@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05658dfbb8d74d62aa99f957caf241b9, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  weaponAlliesConfig: {fileID: 11400000, guid: 62ff3ca45aa196c42bf53d5e4932f83d, type: 2}
+  weaponEnemyConfig: {fileID: 11400000, guid: d13d6427d512e054781079185cb8f36d, type: 2}
+  maxHearts: 3
+  heartRefillTimeSeconds: 300
+  experienceEasyRound: 10
+  baseNumberOfRoundsForLevel: 5
+  experienceHardMultiplier: 2
+  baseNumberNewWeaponsPerLevel: 1
+  baseCardsPerRound: 5
+  baseTimeForCard: 10

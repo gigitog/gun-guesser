@@ -1,12 +1,56 @@
+using System;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+[Serializable]
 public class WeaponModel : IWeapon
 {
-    public string Name { get; private set; }
-    public string Modification { get; private set; }
-    public string Year { get; private set; }
-    public string Country { get; private set; }
-    // Earth, Air, Rocket, Hand Weapon
-    public string Class { get; private set; }
-    // MTB, Jet, AAW
-    public string Type { get; private set; }
-    public string Side { get; private set; }
+    [SerializeField] private string name;
+    [SerializeField] private string modification;
+    [SerializeField] private string year;
+    [SerializeField] private string country;
+
+    [FormerlySerializedAs("weaponClass")]
+    [Tooltip("Earth, Air, Rocket, Hand Weapon")]
+    [SerializeField] private WeaponClassification weaponClass;
+
+    [Tooltip("MTB, Jet, AAW")]
+    [SerializeField] private WeaponTyping type;
+
+    [Tooltip("0 - ally; 1 - enemy")]
+    [SerializeField] private int side;
+    // stage ≈ lvl
+    [SerializeField] private int stage;
+
+    public int Stage => stage;
+    public int Side => side;
+    public WeaponTyping Type => type;
+    public WeaponClassification WeaponClass => weaponClass;
+    public string Country => country;
+    public string Year => year;
+    public string Modification => modification;
+    public string Name => name;
+}
+
+public enum WeaponClassification
+{
+    Ground,
+    Air,
+    Missile,
+    Hand
+}
+
+public enum WeaponTyping
+{
+    MBT = 0,
+    MLRS = 1,
+    APC = 2,
+    AFV = 3,
+    UAV = 4,
+    SPH = 5,
+    Towed = 6,
+    Fighter = 7,
+    Bomber = 8,
+    AH = 9,
+    AAW = 10
 }

@@ -35,6 +35,8 @@ public class GunGuesserMainContext: MVCSContext
 	
     protected override void mapBindings()
     {
+        IGameConfig config = loadGameConfig();
+        injectionBinder.Bind<IGameConfig>().ToValue(config);
         injectionBinder.Bind<UserModel>().To<UserModel>().ToSingleton();
         injectionBinder.Bind<RoundModel>().To<RoundModel>().ToSingleton();
         injectionBinder.Bind<IWeapon>().To<WeaponModel>();
@@ -59,5 +61,10 @@ public class GunGuesserMainContext: MVCSContext
         injectionBinder.Bind<ScoreChangedSignal>().ToSingleton();
         injectionBinder.Bind<FulfillWebServiceRequestSignal>().ToSingleton();
     }
-    
+
+    private IGameConfig loadGameConfig()
+    {
+        var obj = Resources.Load<GameConfig>("");
+        return obj;
+    }
 }
