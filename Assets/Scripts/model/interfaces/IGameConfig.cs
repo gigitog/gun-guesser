@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public interface IGameConfig
 {
-    public WeaponConfig WeaponAlliesConfig { get;}
-    public WeaponConfig WeaponEnemyConfig { get;}
+    public WeaponConfigScriptableObject WeaponAlliesConfig { get;}
+    public WeaponConfigScriptableObject WeaponEnemyConfig { get;}
 
     public int GetHeartsRefillTime();
     public int GetNumberOfRounds(int userLevelNumber);
@@ -14,4 +14,7 @@ public interface IGameConfig
     public int GetTimeForCard(int userLevelNumber);
     
     public short GetXpForLevel(int userLevelNumber);
+
+    public string GetTextType(WeaponTyping typing);
+    public string GetTextClassification(WeaponClassification classification);
 }

@@ -1,6 +1,3 @@
-using System;
-using strange.examples.signals;
-using UnityEngine;
 using strange.extensions.context.impl;
 
 

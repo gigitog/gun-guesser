@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponAlliesConfig: {fileID: 11400000, guid: 62ff3ca45aa196c42bf53d5e4932f83d, type: 2}
   weaponEnemyConfig: {fileID: 11400000, guid: d13d6427d512e054781079185cb8f36d, type: 2}
+  textConfig: {fileID: 11400000, guid: b5f2759d1451ef44abf4f2d546b4b060, type: 2}
   maxHearts: 3
   heartRefillTimeSeconds: 300
   experienceEasyRound: 10

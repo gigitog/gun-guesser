@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b22a87a7fa24f5ca0d56e5dbfbdd784, type: 3}
+  m_Name: TextConfig
+  m_EditorClassIdentifier: 
+  types:
+  - typing: 0
+    typingText: MBT
+    typingTextLong: Main Battle Tank
+  - typing: 1
+    typingText: MLRS
+    typingTextLong: Multi Launch Rocket System
+  - typing: 2
+    typingText: APC
+    typingTextLong: Aa pp cc
+  - typing: 3
+    typingText: AFV
+    typingTextLong: 
+  - typing: 4
+    typingText: 
+    typingTextLong: 
+  - typing: 5
+    typingText: 
+    typingTextLong: 
+  - typing: 6
+    typingText: Towed
+    typingTextLong: Towed Artillery
+  - typing: 7
+    typingText: FJ
+    typingTextLong: Fighter Jet
+  - typing: 8
+    typingText: B
+    typingTextLong: Bomber
+  - typing: 9
+    typingText: AH
+    typingTextLong: Attack Helicopter
+  - typing: 10
+    typingText: AAW
+    typingTextLong: Anti Air Warfare
+  classifications:
+  - classification: 0
+    classificationText: Ground
+  - classification: 1
+    classificationText: Air
+  - classification: 2
+    classificationText: Missile
+  - classification: 3
+    classificationText: Hand Weapon
+  errorText: Missing_Name_Error

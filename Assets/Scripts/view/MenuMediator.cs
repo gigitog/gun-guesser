@@ -1,5 +1,7 @@
 
+using System;
 using strange.extensions.mediation.impl;
+using strange.extensions.signal.api;
 
 public class MenuMediator : Mediator
 {
@@ -13,8 +15,7 @@ public class MenuMediator : Mediator
 
     #region Listen To Signals
     
-    [Inject]
-    public MenuCardChangedSignal scoreChangedSignal{ get; set;}
+    
 
     #endregion
     

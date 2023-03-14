@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/WeaponConfigScriptableObject", order = 1)]
-public class WeaponConfig : ScriptableObject
+public class WeaponConfigScriptableObject : ScriptableObject
 {
     public List<WeaponModel> mbt;
     [Space(10)]
@@ -27,9 +27,9 @@ public class WeaponConfig : ScriptableObject
     [Space(10)]
     public List<WeaponModel> aaw;
     
-    public List<WeaponModel> GetWeapons()
+    public List<IWeapon> GetWeapons()
     {
-        List<WeaponModel> list = new List<WeaponModel>();
+        List<IWeapon> list = new List<IWeapon>();
         list.AddRange(mbt);
         list.AddRange(mlrs);
         list.AddRange(apc);

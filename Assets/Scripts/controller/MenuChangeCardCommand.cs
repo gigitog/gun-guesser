@@ -19,7 +19,7 @@ public class MenuChangeCardCommand : Command
     private IWeapon GetRandomWeapon(IInventory inventory)
     {
         int id = Random.Range(0, inventory.GetInventoryList().Count);
-        List<InventoryObjectModel> list = inventory.GetInventoryList();
+        List<IInventoryElement> list = inventory.GetInventoryList();
         return list[id].weapon;
     }
 }

@@ -40,9 +40,10 @@ public class GunGuesserMainContext: MVCSContext
         injectionBinder.Bind<UserModel>().To<UserModel>().ToSingleton();
         injectionBinder.Bind<RoundModel>().To<RoundModel>().ToSingleton();
         injectionBinder.Bind<IWeapon>().To<WeaponModel>();
-        
+        injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>();
+        injectionBinder.Bind<IInventory>().To<InventoryModel>();
+
         injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
-		
 
         mediationBinder.Bind<MenuView>().To<MenuMediator>();
         
@@ -64,7 +65,7 @@ public class GunGuesserMainContext: MVCSContext
 
     private IGameConfig loadGameConfig()
     {
-        var obj = Resources.Load<GameConfig>("");
+        var obj = Resources.Load<GameConfigScriptableObject>("GameConfig");
         return obj;
     }
 }

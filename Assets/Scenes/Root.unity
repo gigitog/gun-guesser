@@ -300,6 +300,8 @@ GameObject:
   - component: {fileID: 414129092}
   - component: {fileID: 414129091}
   - component: {fileID: 414129090}
+  - component: {fileID: 414129094}
+  - component: {fileID: 414129093}
   m_Layer: 0
   m_Name: Menu Canvas
   m_TagString: Untagged
@@ -390,6 +392,31 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &414129093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414129088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fdb9f67de147b598dbbb36d7bb8e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &414129094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414129088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014e4677370f4f95aa6492397d65e191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardClickButton: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

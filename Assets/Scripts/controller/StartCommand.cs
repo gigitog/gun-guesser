@@ -10,6 +10,11 @@ public class StartCommand : Command
 	
     public override void Execute()
     {
+        //TODO 
+        // Load assets
+        // Load User
+        // Load Firebase?
+
         // GameObject go = new GameObject();
         // go.name = "ExampleView";
         // // go.AddComponent<ExampleView>();

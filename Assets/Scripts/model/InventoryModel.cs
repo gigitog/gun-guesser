@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class InventoryModel : IInventory
 {
-    public List<InventoryObjectModel> inventoryList;
+    [Inject]
+    public List<IInventoryElement> inventoryList { get; set; }
         
-    public List<InventoryObjectModel> GetInventoryList()
+    public List<IInventoryElement> GetInventoryList()
     {
         return inventoryList;
     }
