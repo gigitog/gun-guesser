@@ -7,9 +7,13 @@ public class StartCommand : Command
 	
     [Inject(ContextKeys.CONTEXT_VIEW)]
     public GameObject contextView{get;set;}
-	
+    
+    [Inject]
+    public IGameConfig gameConfig { get; set; }
+    
     public override void Execute()
     {
+        // CreateUser();
         //TODO 
         // Load assets
         // Load User
@@ -20,4 +24,6 @@ public class StartCommand : Command
         // // go.AddComponent<ExampleView>();
         // go.transform.parent = contextView.transform;
     }
+
+    
 }

@@ -21,16 +21,16 @@ MonoBehaviour:
     typingTextLong: Multi Launch Rocket System
   - typing: 2
     typingText: APC
-    typingTextLong: Aa pp cc
+    typingTextLong: Armoured personnel carrier
   - typing: 3
     typingText: AFV
-    typingTextLong: 
+    typingTextLong: Armoured fighting vehicle
   - typing: 4
-    typingText: 
-    typingTextLong: 
+    typingText: UAV
+    typingTextLong: Unmanned aerial vehicle
   - typing: 5
-    typingText: 
-    typingTextLong: 
+    typingText: SPH
+    typingTextLong: Self-propelled howitzer
   - typing: 6
     typingText: Towed
     typingTextLong: Towed Artillery

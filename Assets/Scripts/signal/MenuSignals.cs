@@ -4,4 +4,4 @@ using strange.extensions.signal.impl;
 
 // Listen to 
 
-public class MenuCardChangedSignal : Signal<IWeapon> {}
+public class MenuCardClickedSignal : Signal {}

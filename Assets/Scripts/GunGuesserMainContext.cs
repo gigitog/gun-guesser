@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using strange.examples.signals;
 using strange.extensions.command.api;
 using strange.extensions.command.impl;
@@ -37,18 +38,21 @@ public class GunGuesserMainContext: MVCSContext
     {
         IGameConfig config = loadGameConfig();
         injectionBinder.Bind<IGameConfig>().ToValue(config);
-        injectionBinder.Bind<UserModel>().To<UserModel>().ToSingleton();
         injectionBinder.Bind<RoundModel>().To<RoundModel>().ToSingleton();
         injectionBinder.Bind<IWeapon>().To<WeaponModel>();
-        injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>();
         injectionBinder.Bind<IInventory>().To<InventoryModel>();
+        injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>();
 
+        injectionBinder.Bind<IUser>().To<UserModel>().ToSingleton();
+        
         injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
 
+        // --- View Mediators ---
         mediationBinder.Bind<MenuView>().To<MenuMediator>();
+        mediationBinder.Bind<MenuCardView>().To<MenuCardMediator>();
         
         // --- Commands ---
-        commandBinder.Bind<MenuCardChangedSignal>().To<MenuChangeCardCommand>();
+        commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
         
         commandBinder.Bind<CallWebServiceSignal>().To<CallWebServiceCommand>();
 		
@@ -57,15 +61,13 @@ public class GunGuesserMainContext: MVCSContext
         commandBinder.Bind<GGStartSignal>().To<StartCommand>().Once ();
         
         // --- Signals ---
-        injectionBinder.Bind<CardChangedSignal>().ToSingleton();
+        injectionBinder.Bind<MenuCardChangedSignal>().ToSingleton();
         
-        injectionBinder.Bind<ScoreChangedSignal>().ToSingleton();
-        injectionBinder.Bind<FulfillWebServiceRequestSignal>().ToSingleton();
     }
 
     private IGameConfig loadGameConfig()
     {
-        var obj = Resources.Load<GameConfigScriptableObject>("GameConfig");
-        return obj;
+        var config = Resources.Load<GameConfigScriptableObject>("GameConfig");
+        return config;
     }
 }

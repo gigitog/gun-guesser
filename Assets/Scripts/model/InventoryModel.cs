@@ -1,13 +1,26 @@
 
 using System.Collections.Generic;
+using UnityEngine;
 
 public class InventoryModel : IInventory
 {
-    [Inject]
     public List<IInventoryElement> inventoryList { get; set; }
-        
-    public List<IInventoryElement> GetInventoryList()
+
+    public void AddWeaponToInventory(IWeapon newWeapon)
     {
-        return inventoryList;
+        foreach (var element in inventoryList)
+        {
+            if (element.weapon == newWeapon)
+            {
+                Debug.Log("This weapon already exists in this Inventory");
+                return;
+            }
+        }
+        IInventoryElement inventoryElement = new IInventoryElement
+        {
+            weapon = newWeapon
+        };
+        
+        inventoryList.Add(inventoryElement);
     }
 }

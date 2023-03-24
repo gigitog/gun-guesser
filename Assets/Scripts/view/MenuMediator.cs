@@ -21,17 +21,16 @@ public class MenuMediator : Mediator
     
     public override void OnRegister()
     {
-        view.MenuCardClickedSignal.AddListener(null);
-        view.MenuInventoryClickedSignal.AddListener(null);
-        view.MenuProfileClickedSignal.AddListener(null);
-        view.StartClickedSignal.AddListener(null);
+        
+        // view.MenuInventoryClickedSignal.AddListener(null);
+        // view.MenuProfileClickedSignal.AddListener(null);
+        // view.StartClickedSignal.AddListener(null);
     }
 
     public override void OnRemove()
     {
-        view.MenuCardClickedSignal.RemoveListener(null);
-        view.MenuInventoryClickedSignal.RemoveListener(null);
-        view.MenuProfileClickedSignal.RemoveListener(null);
-        view.StartClickedSignal.RemoveListener(null);
+        // view.MenuInventoryClickedSignal.RemoveListener(null);
+        // view.MenuProfileClickedSignal.RemoveListener(null);
+        // view.StartClickedSignal.RemoveListener(null);
     }
 }

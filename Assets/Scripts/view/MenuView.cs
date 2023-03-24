@@ -10,20 +10,20 @@ public class MenuView : View
     [SerializeField] private Button cardClickButton;
     
     
-    public Signal MenuCardClickedSignal { get; set; }
     public Signal MenuInventoryClickedSignal { get; set; }
     public Signal MenuProfileClickedSignal { get; set; }
     public Signal StartClickedSignal { get; set; }
 
     private void OnEnable()
     {
-        cardClickButton.onClick.AddListener(CardClick);
+        
     }
 
     private void OnDisable()
     {
-        cardClickButton.onClick.RemoveListener(CardClick);
+        
     }
+    
     public void StartClick()
     {
         
@@ -39,12 +39,7 @@ public class MenuView : View
         MenuInventoryClickedSignal.Dispatch();
     }
 
-    private void CardClick()
-    {
-        Debug.Log("MenuView: CardClicked");
-        MenuCardClickedSignal.Dispatch();
-    }
-
+    
     public void StartClicked()
     {
         StartClickedSignal.Dispatch();
