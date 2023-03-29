@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 public interface IWeapon
 {
     public int Stage { get; }
@@ -9,4 +11,5 @@ public interface IWeapon
     public string Year { get; }
     public string Modification { get; }
     public string Name { get; }
+    public Sprite Image { get; }
 }

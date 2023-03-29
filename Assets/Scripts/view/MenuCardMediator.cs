@@ -30,11 +30,7 @@ public class MenuCardMediator : Mediator
 
     public override void OnRemove()
     {
-        Debug.LogWarning("Mediator Remove");
-        if (view == null)
-        {
-            Debug.Log("A view == null");
-        }
+        // Debug.LogWarning("Mediator Remove");
         view.CardClickedSignal.RemoveListener(CardClicked);
         
         menuCardChangedSignal.RemoveListener(SetCard);

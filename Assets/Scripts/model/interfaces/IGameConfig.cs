@@ -1,10 +1,14 @@
 
 using System.Collections.Generic;
+using UnityEngine;
 
 public interface IGameConfig
 {
     public WeaponConfigScriptableObject WeaponAlliesConfig { get;}
     public WeaponConfigScriptableObject WeaponEnemyConfig { get;}
+    
+    public GameObject RoundInterfacePrefab { get; }
+    
     public IInventory GetInitialInventory();
 
     public int GetHeartsRefillTime();
@@ -19,4 +23,6 @@ public interface IGameConfig
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);
     public string GetTextClassification(WeaponClassification classification);
+    public Sprite GetEnemySprite(WeaponTyping typing);
+    public Sprite GetAlliesSprite(WeaponTyping typing);
 }

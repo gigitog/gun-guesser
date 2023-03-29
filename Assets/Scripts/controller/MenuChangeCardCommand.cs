@@ -12,7 +12,7 @@ public class MenuChangeCardCommand : Command
 
     public override void Execute()
     {
-        Debug.Log("MenuChangeCardCommand Execution...");
+        // Debug.Log("MenuChangeCardCommand Execution...");
         IWeapon randomWeapon = GetRandomWeapon(user.inventory);
         menuMenuCardClickedSignal.Dispatch(randomWeapon);
     }

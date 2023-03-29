@@ -21,7 +21,7 @@ public class WeaponModel : IWeapon
     [SerializeField] private int side;
     // stage ≈ lvl
     [SerializeField] private int stage;
-
+    [SerializeField] private Sprite image;
     public int Stage => stage;
     public int Side => side;
     public WeaponTyping Type => type;
@@ -30,6 +30,7 @@ public class WeaponModel : IWeapon
     public string Year => year;
     public string Modification => modification;
     public string Name => name;
+    public Sprite Image => image;
 }
 
 public enum WeaponClassification

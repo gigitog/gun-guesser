@@ -7,7 +7,7 @@ using strange.extensions.context.api;
 using strange.extensions.context.impl;
 using UnityEngine;
 
-public class GunGuesserMainContext: MVCSContext
+public class GunGuesserMainContext : MVCSContext
 {
     public GunGuesserMainContext (MonoBehaviour view) : base(view)
     {

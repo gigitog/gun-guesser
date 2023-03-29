@@ -15,7 +15,10 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     [Header("Text Config")]
     [SerializeField] private TextConfigScriptableObject textConfig;
-    
+
+    [Header("Sprite Config")] [SerializeField]
+    private SpriteConfigScriptableObject spriteConfig;
+
     [Header("Game Logic")] 
     [SerializeField] private short maxHearts;
     [SerializeField] private short heartRefillTimeSeconds;
@@ -32,10 +35,15 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [SerializeField] private int baseCardsPerRound;
     [SerializeField] private int baseTimeForCard;
     
-    
+    [Space(10)]
+    [Header("User Interface Prefavs")]
+    [SerializeField] private GameObject roundInterfacePrefab;
+
+
     public WeaponConfigScriptableObject WeaponAlliesConfig => weaponAlliesConfig;
     public WeaponConfigScriptableObject WeaponEnemyConfig => weaponEnemyConfig;
-    
+    public GameObject RoundInterfacePrefab => roundInterfacePrefab;
+
     public int GetNumberOfRounds(int userLevelNumber)
     {
         throw new System.NotImplementedException();
@@ -83,4 +91,13 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public string GetTextType(WeaponTyping typing) => textConfig.GetType(typing);
     public string GetTextTypeLong(WeaponTyping typing) => textConfig.GetLongType(typing);
     public string GetTextClassification(WeaponClassification classification) => textConfig.GetClassification(classification);
+    public Sprite GetEnemySprite(WeaponTyping typing)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Sprite GetAlliesSprite(WeaponTyping typing)
+    {
+        throw new System.NotImplementedException();
+    }
 }

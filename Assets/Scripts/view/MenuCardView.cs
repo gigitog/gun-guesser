@@ -43,13 +43,13 @@ public class MenuCardView : View
 
     private void OnDisable()
     {
-        Debug.LogWarning("View Disable");
+        // Debug.LogWarning("View Disable");
         cardClickButton.onClick.RemoveListener(CardClick);
     }
 
     private void CardClick()
     {
-        Debug.LogWarning("MenuCardView: CardClicked");
+        // Debug.LogWarning("MenuCardView: CardClicked");
         CardClickedSignal.Dispatch();
     }
 }
