@@ -11,26 +11,23 @@ public class RoundView : View
     // Enemy Card
     [SerializeField] private TMP_Text enemyNameField;
     [SerializeField] private TMP_Text enemyTypeField;
-    [SerializeField] private TMP_Text enemySideField;
-    [SerializeField] private SpriteRenderer enemySprite;
+    [SerializeField] private Image enemySprite;
 
     // Choices
     [SerializeField] private TMP_Text firstChoiceNameField;
     [SerializeField] private TMP_Text firstChoiceTypeField;
-    [SerializeField] private TMP_Text firstChoiceSideField;
-    [SerializeField] private SpriteRenderer firstChoiceSprite;
+    [SerializeField] private Image firstChoiceSprite;
     [SerializeField] private Button firstChoiceButton;
     
     [SerializeField] private TMP_Text secondChoiceNameField;
     [SerializeField] private TMP_Text secondChoiceTypeField;
-    [SerializeField] private TMP_Text secondChoiceSideField;
-    [SerializeField] private SpriteRenderer secondChoiceSprite;
+    [SerializeField] private Image secondChoiceSprite;
     [SerializeField] private Button secondChoiceButton;
     
     // UI
     [SerializeField] private Button exitButton; // leave round
     [SerializeField] private ProgressBar progressBar; // track progress via bar
-    [SerializeField] private TMP_Text enemiesProgressCounter; // [curr/max]
+    [SerializeField] private TMP_Text phaseProgressCounter; // [curr/max]
     
     public Signal firstChoiceClickedSignal = new Signal();
     public Signal secondChoiceClickedSignal = new Signal();
@@ -48,12 +45,6 @@ public class RoundView : View
     {
         get => enemyTypeField.text;
         set => enemyTypeField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
-    }
-
-    public string EnemySide
-    {
-        get => enemySideField.text;
-        set => enemySideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
 
     public Sprite EnemySprite
@@ -76,12 +67,6 @@ public class RoundView : View
         set => firstChoiceTypeField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
 
-    public string FirstChoiceSide
-    {
-        get => firstChoiceSideField.text;
-        set => firstChoiceSideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
-    }
-
     public Sprite FirstChoiceSprite
     {
         get => firstChoiceSprite.sprite;
@@ -98,12 +83,6 @@ public class RoundView : View
     {
         get => secondChoiceTypeField.text;
         set => secondChoiceTypeField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
-    }
-
-    public string SecondChoiceSide
-    {
-        get => secondChoiceSideField.text;
-        set => secondChoiceSideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
 
     public Sprite SecondChoiceSprite

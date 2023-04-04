@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TextConfigScriptableObject", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TextConfig", order = 1)]
 public class TextConfigScriptableObject : ScriptableObject
 {
     [Header("Weapon Typing")] 

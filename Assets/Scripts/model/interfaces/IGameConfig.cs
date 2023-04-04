@@ -25,4 +25,6 @@ public interface IGameConfig
     public string GetTextClassification(WeaponClassification classification);
     public Sprite GetEnemySprite(WeaponTyping typing);
     public Sprite GetAlliesSprite(WeaponTyping typing);
+
+    public bool MatchWeaponTypes(IWeapon enemy, IWeapon weapon);
 }

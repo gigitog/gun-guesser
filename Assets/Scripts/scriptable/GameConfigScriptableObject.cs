@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using strange.extensions.injector.api;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameConfigScriptableObject", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameConfig", order = 1)]
 public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 {
     [Inject]
@@ -12,6 +12,7 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [Header("Weapon Configs")]
     [SerializeField] private WeaponConfigScriptableObject weaponAlliesConfig;
     [SerializeField] private WeaponConfigScriptableObject weaponEnemyConfig;
+    [SerializeField] private WeaponRulesConfigScriptableObject weaponRulesConfig;
 
     [Header("Text Config")]
     [SerializeField] private TextConfigScriptableObject textConfig;
@@ -99,5 +100,10 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public Sprite GetAlliesSprite(WeaponTyping typing)
     {
         throw new System.NotImplementedException();
+    }
+
+    public bool MatchWeaponTypes(IWeapon enemy, IWeapon weapon)
+    {
+        return weaponRulesConfig.CompareWeapons(enemy, weapon);
     }
 }

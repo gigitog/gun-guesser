@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpriteConfigScriptableObject", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpriteConfig", order = 1)]
 public class SpriteConfigScriptableObject : ScriptableObject
 {
     public Sprite mbt;
