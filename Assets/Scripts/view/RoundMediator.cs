@@ -1,5 +1,6 @@
 
 using strange.extensions.mediation.impl;
+using strange.extensions.signal.impl;
 using UnityEngine;
 
 public class RoundMediator : Mediator
@@ -111,7 +112,7 @@ public class RoundMediator : Mediator
         }
         else
         {
-            cardLoadedSignal.AddListener(SetPhase);
+            cardLoadedSignal.RemoveListener(SetPhase);
             wonSignal.RemoveListener(ShowWinningScreen);
             lostSignal.RemoveListener(ShowLosingScreen);
             correctAnsweredSignal.RemoveListener(ShowAnimationCorrect);

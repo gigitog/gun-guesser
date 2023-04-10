@@ -14,14 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mbt:
   - name: T-64
-    modification: BV
-    year: 
-    country: 
-    weaponClass: 0
-    type: 0
-    side: 0
-    stage: 0
-  - name: T-64
     modification: BM
     year: 
     country: 
@@ -29,6 +21,16 @@ MonoBehaviour:
     type: 0
     side: 0
     stage: 0
+    image: {fileID: 0}
+  - name: T-64
+    modification: BV
+    year: 
+    country: 
+    weaponClass: 0
+    type: 0
+    side: 0
+    stage: 0
+    image: {fileID: 0}
   - name: T-72
     modification: AMT
     year: 
@@ -37,6 +39,7 @@ MonoBehaviour:
     type: 0
     side: 0
     stage: 0
+    image: {fileID: 0}
   mlrs:
   - name: Bureviy
     modification: 
@@ -46,6 +49,7 @@ MonoBehaviour:
     type: 1
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: BM-27 Uragan
     modification: 
     year: 
@@ -54,6 +58,7 @@ MonoBehaviour:
     type: 1
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: BM-30 Smerch
     modification: 
     year: 
@@ -62,6 +67,7 @@ MonoBehaviour:
     type: 1
     side: 0
     stage: 0
+    image: {fileID: 0}
   apc:
   - name: Varta
     modification: 
@@ -71,6 +77,7 @@ MonoBehaviour:
     type: 2
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: 'Novator '
     modification: 
     year: 
@@ -79,6 +86,7 @@ MonoBehaviour:
     type: 2
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: 'Kozak '
     modification: 2
     year: 
@@ -87,7 +95,8 @@ MonoBehaviour:
     type: 2
     side: 0
     stage: 0
-  afv:
+    image: {fileID: 0}
+  ifv:
   - name: BTR
     modification: 3
     year: 
@@ -96,6 +105,7 @@ MonoBehaviour:
     type: 3
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: BTR
     modification: 4
     year: 
@@ -104,6 +114,7 @@ MonoBehaviour:
     type: 3
     side: 0
     stage: 0
+    image: {fileID: 0}
   uav:
   - name: Test
     modification: 1
@@ -113,6 +124,7 @@ MonoBehaviour:
     type: 4
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Test
     modification: 2
     year: 
@@ -121,6 +133,7 @@ MonoBehaviour:
     type: 4
     side: 0
     stage: 0
+    image: {fileID: 0}
   sph:
   - name: 2S22 Bohdana
     modification: 
@@ -130,6 +143,7 @@ MonoBehaviour:
     type: 5
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: 2S19 Msta-S
     modification: 
     year: 
@@ -138,6 +152,7 @@ MonoBehaviour:
     type: 5
     side: 0
     stage: 0
+    image: {fileID: 0}
   towed:
   - name: 2A65 Msta-B
     modification: 
@@ -147,6 +162,7 @@ MonoBehaviour:
     type: 6
     side: 0
     stage: 0
+    image: {fileID: 0}
   fighters:
   - name: Test FJ 1
     modification: 
@@ -156,6 +172,7 @@ MonoBehaviour:
     type: 7
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Test FJ 2
     modification: 
     year: 
@@ -164,6 +181,7 @@ MonoBehaviour:
     type: 7
     side: 0
     stage: 0
+    image: {fileID: 0}
   bombers:
   - name: Test Bomber 1
     modification: 
@@ -173,6 +191,7 @@ MonoBehaviour:
     type: 8
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Test Bomber 2
     modification: 
     year: 
@@ -181,23 +200,26 @@ MonoBehaviour:
     type: 8
     side: 0
     stage: 0
+    image: {fileID: 0}
   helicopters:
   - name: Test AH 1
     modification: 
     year: 
     country: 
     weaponClass: 1
-    type: 0
+    type: 9
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Test AH 2
     modification: 
     year: 
     country: 
     weaponClass: 1
-    type: 0
+    type: 9
     side: 0
     stage: 0
+    image: {fileID: 0}
   aaw:
   - name: S-300
     modification: 
@@ -207,6 +229,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: S-400
     modification: 
     year: 
@@ -215,6 +238,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Patriot
     modification: 
     year: 
@@ -223,6 +247,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Osa
     modification: 
     year: 
@@ -231,6 +256,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Tunguska
     modification: 
     year: 
@@ -239,6 +265,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: Shilka
     modification: 
     year: 
@@ -247,6 +274,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: SAMP-T
     modification: 
     year: 
@@ -255,6 +283,7 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}
   - name: IRIS-T
     modification: 
     year: 
@@ -263,3 +292,4 @@ MonoBehaviour:
     type: 10
     side: 0
     stage: 0
+    image: {fileID: 0}

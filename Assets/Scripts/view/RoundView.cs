@@ -8,31 +8,38 @@ using UnityEngine.UI;
 
 public class RoundView : View
 {
+    #region Serialize Fields
+    
     // Enemy Card
+    [Header("Enemy Card")]
     [SerializeField] private TMP_Text enemyNameField;
     [SerializeField] private TMP_Text enemyTypeField;
     [SerializeField] private Image enemySprite;
 
     // Choices
+    [Header("Choice 1")]
     [SerializeField] private TMP_Text firstChoiceNameField;
     [SerializeField] private TMP_Text firstChoiceTypeField;
     [SerializeField] private Image firstChoiceSprite;
     [SerializeField] private Button firstChoiceButton;
-    
+    [Header("Choice 2")]
     [SerializeField] private TMP_Text secondChoiceNameField;
     [SerializeField] private TMP_Text secondChoiceTypeField;
     [SerializeField] private Image secondChoiceSprite;
     [SerializeField] private Button secondChoiceButton;
     
     // UI
+    [Header("User Interface")]
     [SerializeField] private Button exitButton; // leave round
-    [SerializeField] private ProgressBar progressBar; // track progress via bar
+    [SerializeField] private Slider progressBar; // track progress via bar
     [SerializeField] private TMP_Text phaseProgressCounter; // [curr/max]
     
     public Signal firstChoiceClickedSignal = new Signal();
     public Signal secondChoiceClickedSignal = new Signal();
     public Signal exitClickedSignal = new Signal();
-
+    
+    #endregion
+    
     #region Properties
 
     // Enemy -------------- Properties

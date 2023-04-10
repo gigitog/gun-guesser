@@ -53,7 +53,10 @@ public class GunGuesserMainContext : MVCSContext
         mediationBinder.Bind<RoundView>().To<RoundMediator>();
         
         // --- Commands ---
+        // --- --- Menu:
         commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
+        
+        // --- --- Round:
         commandBinder.Bind<RoundAnsweredSignal>().To<RoundAnswerCommand>();
         
         commandBinder.Bind<CallWebServiceSignal>().To<CallWebServiceCommand>();
@@ -64,6 +67,7 @@ public class GunGuesserMainContext : MVCSContext
         
         // --- Signals ---
         injectionBinder.Bind<MenuCardChangedSignal>().ToSingleton();
+        
         injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundCardLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundWonSignal>().ToSingleton();

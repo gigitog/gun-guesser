@@ -20,7 +20,7 @@ public class WeaponConfigScriptableObject : ScriptableObject
         {
             if (enemy.Type == model.typing)
             {
-                weaponsAgainstEnemy = model.counterWeapons;
+                // weaponsAgainstEnemy = model.counterWeapons[];
             }
             else
             {
@@ -91,8 +91,30 @@ public class WeaponConfigModel
     public WeaponTyping typing;
     public WeaponClassification classification;
     
-    [Space(10)]
-    public List<WeaponTyping> counterWeapons;
+    [Header("Counter Weapon")]
+    [Tooltip("MBT = 0 \n" +
+             "LRS = 1 \n" +
+             "APC = 2 \n" +
+             "IFV = 3 \n" +
+             "UAV = 4 \n" +
+             "SPH = 5 \n" +
+             "tow = 6 \n" +
+             "jet = 7 \n" +
+             "bbr = 8 \n" +
+             "AHe = 9 \n" +
+             "AAW = 10")]
+    public int mbt;
+    public int mlrs;
+    public int apc;
+    public int ifv;
+    public int uav;
+    public int sph;
+    public int towed;
+    public int fighter;
+    public int bombers;
+    public int ah;
+    public int aaw;
+
     
 }
 
@@ -102,3 +124,4 @@ public class ClassificationToString
     public string classificationText;
     public WeaponClassification classification;
 }
+

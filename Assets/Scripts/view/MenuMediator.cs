@@ -2,6 +2,7 @@
 using System;
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.api;
+using UnityEngine;
 
 public class MenuMediator : Mediator
 {
@@ -21,16 +22,42 @@ public class MenuMediator : Mediator
     
     public override void OnRegister()
     {
-        
-        // view.MenuInventoryClickedSignal.AddListener(null);
-        // view.MenuProfileClickedSignal.AddListener(null);
-        // view.StartClickedSignal.AddListener(null);
+        SetListeners(true);
+    }
+
+    private void OnStartButtonClicked()
+    {
+        Debug.Log("Menu mediator: Start Clicked");
+    }
+
+    private void OnInventoryButtonClicked()
+    {
+        Debug.Log("Menu mediator: Inventory Clicked");
+    }
+
+    private void OnProfileButtonClicked()
+    {
+        Debug.Log("Menu mediator: Profile Clicked");
     }
 
     public override void OnRemove()
     {
-        // view.MenuInventoryClickedSignal.RemoveListener(null);
-        // view.MenuProfileClickedSignal.RemoveListener(null);
-        // view.StartClickedSignal.RemoveListener(null);
+        SetListeners(false);
+    }
+    
+    private void SetListeners(bool isSet)
+    {
+        if (isSet)
+        {
+            view.MenuInventoryClickedSignal.AddListener(OnInventoryButtonClicked);
+            view.MenuProfileClickedSignal.AddListener(OnProfileButtonClicked);
+            view.MenuStartClickedSignal.AddListener(OnStartButtonClicked);
+        }
+        else
+        {
+            view.MenuInventoryClickedSignal.RemoveListener(OnInventoryButtonClicked);
+            view.MenuProfileClickedSignal.RemoveListener(OnProfileButtonClicked);
+            view.MenuStartClickedSignal.RemoveListener(OnStartButtonClicked);
+        }
     }
 }
