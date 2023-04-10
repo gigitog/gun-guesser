@@ -46,7 +46,7 @@ public enum WeaponTyping
     MBT = 0,
     MLRS = 1,
     APC = 2,
-    AFV = 3,
+    IFV = 3,
     UAV = 4,
     SPH = 5,
     Towed = 6,

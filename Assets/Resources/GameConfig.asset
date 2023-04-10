@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05658dfbb8d74d62aa99f957caf241b9, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  weaponAlliesConfig: {fileID: 11400000, guid: 62ff3ca45aa196c42bf53d5e4932f83d, type: 2}
-  weaponEnemyConfig: {fileID: 11400000, guid: d13d6427d512e054781079185cb8f36d, type: 2}
-  weaponRulesConfig: {fileID: 11400000, guid: 8e8c4f81f1bb38545a49f732434c8cbf, type: 2}
+  weaponAlliesData: {fileID: 11400000, guid: 62ff3ca45aa196c42bf53d5e4932f83d, type: 2}
+  weaponEnemyData: {fileID: 11400000, guid: d13d6427d512e054781079185cb8f36d, type: 2}
+  weaponConfig: {fileID: 11400000, guid: 8e8c4f81f1bb38545a49f732434c8cbf, type: 2}
   textConfig: {fileID: 11400000, guid: b5f2759d1451ef44abf4f2d546b4b060, type: 2}
-  spriteConfig: {fileID: 0}
   maxHearts: 3
   heartRefillTimeSeconds: 300
   experienceEasyRound: 10

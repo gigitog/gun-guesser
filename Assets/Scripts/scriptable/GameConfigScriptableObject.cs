@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using strange.extensions.injector.api;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameConfig", order = 1)]
 public class GameConfigScriptableObject : ScriptableObject, IGameConfig
@@ -9,16 +10,12 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [Inject]
     public IInjectionBinder injectionBinder{ get; set; }
     
-    [Header("Weapon Configs")]
-    [SerializeField] private WeaponConfigScriptableObject weaponAlliesConfig;
-    [SerializeField] private WeaponConfigScriptableObject weaponEnemyConfig;
-    [SerializeField] private WeaponRulesConfigScriptableObject weaponRulesConfig;
-
-    [Header("Text Config")]
-    [SerializeField] private TextConfigScriptableObject textConfig;
-
-    [Header("Sprite Config")] [SerializeField]
-    private SpriteConfigScriptableObject spriteConfig;
+    [Header("Weapon Data")]
+    [SerializeField] private WeaponDataScriptableObject weaponAlliesData;
+    [SerializeField] private WeaponDataScriptableObject weaponEnemyData;
+    
+    [Header("Weapon Config")]
+    [SerializeField] private WeaponConfigScriptableObject weaponConfig;
 
     [Header("Game Logic")] 
     [SerializeField] private short maxHearts;
@@ -40,9 +37,8 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [Header("User Interface Prefavs")]
     [SerializeField] private GameObject roundInterfacePrefab;
 
-
-    public WeaponConfigScriptableObject WeaponAlliesConfig => weaponAlliesConfig;
-    public WeaponConfigScriptableObject WeaponEnemyConfig => weaponEnemyConfig;
+    public WeaponDataScriptableObject WeaponAlliesData => weaponAlliesData;
+    public WeaponDataScriptableObject WeaponEnemyData => weaponEnemyData;
     public GameObject RoundInterfacePrefab => roundInterfacePrefab;
 
     public int GetNumberOfRounds(int userLevelNumber)
@@ -74,13 +70,13 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     {
         var init = injectionBinder.GetInstance<IInventory>() as IInventory;
         init.inventoryList = new List<IInventoryElement>();
-        init.AddWeaponToInventory(weaponAlliesConfig.aaw[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.afv[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.apc[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.mbt[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.mlrs[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.towed[0]);
-        init.AddWeaponToInventory(weaponAlliesConfig.sph[0]);
+        init.AddWeaponToInventory(weaponAlliesData.aaw[0]);
+        init.AddWeaponToInventory(weaponAlliesData.ifv[0]);
+        init.AddWeaponToInventory(weaponAlliesData.apc[0]);
+        init.AddWeaponToInventory(weaponAlliesData.mbt[0]);
+        init.AddWeaponToInventory(weaponAlliesData.mlrs[0]);
+        init.AddWeaponToInventory(weaponAlliesData.towed[0]);
+        init.AddWeaponToInventory(weaponAlliesData.sph[0]);
         return init;
     }
 
@@ -89,9 +85,9 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
         throw new System.NotImplementedException();
     }
     
-    public string GetTextType(WeaponTyping typing) => textConfig.GetType(typing);
-    public string GetTextTypeLong(WeaponTyping typing) => textConfig.GetLongType(typing);
-    public string GetTextClassification(WeaponClassification classification) => textConfig.GetClassification(classification);
+    public string GetTextType(WeaponTyping typing) => weaponConfig.GetShortType(typing);
+    public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
+    public string GetTextClassification(WeaponClassification classification) => weaponConfig.GetClassification(classification);
     public Sprite GetEnemySprite(WeaponTyping typing)
     {
         throw new System.NotImplementedException();
@@ -104,6 +100,6 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     public bool MatchWeaponTypes(IWeapon enemy, IWeapon weapon)
     {
-        return weaponRulesConfig.CompareWeapons(enemy, weapon);
+        return weaponConfig.CompareWeapons(enemy, weapon);
     }
 }

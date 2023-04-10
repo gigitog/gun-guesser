@@ -4,8 +4,8 @@ using UnityEngine;
 
 public interface IGameConfig
 {
-    public WeaponConfigScriptableObject WeaponAlliesConfig { get;}
-    public WeaponConfigScriptableObject WeaponEnemyConfig { get;}
+    public WeaponDataScriptableObject WeaponAlliesData { get;}
+    public WeaponDataScriptableObject WeaponEnemyData { get;}
     
     public GameObject RoundInterfacePrefab { get; }
     

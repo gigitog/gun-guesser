@@ -1,47 +1,104 @@
-
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/WeaponConfig", order = 1)]
 public class WeaponConfigScriptableObject : ScriptableObject
 {
-    public List<WeaponModel> mbt;
-    [Space(10)]
-    public List<WeaponModel> mlrs;
-    [Space(10)]
-    public List<WeaponModel> apc;
-    [Space(10)]
-    public List<WeaponModel> afv;
-    [Space(10)]
-    public List<WeaponModel> uav;
-    [Space(10)]
-    public List<WeaponModel> sph;
-    [Space(10)]
-    public List<WeaponModel> towed;
-    [Space(10)]
-    public List<WeaponModel> fighters;
-    [Space(10)]
-    public List<WeaponModel> bombers;
-    [Space(10)]
-    public List<WeaponModel> helicopters;
-    [Space(10)]
-    public List<WeaponModel> aaw;
+    public List<WeaponConfigModel> weapons;
     
-    public List<IWeapon> GetWeapons()
-    {
-        List<IWeapon> list = new List<IWeapon>();
-        list.AddRange(mbt);
-        list.AddRange(mlrs);
-        list.AddRange(apc);
-        list.AddRange(afv);
-        list.AddRange(uav);
-        list.AddRange(sph);
-        list.AddRange(towed);
-        list.AddRange(fighters);
-        list.AddRange(bombers);
-        list.AddRange(helicopters);
-        list.AddRange(aaw);
+    [Header("Weapon Classification")] 
+    [SerializeField] private List<ClassificationToString> classifications;
+    
+    [Header("Errors")] 
+    [SerializeField] private string errorText;
 
-        return list;
+    public bool CompareWeapons(IWeapon enemy, IWeapon weapon)
+    {
+        List<WeaponTyping> weaponsAgainstEnemy = null;
+        foreach (var model in weapons)
+        {
+            if (enemy.Type == model.typing)
+            {
+                weaponsAgainstEnemy = model.counterWeapons;
+            }
+            else
+            {
+                Debug.LogError("Could not find Type of this enemy in WeaponConfig!");
+                return false;
+            }
+        }
+
+        if (weaponsAgainstEnemy == null) return false;
+        
+        foreach (var weaponTyping in weaponsAgainstEnemy)
+        {
+            if (weapon.Type == weaponTyping)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
+    
+    public string GetShortType(WeaponTyping searchedTyping)
+    {
+        foreach (var model in weapons)
+        {
+            if (model.typing == searchedTyping)
+            {
+                return model.abbreviation;
+            }
+        }
+
+        return errorText;
+    }
+    public string GetFullType(WeaponTyping searchedTyping)
+    {
+        foreach (var model in weapons)
+        {
+            if (model.typing == searchedTyping)
+            {
+                return model.name;
+            }
+        }
+
+        return errorText;
+    }
+
+    public string GetClassification(WeaponClassification searchedClassification)
+    {
+        foreach (var classification in classifications)
+        {
+            if (classification.classification == searchedClassification)
+            {
+                return classification.classificationText;
+            }
+        }
+
+        return errorText;
+    }
+}
+
+[Serializable]
+public class WeaponConfigModel
+{
+    public string abbreviation;
+    public string name;
+    public Sprite defaultSprite;
+    [Space(10)]
+    public WeaponTyping typing;
+    public WeaponClassification classification;
+    
+    [Space(10)]
+    public List<WeaponTyping> counterWeapons;
+    
+}
+
+[Serializable]
+public class ClassificationToString
+{
+    public string classificationText;
+    public WeaponClassification classification;
 }
