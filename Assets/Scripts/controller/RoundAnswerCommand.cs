@@ -13,6 +13,6 @@ public class RoundAnswerCommand : Command
     public IGameConfig gameConfig { get; set; }
     public override void Execute()
     {
-        Debug.LogWarning($"Round Answer Command Execution: A={AnswerNumber}");
+        Debug.LogWarning($"[RoundAnswerCommand] Execution: A={AnswerNumber}");
     }
 }

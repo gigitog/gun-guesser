@@ -37,13 +37,17 @@ public class GunGuesserMainContext : MVCSContext
     protected override void mapBindings()
     {
         IGameConfig config = loadGameConfig();
+        
+        // --- Models ---
         injectionBinder.Bind<IGameConfig>().ToValue(config);
         injectionBinder.Bind<IRound>().To<RoundModel>().ToSingleton();
         injectionBinder.Bind<IWeapon>().To<WeaponModel>();
         injectionBinder.Bind<IInventory>().To<InventoryModel>();
         injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>();
-
         injectionBinder.Bind<IUser>().To<UserModel>().ToSingleton();
+        
+        
+        // ---
         
         injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
 
@@ -55,10 +59,12 @@ public class GunGuesserMainContext : MVCSContext
         // --- Commands ---
         // --- --- Menu:
         commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
-        
+
         // --- --- Round:
+        commandBinder.Bind<MenuStartRoundSignal>().To<RoundLoadCommand>();
+        commandBinder.Bind<RoundLoadedSignal>().To<RoundGetPhaseCommand>();
         commandBinder.Bind<RoundAnsweredSignal>().To<RoundAnswerCommand>();
-        
+
         commandBinder.Bind<CallWebServiceSignal>().To<CallWebServiceCommand>();
 		
         //StartSignal is now fired instead of the START event.
@@ -68,12 +74,11 @@ public class GunGuesserMainContext : MVCSContext
         // --- Signals ---
         injectionBinder.Bind<MenuCardChangedSignal>().ToSingleton();
         
-        injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
-        injectionBinder.Bind<RoundCardLoadedSignal>().ToSingleton();
+        // injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundWonSignal>().ToSingleton();
         injectionBinder.Bind<RoundLostSignal>().ToSingleton();
         injectionBinder.Bind<RoundCorrectAnsweredSignal>().ToSingleton();
-
     }
 
     private IGameConfig loadGameConfig()

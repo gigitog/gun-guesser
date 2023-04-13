@@ -41,27 +41,28 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public WeaponDataScriptableObject WeaponEnemyData => weaponEnemyData;
     public GameObject RoundInterfacePrefab => roundInterfacePrefab;
 
-    public int GetNumberOfRounds(int userLevelNumber)
+    public int GetNumberOfPhases(long userLevelNumber) => baseCardsPerRound;
+
+    public int GetNumberNewWeapons(long userLevelNumber)
+    {
+        if (userLevelNumber < 10)
+            return 1;
+
+        if (userLevelNumber < 20)
+            return 2;
+
+        if (userLevelNumber < 30)
+            return 3;
+
+        return 4;
+    }
+
+    public int GetTimeForCard(long userLevelNumber)
     {
         throw new System.NotImplementedException();
     }
 
-    public int GetNumberNewWeapons(int userLevelNumber)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public int GetCardsPerRound(int userLevelNumber)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public int GetTimeForCard(int userLevelNumber)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public short GetXpForLevel(int userLevelNumber)
+    public short GetXpForLevel(long userLevelNumber)
     {
         throw new System.NotImplementedException();
     }
@@ -84,10 +85,13 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     {
         throw new System.NotImplementedException();
     }
-    
+
     public string GetTextType(WeaponTyping typing) => weaponConfig.GetShortType(typing);
+
     public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
+
     public string GetTextClassification(WeaponClassification classification) => weaponConfig.GetClassification(classification);
+
     public Sprite GetEnemySprite(WeaponTyping typing)
     {
         throw new System.NotImplementedException();
@@ -100,6 +104,25 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     public bool MatchWeaponTypes(IWeapon enemy, IWeapon weapon)
     {
-        return weaponConfig.CompareWeapons(enemy, weapon);
+        return false;
+    }
+
+    public List<IWeapon> GetEnemiesForRound(IUser user)
+    {
+        System.Random random = new System.Random();
+        List<IInventoryElement> inventoryEnemies = user.inventory.enemiesList;
+        List<IWeapon> resultEnemies = new List<IWeapon>();
+        string enemiesString = "";
+        
+        for (int i = 0; i < GetNumberOfPhases(user.Level); i++)
+        {
+            var w = inventoryEnemies[random.Next(inventoryEnemies.Count)].weapon;
+            resultEnemies.Add(w);
+            enemiesString += $"{i+1}: {w}\n";
+        }
+        
+        Debug.Log($"[GameCfgSO]: GetEnemiesForRound:\n" + enemiesString);
+
+        return resultEnemies;
     }
 }

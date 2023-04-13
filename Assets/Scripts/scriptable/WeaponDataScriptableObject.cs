@@ -43,6 +43,11 @@ public class WeaponDataScriptableObject : ScriptableObject
         list.AddRange(helicopters);
         list.AddRange(aaw);
 
+        foreach (var weapon in list)
+        {
+            weapon.Side = WeaponSide.Enemy;
+        }
+
         return list;
     }
 }

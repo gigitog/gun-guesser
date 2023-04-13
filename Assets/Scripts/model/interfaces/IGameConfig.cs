@@ -11,14 +11,14 @@ public interface IGameConfig
     
     public IInventory GetInitialInventory();
 
+    public List<IWeapon> GetEnemiesForRound(IUser user);
+    
     public int GetHeartsRefillTime();
-    public int GetNumberOfRounds(int userLevelNumber);
+    public int GetNumberOfPhases(long userLevelNumber);
+    public int GetNumberNewWeapons(long userLevelNumber);
+    public int GetTimeForCard(long userLevelNumber);
     
-    public int GetNumberNewWeapons(int userLevelNumber);
-    public int GetCardsPerRound(int userLevelNumber);
-    public int GetTimeForCard(int userLevelNumber);
-    
-    public short GetXpForLevel(int userLevelNumber);
+    public short GetXpForLevel(long userLevelNumber);
 
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);

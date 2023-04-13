@@ -6,11 +6,10 @@ using UnityEngine.Serialization;
 public class WeaponModel : IWeapon
 {
     [SerializeField] private string name;
-    [SerializeField] private string modification;
+    [SerializeField] private string description;
     [SerializeField] private string year;
     [SerializeField] private string country;
-
-    [FormerlySerializedAs("weaponClass")]
+    
     [Tooltip("Earth, Air, Rocket, Hand Weapon")]
     [SerializeField] private WeaponClassification weaponClass;
 
@@ -18,18 +17,53 @@ public class WeaponModel : IWeapon
     [SerializeField] private WeaponTyping type;
 
     [Tooltip("0 - ally; 1 - enemy")]
-    [SerializeField] private int side;
+    [SerializeField] private WeaponSide side;
     // stage ≈ lvl
     [SerializeField] private int stage;
     [SerializeField] private Sprite image;
     public int Stage => stage;
-    public int Side => side;
-    public WeaponTyping Type => type;
-    public WeaponClassification WeaponClass => weaponClass;
-    public string Country => country;
-    public string Year => year;
-    public string Modification => modification;
-    public string Name => name;
+    public WeaponSide Side
+    {
+        get => side;
+        set => side = value;
+    }
+
+    public WeaponTyping Type
+    {
+        get => type;
+        set => type = value;
+    }
+
+    public WeaponClassification WeaponClass
+    {
+        get => weaponClass;
+        set => weaponClass = value;
+    }
+
+    public string Country
+    {
+        get => country;
+        set => country = value;
+    }
+
+    public string Year
+    {
+        get => year;
+        set => year = value;
+    }
+
+    public string Description
+    {
+        get => description;
+        set => description = value;
+    }
+
+    public string Name
+    {
+        get => name;
+        set => name = value;
+    }
+
     public Sprite Image => image;
 }
 
@@ -54,4 +88,10 @@ public enum WeaponTyping
     Bomber = 8,
     AH = 9,
     AAW = 10
+}
+
+public enum WeaponSide
+{
+    Ally = 0,
+    Enemy = 1
 }

@@ -1,10 +1,13 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InventoryModel : IInventory
 {
     public List<IInventoryElement> inventoryList { get; set; }
+    public List<IInventoryElement> alliesList => inventoryList.Where(element => element.weapon.Side == WeaponSide.Ally).ToList();
+    public List<IInventoryElement> enemiesList => inventoryList.Where(element => element.weapon.Side == WeaponSide.Enemy).ToList();
 
     public void AddWeaponToInventory(IWeapon newWeapon)
     {
@@ -22,5 +25,18 @@ public class InventoryModel : IInventory
         };
         
         inventoryList.Add(inventoryElement);
+    }
+
+    public string GetInventoryString()
+    {
+        string result = "";
+        int counter = 0;
+        foreach (var element in inventoryList)
+        {
+            counter++;
+            result += $"{counter} : {element.weapon.Name}\n";
+        }
+
+        return result;
     }
 }

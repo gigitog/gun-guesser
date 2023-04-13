@@ -9,6 +9,6 @@ public interface IRound
     public short RoundNumber { get; set; }
 
 
-    public void SetWeapons(List<IWeapon> list);
+    public void SetPhases(List<IWeapon> list);
     
 }

@@ -7,3 +7,5 @@ using strange.extensions.signal.impl;
 public class MenuCardClickedSignal : Signal {}
 
 public class MenuCardChangedSignal : Signal<IWeapon> {}
+
+public class MenuStartRoundSignal : Signal {}

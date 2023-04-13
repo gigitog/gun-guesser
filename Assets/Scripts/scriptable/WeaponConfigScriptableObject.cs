@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/WeaponConfig", order = 1)]
 public class WeaponConfigScriptableObject : ScriptableObject
@@ -13,35 +14,6 @@ public class WeaponConfigScriptableObject : ScriptableObject
     [Header("Errors")] 
     [SerializeField] private string errorText;
 
-    public bool CompareWeapons(IWeapon enemy, IWeapon weapon)
-    {
-        List<WeaponTyping> weaponsAgainstEnemy = null;
-        foreach (var model in weapons)
-        {
-            if (enemy.Type == model.typing)
-            {
-                // weaponsAgainstEnemy = model.counterWeapons[];
-            }
-            else
-            {
-                Debug.LogError("Could not find Type of this enemy in WeaponConfig!");
-                return false;
-            }
-        }
-
-        if (weaponsAgainstEnemy == null) return false;
-        
-        foreach (var weaponTyping in weaponsAgainstEnemy)
-        {
-            if (weapon.Type == weaponTyping)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-    
     public string GetShortType(WeaponTyping searchedTyping)
     {
         foreach (var model in weapons)
@@ -111,11 +83,28 @@ public class WeaponConfigModel
     public int sph;
     public int towed;
     public int fighter;
-    public int bombers;
+    [FormerlySerializedAs("bombers")] public int bomber;
     public int ah;
     public int aaw;
 
-    
+    public int GetValue(WeaponTyping typing)
+    {
+        return typing switch
+        {
+            WeaponTyping.MBT => mbt,
+            WeaponTyping.MLRS => mlrs,
+            WeaponTyping.APC => apc,
+            WeaponTyping.IFV => ifv,
+            WeaponTyping.UAV => uav,
+            WeaponTyping.SPH => sph,
+            WeaponTyping.Towed => towed,
+            WeaponTyping.Fighter => fighter,
+            WeaponTyping.Bomber => bomber,
+            WeaponTyping.AH => ah,
+            WeaponTyping.AAW => aaw,
+            _ => throw new ArgumentOutOfRangeException(nameof(typing), typing, null)
+        };
+    }
 }
 
 [Serializable]

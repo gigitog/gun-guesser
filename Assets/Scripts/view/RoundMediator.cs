@@ -15,7 +15,7 @@ public class RoundMediator : Mediator
     [Inject]
     public RoundAnsweredSignal answeredSignal { get; set; }
     [Inject]
-    public RoundCardLoadedSignal cardLoadedSignal { get; set; }
+    public RoundPhaseLoadedSignal phaseLoadedSignal { get; set; }
     [Inject]
     public RoundWonSignal wonSignal { get; set; }
     [Inject]
@@ -33,6 +33,7 @@ public class RoundMediator : Mediator
 
     private void SetPhase(IWeapon enemy, IWeapon firstWeapon, IWeapon secondWeapon)
     {
+        Debug.LogWarning("[RoundMediator] Setting phase data");
         SetEnemy(enemy);
         SetFirst(firstWeapon);
         SetSecond(secondWeapon);
@@ -101,7 +102,7 @@ public class RoundMediator : Mediator
     {
         if (isSet)
         {
-            cardLoadedSignal.AddListener(SetPhase);
+            phaseLoadedSignal.AddListener(SetPhase);
             wonSignal.AddListener(ShowWinningScreen);
             lostSignal.AddListener(ShowLosingScreen);
             correctAnsweredSignal.AddListener(ShowAnimationCorrect);
@@ -112,7 +113,7 @@ public class RoundMediator : Mediator
         }
         else
         {
-            cardLoadedSignal.RemoveListener(SetPhase);
+            phaseLoadedSignal.RemoveListener(SetPhase);
             wonSignal.RemoveListener(ShowWinningScreen);
             lostSignal.RemoveListener(ShowLosingScreen);
             correctAnsweredSignal.RemoveListener(ShowAnimationCorrect);

@@ -2,10 +2,10 @@ using strange.extensions.signal.impl;using UnityEngine.UIElements;
 
 
 // Start
-public class RoundLoadedSignal : Signal<IRound> {} 
+public class RoundLoadedSignal : Signal {} 
 
 // Round Phase
-public class RoundCardLoadedSignal : Signal<IWeapon, IWeapon, IWeapon> {}
+public class RoundPhaseLoadedSignal : Signal<IWeapon, IWeapon, IWeapon> {}
 public class RoundAnsweredSignal : Signal<int> {}
 public class RoundCorrectAnsweredSignal : Signal<IWeapon> {}
 

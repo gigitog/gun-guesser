@@ -8,6 +8,9 @@ public class MenuMediator : Mediator
 {
     [Inject]
     public MenuView view{ get; set;}
+
+    [Inject]
+    public MenuStartRoundSignal startRoundSignal { get; set; }
     
     #region Dispatched Signals
     
@@ -28,6 +31,7 @@ public class MenuMediator : Mediator
     private void OnStartButtonClicked()
     {
         Debug.Log("Menu mediator: Start Clicked");
+        startRoundSignal.Dispatch();
     }
 
     private void OnInventoryButtonClicked()

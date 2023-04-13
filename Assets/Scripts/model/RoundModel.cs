@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoundModel : IRound
@@ -10,8 +11,12 @@ public class RoundModel : IRound
     public IWeapon Card { get; set; }
 
     public short RoundNumber { get; set; }
-    public void SetWeapons(List<IWeapon> list)
+    public void SetPhases(List<IWeapon> list)
     {
-        Debug.Log("RoundModel: Set Weapons (Phases) for Round");
+        var enemiesString = list.Aggregate("", (current, weapon) => current + weapon.Name + "\n");
+        
+        Debug.Log("[RoundModel]: Set Enemies (Phases) for Round: " + enemiesString);
+
+        Weapons = new Queue<IWeapon>(list);
     }
 }
