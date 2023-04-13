@@ -1,0 +1,62 @@
+[
+  {
+    "name": "D-30",
+    "year": 1960,
+    "country": "USSR",
+    "description": "122 mm towed howitzer"
+  },
+  {
+    "name": "2A65 Msta-B",
+    "year": 1987,
+    "country": "Russia",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "D-20",
+    "year": 1955,
+    "country": "USSR",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "2A36 Giatsint-B",
+    "year": 1975,
+    "country": "USSR",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "M-46",
+    "year": 1955,
+    "country": "USSR",
+    "description": "130 mm towed howitzer"
+  },
+  {
+    "name": "2A18 (D-20)",
+    "year": 1955,
+    "country": "USSR",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "2A19 (Msta-S)",
+    "year": 1989,
+    "country": "Russia",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "D-1",
+    "year": 1956,
+    "country": "USSR",
+    "description": "152 mm towed howitzer"
+  },
+  {
+    "name": "D-74",
+    "year": 1955,
+    "country": "USSR",
+    "description": "122 mm towed howitzer"
+  },
+  {
+    "name": "M-30",
+    "year": 1941,
+    "country": "USSR",
+    "description": "122 mm towed howitzer"
+  }
+]

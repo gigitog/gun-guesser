@@ -1,0 +1,74 @@
+[
+  {
+    "name": "S-400 Triumf",
+    "year": 2007,
+    "country": "Russia",
+    "description": "Long-range air defense system"
+  },
+  {
+    "name": "S-300V4 Antey-2500",
+    "year": 2014,
+    "country": "Russia",
+    "description": "Long-range air defense system with anti-ballistic missile capability"
+  },
+  {
+    "name": "S-300PMU2 Favorit",
+    "year": 1997,
+    "country": "Russia",
+    "description": "Long-range air defense system"
+  },
+  {
+    "name": "Buk-M2",
+    "year": 1988,
+    "country": "USSR",
+    "description": "Medium-range surface-to-air missile system"
+  },
+  {
+    "name": "Pantsir-S1",
+    "year": 2007,
+    "country": "Russia",
+    "description": "Short-to-medium range air defense system"
+  },
+  {
+    "name": "Tor-M2",
+    "year": 2010,
+    "country": "Russia",
+    "description": "Short-range air defense system"
+  },
+  {
+    "name": "Tunguska-M1",
+    "year": 1986,
+    "country": "USSR",
+    "description": "Self-propelled anti-aircraft gun and missile system"
+  },
+  {
+    "name": "ZSU-23-4 Shilka",
+    "year": 1962,
+    "country": "USSR",
+    "description": "Self-propelled anti-aircraft gun system"
+  },
+  {
+    "name": "SA-19 Grison",
+    "year": 1982,
+    "country": "USSR",
+    "description": "Short-range air defense missile system"
+  },
+  {
+    "name": "SA-22 Greyhound",
+    "year": 2007,
+    "country": "Russia",
+    "description": "Self-propelled medium-range air defense missile system"
+  },
+  {
+    "name": "SA-13 Gopher",
+    "year": 1974,
+    "country": "USSR",
+    "description": "Man-portable air defense system"
+  },
+  {
+    "name": "9K22 Tunguska",
+    "year": 1982,
+    "country": "USSR",
+    "description": "Self-propelled anti-aircraft gun and missile system"
+  }
+]

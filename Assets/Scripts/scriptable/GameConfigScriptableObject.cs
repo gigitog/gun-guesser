@@ -1,8 +1,6 @@
-
 using System.Collections.Generic;
 using strange.extensions.injector.api;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameConfig", order = 1)]
 public class GameConfigScriptableObject : ScriptableObject, IGameConfig
@@ -71,6 +69,24 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     {
         var init = injectionBinder.GetInstance<IInventory>() as IInventory;
         init.inventoryList = new List<IInventoryElement>();
+        AddAllyWeapons(init);
+        AddEnemyWeapons(init);
+        return init;
+    }
+
+    private void AddEnemyWeapons(IInventory init)
+    {
+        init.AddWeaponToInventory(weaponEnemyData.aaw[0]);
+        init.AddWeaponToInventory(weaponEnemyData.ifv[0]);
+        init.AddWeaponToInventory(weaponEnemyData.apc[0]);
+        init.AddWeaponToInventory(weaponEnemyData.mbt[0]);
+        init.AddWeaponToInventory(weaponEnemyData.mlrs[0]);
+        init.AddWeaponToInventory(weaponEnemyData.towed[0]);
+        init.AddWeaponToInventory(weaponEnemyData.sph[0]);
+    }
+
+    private void AddAllyWeapons(IInventory init)
+    {
         init.AddWeaponToInventory(weaponAlliesData.aaw[0]);
         init.AddWeaponToInventory(weaponAlliesData.ifv[0]);
         init.AddWeaponToInventory(weaponAlliesData.apc[0]);
@@ -78,7 +94,6 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
         init.AddWeaponToInventory(weaponAlliesData.mlrs[0]);
         init.AddWeaponToInventory(weaponAlliesData.towed[0]);
         init.AddWeaponToInventory(weaponAlliesData.sph[0]);
-        return init;
     }
 
     public int GetHeartsRefillTime()
@@ -116,9 +131,9 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
         
         for (int i = 0; i < GetNumberOfPhases(user.Level); i++)
         {
-            var w = inventoryEnemies[random.Next(inventoryEnemies.Count)].weapon;
+            var w = inventoryEnemies[random.Next(0, inventoryEnemies.Count)].weapon;
             resultEnemies.Add(w);
-            enemiesString += $"{i+1}: {w}\n";
+            enemiesString += $"{i+1}: {w.Name}\n";
         }
         
         Debug.Log($"[GameCfgSO]: GetEnemiesForRound:\n" + enemiesString);

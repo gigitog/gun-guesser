@@ -1,7 +1,5 @@
-namespace DefaultNamespace
+
+public class RoundNextCommand
 {
-    public class RoundNextCommand
-    {
-        
-    }
+    
 }

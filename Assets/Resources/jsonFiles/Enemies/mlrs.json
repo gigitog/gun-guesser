@@ -1,0 +1,44 @@
+[
+  {
+    "name": "BM-21 Grad",
+    "year": 1963,
+    "country": "USSR",
+    "description": "Soviet-made rocket artillery system that can launch 40 122mm rockets at once."
+  },
+  {
+    "name": "BM-27 Uragan",
+    "year": 1975,
+    "country": "USSR",
+    "description": "Soviet-made multiple launch rocket system that can fire up to 16 220mm rockets at a range of up to 35km."
+  },
+  {
+    "name": "BM-30 Smerch",
+    "year": 1987,
+    "country": "USSR",
+    "description": "Soviet-made multiple launch rocket system that can fire up to 12 300mm rockets at a range of up to 90km."
+  },
+  {
+    "name": "TOS-1 Buratino",
+    "year": 1988,
+    "country": "USSR",
+    "description": "Russian-made flamethrower multiple rocket launcher that can launch thermobaric rockets at a range of up to 6km."
+  },
+  {
+    "name": "BM-21V Grad-V",
+    "year": 2014,
+    "country": "Russia",
+    "description": "Upgraded version of the BM-21 Grad that has improved accuracy and firing range."
+  },
+  {
+    "name": "Tornado-G",
+    "year": 2011,
+    "country": "Russia",
+    "description": "Russian-made multiple launch rocket system that can fire up to 12 122mm or 220mm rockets at a range of up to 120km."
+  },
+  {
+    "name": "Iskander-M",
+    "year": 2006,
+    "country": "Russia",
+    "description": "Russian-made mobile ballistic missile system that can launch a variety of missiles, including those with nuclear warheads."
+  }
+]

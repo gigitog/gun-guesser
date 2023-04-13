@@ -1,0 +1,50 @@
+[
+  {
+    "name": "BTR-60",
+    "year": 1960,
+    "country": "USSR",
+    "description": "Soviet-made wheeled armored personnel carrier that can carry up to 14 soldiers."
+  },
+  {
+    "name": "BTR-70",
+    "year": 1972,
+    "country": "USSR",
+    "description": "Soviet-made wheeled armored personnel carrier that can carry up to 9 soldiers and has improved armor protection compared to the BTR-60."
+  },
+  {
+    "name": "BTR-80",
+    "year": 1986,
+    "country": "USSR",
+    "description": "Soviet-made wheeled armored personnel carrier that can carry up to 10 soldiers and has better cross-country mobility than the BTR-70."
+  },
+  {
+    "name": "BMD-1",
+    "year": 1969,
+    "country": "USSR",
+    "description": "Soviet-made airborne infantry fighting vehicle that can transport up to 5 soldiers and is equipped with a 73mm gun and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMD-2",
+    "year": 1985,
+    "country": "USSR",
+    "description": "Soviet-made airborne infantry fighting vehicle that can transport up to 5 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMD-3",
+    "year": 1990,
+    "country": "Russia",
+    "description": "Russian-made airborne infantry fighting vehicle that can transport up to 5 soldiers and is equipped with a 30mm cannon, a 100mm gun and a 7.62mm machine gun."
+  },
+  {
+    "name": "Kurganets-25",
+    "year": 2015,
+    "country": "Russia",
+    "description": "Russian-made tracked armored personnel carrier that can carry up to 14 soldiers and is equipped with a remote-controlled 12.7mm machine gun."
+  },
+  {
+    "name": "Boomerang",
+    "year": 2014,
+    "country": "Russia",
+    "description": "Russian-made wheeled armored personnel carrier that can carry up to 11 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun."
+  }
+]

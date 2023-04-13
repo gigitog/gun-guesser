@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Tupolev Tu-160",
+    "year": 1987,
+    "country": "USSR",
+    "description": "Supersonic strategic bomber aircraft"
+  },
+  {
+    "name": "Tupolev Tu-22M",
+    "year": 1969,
+    "country": "USSR",
+    "description": "Strategic and maritime strike bomber aircraft"
+  },
+  {
+    "name": "Sukhoi Su-34",
+    "year": 2006,
+    "country": "Russia",
+    "description": "Tactical bomber and strike fighter aircraft"
+  },
+  {
+    "name": "Tupolev Tu-95",
+    "year": 1952,
+    "country": "USSR",
+    "description": "Long-range turboprop bomber aircraft"
+  },
+  {
+    "name": "Ilyushin Il-28",
+    "year": 1948,
+    "country": "USSR",
+    "description": "Tactical bomber and reconnaissance aircraft"
+  },
+  {
+    "name": "Tupolev Tu-22",
+    "year": 1959,
+    "country": "USSR",
+    "description": "Supersonic long-range bomber aircraft"
+  }
+]

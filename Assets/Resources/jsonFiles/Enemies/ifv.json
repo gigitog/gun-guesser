@@ -1,0 +1,50 @@
+[
+  {
+    "name": "BMP-1",
+    "year": 1966,
+    "country": "USSR",
+    "description": "Soviet-made infantry fighting vehicle that can transport up to 8 soldiers and is equipped with a 73mm gun and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMP-2",
+    "year": 1980,
+    "country": "USSR",
+    "description": "Soviet-made infantry fighting vehicle that can transport up to 8 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMP-3",
+    "year": 1987,
+    "country": "Russia",
+    "description": "Russian-made infantry fighting vehicle that can transport up to 7 soldiers and is equipped with a 100mm gun, a 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "Kurganets-25",
+    "year": 2015,
+    "country": "Russia",
+    "description": "Russian-made tracked infantry fighting vehicle that can transport up to 9 soldiers and is equipped with a remote-controlled 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "T-15",
+    "year": 2018,
+    "country": "Russia",
+    "description": "Russian-made tracked infantry fighting vehicle that can transport up to 9 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMD-4",
+    "year": 2004,
+    "country": "Russia",
+    "description": "Russian-made airborne infantry fighting vehicle that can transport up to 5 soldiers and is equipped with a 100mm gun, a 30mm cannon and a 7.62mm machine gun."
+  },
+  {
+    "name": "BMPT Terminator",
+    "year": 2006,
+    "country": "Russia",
+    "description": "Russian-made armored fighting vehicle that is designed to support infantry in urban and other complex terrains. It is equipped with a 30mm cannon, two 30mm automatic grenade launchers and four ATGM launchers."
+  },
+  {
+    "name": "BTR-T",
+    "year": 1998,
+    "country": "Russia",
+    "description": "Russian-made heavily armored infantry fighting vehicle based on the BTR-80 chassis. It can transport up to 9 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun."
+  }
+]

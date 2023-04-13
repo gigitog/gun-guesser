@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Mil Mi-24",
+    "year": 1972,
+    "country": "USSR",
+    "description": "Soviet/Russian attack helicopter and gunship."
+  },
+  {
+    "name": "Kamov Ka-50",
+    "year": 1982,
+    "country": "Russia",
+    "description": "Single-seat attack helicopter designed for the Soviet Army."
+  },
+  {
+    "name": "Kamov Ka-52",
+    "year": 1997,
+    "country": "Russia",
+    "description": "Twin-seat variant of the Ka-50 designed for all-weather operations."
+  },
+  {
+    "name": "Mil Mi-28",
+    "year": 1982,
+    "country": "Russia",
+    "description": "Russian all-weather, day-night, military tandem, two-seat anti-armor attack helicopter."
+  },
+  {
+    "name": "Kamov Ka-27",
+    "year": 1973,
+    "country": "USSR",
+    "description": "Soviet naval helicopter used for anti-submarine warfare and search and rescue missions."
+  },
+  {
+    "name": "Mil Mi-8",
+    "year": 1961,
+    "country": "USSR",
+    "description": "Soviet multipurpose helicopter widely used for transport, medevac, and gunship operations."
+  },
+  {
+    "name": "Mil Mi-35",
+    "year": 1978,
+    "country": "USSR",
+    "description": "Soviet/Russian version of the Mi-24 attack helicopter with upgraded avionics and weapons systems."
+  },
+  {
+    "name": "Kamov Ka-226",
+    "year": 2002,
+    "country": "Russia",
+    "description": "Light multi-purpose helicopter designed for civilian and military applications."
+  },
+  {
+    "name": "Mil Mi-26",
+    "year": 1977,
+    "country": "USSR",
+    "description": "Soviet heavy transport helicopter designed for carrying large and heavy cargos, equipment and troops."
+  },
+  {
+    "name": "Kamov Ka-29",
+    "year": 1976,
+    "country": "USSR",
+    "description": "Soviet naval helicopter used for transportation and fire support of naval infantry."
+  }
+]

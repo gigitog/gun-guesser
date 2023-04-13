@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Sukhoi Su-57",
+    "year": 2010,
+    "country": "Russia",
+    "description": "Stealth multirole fighter aircraft"
+  },
+  {
+    "name": "Mikoyan MiG-29",
+    "year": 1982,
+    "country": "USSR",
+    "description": "Twin-engine air superiority fighter aircraft"
+  },
+  {
+    "name": "Sukhoi Su-35",
+    "year": 2008,
+    "country": "Russia",
+    "description": "Multirole air superiority fighter aircraft"
+  },
+  {
+    "name": "Mikoyan MiG-31",
+    "year": 1975,
+    "country": "USSR",
+    "description": "Intercept and air superiority fighter aircraft"
+  },
+  {
+    "name": "Sukhoi Su-30",
+    "year": 1996,
+    "country": "Russia",
+    "description": "Twin-engine multirole fighter aircraft"
+  },
+  {
+    "name": "Mikoyan MiG-35",
+    "year": 2007,
+    "country": "Russia",
+    "description": "Multirole fighter aircraft"
+  },
+  {
+    "name": "Sukhoi Su-27",
+    "year": 1985,
+    "country": "USSR",
+    "description": "Twin-engine air superiority fighter aircraft"
+  }
+]

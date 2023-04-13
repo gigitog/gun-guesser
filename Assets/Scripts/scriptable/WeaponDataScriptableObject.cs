@@ -18,16 +18,16 @@ public class WeaponDataScriptableObject : ScriptableObject
     [Space(10)]
     public List<WeaponModel> sph;
     [Space(10)]
+    public List<WeaponModel> aaw;
+    [Space(10)]
     public List<WeaponModel> towed;
     [Space(10)]
     public List<WeaponModel> fighters;
     [Space(10)]
     public List<WeaponModel> bombers;
-    [Space(10)]
-    public List<WeaponModel> helicopters;
-    [Space(10)]
-    public List<WeaponModel> aaw;
-    
+    [FormerlySerializedAs("helicopters")] [Space(10)]
+    public List<WeaponModel> ah;
+
     public List<IWeapon> GetWeapons()
     {
         List<IWeapon> list = new List<IWeapon>();
@@ -40,7 +40,7 @@ public class WeaponDataScriptableObject : ScriptableObject
         list.AddRange(towed);
         list.AddRange(fighters);
         list.AddRange(bombers);
-        list.AddRange(helicopters);
+        list.AddRange(ah);
         list.AddRange(aaw);
 
         foreach (var weapon in list)

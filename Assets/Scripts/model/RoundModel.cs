@@ -13,9 +13,9 @@ public class RoundModel : IRound
     public short RoundNumber { get; set; }
     public void SetPhases(List<IWeapon> list)
     {
-        var enemiesString = list.Aggregate("", (current, weapon) => current + weapon.Name + "\n");
+        string enemiesString = list.Aggregate("", (current, weapon) => current + " - " + weapon.Name + "\n");
         
-        Debug.Log("[RoundModel]: Set Enemies (Phases) for Round: " + enemiesString);
+        Debug.Log("[RoundModel]: Set Enemies (Phases) for Round: \n" + enemiesString);
 
         Weapons = new Queue<IWeapon>(list);
     }

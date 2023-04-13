@@ -1,5 +1,3 @@
-
-using System.Collections.Generic;
 using strange.examples.signals;
 using strange.extensions.command.api;
 using strange.extensions.command.impl;

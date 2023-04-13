@@ -1,0 +1,44 @@
+[
+  {
+    "name": "2S19 Msta-S",
+    "year": 1989,
+    "country": "USSR",
+    "description": "155 mm self-propelled howitzer"
+  },
+  {
+    "name": "2S3 Akatsiya",
+    "year": 1967,
+    "country": "USSR",
+    "description": "152 mm self-propelled howitzer"
+  },
+  {
+    "name": "2S1 Gvozdika",
+    "year": 1972,
+    "country": "USSR",
+    "description": "122 mm self-propelled howitzer"
+  },
+  {
+    "name": "2S35 Koalitsiya-SV",
+    "year": 2015,
+    "country": "Russia",
+    "description": "152 mm self-propelled howitzer"
+  },
+  {
+    "name": "2S7 Pion",
+    "year": 1975,
+    "country": "USSR",
+    "description": "203 mm self-propelled gun"
+  },
+  {
+    "name": "2S31 Vena",
+    "year": 1990,
+    "country": "Russia",
+    "description": "120 mm self-propelled mortar"
+  },
+  {
+    "name": "2S25 Sprut-SD",
+    "year": 2005,
+    "country": "Russia",
+    "description": "125 mm self-propelled anti-tank gun"
+  }
+]

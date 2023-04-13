@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Orlan-10",
+    "year": 2010,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for surveillance and reconnaissance missions."
+  },
+  {
+    "name": "Forpost",
+    "year": 2014,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for surveillance, reconnaissance, and target acquisition missions."
+  },
+  {
+    "name": "Zastava",
+    "year": 2016,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for surveillance and reconnaissance missions."
+  },
+  {
+    "name": "Eleron-3",
+    "year": 2014,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for reconnaissance, surveillance, and target acquisition missions."
+  },
+  {
+    "name": "Orion",
+    "year": 2019,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for reconnaissance, surveillance, and target acquisition missions."
+  },
+  {
+    "name": "ZALA 421-16E2",
+    "year": 2016,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for reconnaissance and surveillance missions."
+  },
+  {
+    "name": "Korsar",
+    "year": 2018,
+    "country": "Russia",
+    "description": "Unmanned aerial vehicle used for reconnaissance, surveillance, and target acquisition missions."
+  }
+]

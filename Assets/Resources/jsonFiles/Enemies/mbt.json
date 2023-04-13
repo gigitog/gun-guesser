@@ -1,0 +1,50 @@
+[
+  {
+    "name": "T-72B3",
+    "year": 2013,
+    "country": "Russia",
+    "description": "Main battle tank that has improved armor protection and upgraded digital equipment."
+  },
+  {
+    "name": "T-90",
+    "year": 1992,
+    "country": "Russia",
+    "description": "Main battle tank that has a low profile, improved fire control system, and advanced armor protection."
+  },
+  {
+    "name": "T-80",
+    "year": 1976,
+    "country": "USSR",
+    "description": "Main battle tank that has a gas turbine engine and composite armor protection."
+  },
+  {
+    "name": "Object 195",
+    "year": 2010,
+    "country": "Russia",
+    "description": "Main battle tank that has an unmanned turret and a 125mm smoothbore gun."
+  },
+  {
+    "name": "T-14 Armata",
+    "year": 2015,
+    "country": "Russia",
+    "description": "Main battle tank that has a remote controlled turret, advanced fire control system, and improved armor protection."
+  },
+  {
+    "name": "T-64",
+    "year": 1966,
+    "country": "USSR",
+    "description": "Main battle tank that has a 125mm smoothbore gun and composite armor protection."
+  },
+  {
+    "name": "T-54/55",
+    "year": 1947,
+    "country": "USSR",
+    "description": "Main battle tank that has a 100mm rifled gun and sloped armor protection."
+  },
+  {
+    "name": "T-62",
+    "year": 1961,
+    "country": "USSR",
+    "description": "Main battle tank that has a 115mm smoothbore gun and composite armor protection."
+  }
+]
