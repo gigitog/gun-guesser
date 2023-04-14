@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using strange.extensions.injector.api;
 using UnityEngine;
@@ -9,8 +10,8 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public IInjectionBinder injectionBinder{ get; set; }
     
     [Header("Weapon Data")]
-    [SerializeField] private WeaponDataScriptableObject weaponAlliesData;
-    [SerializeField] private WeaponDataScriptableObject weaponEnemyData;
+    [SerializeField] private DataScriptableObject weaponAlliesData;
+    [SerializeField] private DataScriptableObject weaponEnemyData;
     
     [Header("Weapon Config")]
     [SerializeField] private WeaponConfigScriptableObject weaponConfig;
@@ -35,8 +36,8 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [Header("User Interface Prefavs")]
     [SerializeField] private GameObject roundInterfacePrefab;
 
-    public WeaponDataScriptableObject WeaponAlliesData => weaponAlliesData;
-    public WeaponDataScriptableObject WeaponEnemyData => weaponEnemyData;
+    public List<IWeapon> WeaponAlliesData => weaponAlliesData.GetWeapons();
+    public List<IWeapon> WeaponEnemyData => weaponEnemyData.GetWeapons();
     public GameObject RoundInterfacePrefab => roundInterfacePrefab;
 
     public int GetNumberOfPhases(long userLevelNumber) => baseCardsPerRound;
@@ -69,31 +70,28 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     {
         var init = injectionBinder.GetInstance<IInventory>() as IInventory;
         init.inventoryList = new List<IInventoryElement>();
-        AddAllyWeapons(init);
-        AddEnemyWeapons(init);
+        AddInitWeapons(init, WeaponAlliesData);
+        AddInitWeapons(init, WeaponEnemyData);
         return init;
     }
 
-    private void AddEnemyWeapons(IInventory init)
+    private static void AddInitWeapons(IInventory init, List<IWeapon> listFromToAdd)
     {
-        init.AddWeaponToInventory(weaponEnemyData.aaw[0]);
-        init.AddWeaponToInventory(weaponEnemyData.ifv[0]);
-        init.AddWeaponToInventory(weaponEnemyData.apc[0]);
-        init.AddWeaponToInventory(weaponEnemyData.mbt[0]);
-        init.AddWeaponToInventory(weaponEnemyData.mlrs[0]);
-        init.AddWeaponToInventory(weaponEnemyData.towed[0]);
-        init.AddWeaponToInventory(weaponEnemyData.sph[0]);
-    }
-
-    private void AddAllyWeapons(IInventory init)
-    {
-        init.AddWeaponToInventory(weaponAlliesData.aaw[0]);
-        init.AddWeaponToInventory(weaponAlliesData.ifv[0]);
-        init.AddWeaponToInventory(weaponAlliesData.apc[0]);
-        init.AddWeaponToInventory(weaponAlliesData.mbt[0]);
-        init.AddWeaponToInventory(weaponAlliesData.mlrs[0]);
-        init.AddWeaponToInventory(weaponAlliesData.towed[0]);
-        init.AddWeaponToInventory(weaponAlliesData.sph[0]);
+        foreach (WeaponTyping typ in Enum.GetValues(typeof(WeaponTyping)))
+        {
+            init.AddWeaponToInventory(listFromToAdd.Find(w => w.Type == typ));
+            // foreach (var weapon in listFromToAdd)
+            // {
+            //     if (weapon.Type == typ)
+            //     {
+            //         init.AddWeaponToInventory(weapon);
+            //         Debug.Log($"[GameCfg] AddEnemy:\n" +
+            //                   $"  Linq: {listFromToAdd.Find(w => w.Type == typ).Name}\n" +
+            //                   $"  Fore:{weapon.Name}");
+            //         break;
+            //     }
+            // }
+        }
     }
 
     public int GetHeartsRefillTime()
@@ -105,7 +103,7 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
 
-    public string GetTextClassification(WeaponClassification classification) => weaponConfig.GetClassification(classification);
+    public string GetTextClassification(WeaponMobility mobility) => weaponConfig.GetMobilityType(mobility);
 
     public Sprite GetEnemySprite(WeaponTyping typing)
     {

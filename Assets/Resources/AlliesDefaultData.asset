@@ -1,0 +1,556 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4d18523dde4fdb90ec2ccbff783d4d, type: 3}
+  m_Name: AlliesDefaultData
+  m_EditorClassIdentifier: 
+  side: 0
+  dataWeapons:
+  - typeName: MBT
+    typing: 0
+    weapons:
+    - name: T-64B
+      description: Main battle tank produced by the Soviet Union.
+      year: 1966
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV
+      description: Improved version of the T-64B with additional armor and upgrades
+        to the fire control system.
+      year: 1985
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV 2017
+      description: Modernized version of the T-64BV with improved armor and new fire
+        control system.
+      year: 2017
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV 2022
+      description: Latest upgrade of the T-64BV with improved engines and digital
+        systems.
+      year: 2022
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BM "Bulat"
+      description: Modernized version of the T-64B with upgraded armor, new fire
+        control system and improved engines.
+      year: 2000
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BM2
+      description: Further upgrade of the T-64BM with additional armor and new electronic
+        systems.
+      year: 2014
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-72AMT
+      description: Improved version of the T-72 with additional armor and new fire
+        control system.
+      year: 1987
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-80BV
+      description: Main battle tank with advanced fire control system and composite
+        armor.
+      year: 1987
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-84
+      description: Main battle tank with composite armor and advanced fire control
+        system.
+      year: 1994
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-84U
+      description: Improved version of the T-84 with new fire control system and
+        engine.
+      year: 1997
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: "T-84U \u201COplot-M\u201D"
+      description: Further upgrade of the T-84U with additional armor and new fire
+        control system.
+      year: 2001
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM Oplot
+      description: New generation main battle tank with advanced armor and electronic
+        systems.
+      year: 2009
+      country: Ukraine
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: MLRS
+    typing: 1
+    weapons:
+    - name: BM-21 Grad
+      description: Soviet truck-mounted 122 mm multiple rocket launcher
+      year: 1963
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Bastion-1(2)
+      description: Ukrainian truck-mounted 122 mm multiple rocket launcher
+      year: 1996
+      country: Ukraine
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-27 Uragan
+      description: Soviet self-propelled multiple rocket launcher with a range of
+        35 km
+      year: 1975
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Bureviy
+      description: Ukrainian 300 mm guided rocket system with a range of 130 km
+      year: 2019
+      country: Ukraine
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-30 Smerch
+      description: Soviet heavy multiple rocket launcher system with a range of up
+        to 90 km
+      year: 1987
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Vilkha
+      description: Ukrainian guided rocket system with a range of up to 300 km
+      year: 2018
+      country: Ukraine
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: APC
+    typing: 2
+    weapons:
+    - name: BTR-60
+      description: Armored personnel carrier developed in the Soviet Union.
+      year: 1960
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-70
+      description: Improved version of BTR-60 with better armor and armament.
+      year: 1972
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-80
+      description: Further development of BTR-70 with improved mobility and protection.
+      year: 1984
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Varta
+      description: Armored personnel carrier produced in Ukraine with advanced protection
+        and mobility features.
+      year: 1999
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Novator
+      description: New generation armored personnel carrier with enhanced protection,
+        firepower and mobility.
+      year: 2005
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Spartan"
+      description: Armored personnel carrier built on Kraz chassis with advanced
+        armor and protection systems.
+      year: 2008
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Shreck"
+      description: New generation armored personnel carrier with high level of protection
+        and firepower.
+      year: 2014
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Phiona"
+      description: Latest generation armored personnel carrier with advanced armor,
+        protection and mobility features.
+      year: 2018
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kozak-2
+      description: Armored personnel carrier with modular design, capable of quick
+        reconfiguration for different mission requirements.
+      year: 2015
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kozak-5
+      description: New generation armored personnel carrier with enhanced protection,
+        firepower and mobility features.
+      year: 2017
+      country: Ukraine
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: IFV
+    typing: 3
+    weapons:
+    - name: BMP-1
+      description: Soviet-designed tracked infantry fighting vehicle with 73mm main
+        gun.
+      year: 1966
+      country: Soviet Union
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-2
+      description: Soviet-designed tracked infantry fighting vehicle with 30mm automatic
+        cannon and 9M113 Konkurs ATGM.
+      year: 1980
+      country: Soviet Union
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-3
+      description: Russian-designed tracked infantry fighting vehicle with 100mm
+        main gun, 30mm automatic cannon, and 9M120 Ataka ATGM.
+      year: 1987
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-4
+      description: Russian-designed airborne infantry fighting vehicle with 100mm
+        main gun, 30mm automatic cannon, and 9M120 Ataka ATGM.
+      year: 2004
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-3
+      description: Ukrainian-designed wheeled infantry fighting vehicle with 30mm
+        automatic cannon and 9K113 Konkurs ATGM.
+      year: 2000
+      country: Ukraine
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-4
+      description: Ukrainian-designed wheeled infantry fighting vehicle with 30mm
+        automatic cannon and 9K135 Kornet ATGM.
+      year: 2008
+      country: Ukraine
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: SPH
+    typing: 4
+    weapons:
+    - name: 2S22 Bohdana
+      description: Self propelled howitzer capable of firing 155 mm shells up to
+        40 km
+      year: 2018
+      country: Ukraine
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S19 Msta-S
+      description: Self propelled howitzer capable of firing 152 mm shells up to
+        24 km
+      year: 1989
+      country: Russia
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S3 Akatsiya
+      description: Self propelled howitzer capable of firing 152 mm shells up to
+        18.5 km
+      year: 1969
+      country: Soviet Union
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S1 Gvozdika
+      description: Self propelled howitzer capable of firing 122 mm shells up to
+        15.3 km
+      year: 1972
+      country: Soviet Union
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Towed
+    typing: 5
+    weapons:
+    - name: 2A65 Msta-B
+      description: 
+      year: 0
+      country: Ukraine
+      weaponMobility: 0
+      type: 5
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AAW
+    typing: 6
+    weapons:
+    - name: S-300
+      description: Long-range surface-to-air missile system capable of engaging multiple
+        targets
+      year: 1979
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: S-400
+      description: Long-range anti-aircraft missile system with improved capabilities
+        over S-300
+      year: 2007
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Patriot
+      description: Mobile air defense system designed to intercept tactical ballistic
+        missiles, cruise missiles, and advanced aircraft
+      year: 1981
+      country: United States
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Osa
+      description: Short-range air defense missile system used to protect ground
+        forces and strategic facilities
+      year: 1971
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Tunguska
+      description: Self-propelled anti-aircraft weapon system with guns and missiles
+        used to protect ground forces from air attacks
+      year: 1982
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Shilka
+      description: Self-propelled anti-aircraft gun system used to protect ground
+        forces from air attacks
+      year: 1965
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: SAMP-T
+      description: Medium-range air defense missile system designed to counter a
+        wide range of airborne threats
+      year: 2011
+      country: France/Italy
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: IRIS-T
+      description: Short-range air-to-air missile used for self-defense and attacking
+        enemy aircraft
+      year: 2005
+      country: Germany
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: S-2 Pantsir
+      description: Short to medium range surface-to-air missile and anti-aircraft
+        artillery system
+      year: 2007
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: UAV
+    typing: 7
+    weapons:
+    - name: Test UA UAV
+      description: 
+      year: 0
+      country: Ukraine
+      weaponMobility: 1
+      type: 7
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Fighter
+    typing: 8
+    weapons:
+    - name: F 0 16
+      description: 
+      year: 0
+      country: Ukraine
+      weaponMobility: 1
+      type: 8
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Bomber
+    typing: 9
+    weapons:
+    - name: Bomber ua 1
+      description: 
+      year: 0
+      country: Ukraine
+      weaponMobility: 1
+      type: 9
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AH
+    typing: 10
+    weapons:
+    - name: Attack!
+      description: 
+      year: 0
+      country: Ukraine
+      weaponMobility: 1
+      type: 10
+      side: 0
+      stage: 0
+      image: {fileID: 0}

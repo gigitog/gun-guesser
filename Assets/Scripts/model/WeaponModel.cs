@@ -11,13 +11,13 @@ public class WeaponModel : IWeapon
     [SerializeField] private string country;
     
     [Tooltip("Earth, Air, Rocket, Hand Weapon")]
-    [SerializeField] private WeaponClassification weaponClass;
+    [NotEditable] [SerializeField] private WeaponMobility weaponMobility;
 
     [Tooltip("MTB, Jet, AAW")]
-    [SerializeField] private WeaponTyping type;
+    [NotEditable] [SerializeField] private WeaponTyping type;
 
     [Tooltip("0 - ally; 1 - enemy")]
-    [SerializeField] private WeaponSide side;
+    [NotEditable] [SerializeField] private WeaponSide side;
     // stage ≈ lvl
     [SerializeField] private int stage;
     [SerializeField] private Sprite image;
@@ -34,10 +34,14 @@ public class WeaponModel : IWeapon
         set => type = value;
     }
 
-    public WeaponClassification WeaponClass
+    public WeaponMobility WeaponMobility
     {
-        get => weaponClass;
-        set => weaponClass = value;
+        get => weaponMobility;
+        set
+        {
+            weaponMobility = value;
+            SetMobility();
+        }
     }
 
     public string Country
@@ -65,9 +69,37 @@ public class WeaponModel : IWeapon
     }
 
     public Sprite Image => image;
+
+    public WeaponModel(WeaponSide side, WeaponTyping type)
+    {
+        this.side = side;
+        this.type = type;
+        SetMobility();
+    }
+
+    public WeaponModel() { }
+
+    private void SetMobility()
+    {
+        weaponMobility = type switch
+        {
+            WeaponTyping.MBT => WeaponMobility.Ground,
+            WeaponTyping.MLRS => WeaponMobility.Ground,
+            WeaponTyping.APC => WeaponMobility.Ground,
+            WeaponTyping.IFV => WeaponMobility.Ground,
+            WeaponTyping.SPH => WeaponMobility.Ground,
+            WeaponTyping.Towed => WeaponMobility.Ground,
+            WeaponTyping.AAW => WeaponMobility.Ground,
+            WeaponTyping.UAV => WeaponMobility.Air,
+            WeaponTyping.Fighter => WeaponMobility.Air,
+            WeaponTyping.Bomber => WeaponMobility.Air,
+            WeaponTyping.AH => WeaponMobility.Air,
+            _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
+        };
+    }
 }
 
-public enum WeaponClassification
+public enum WeaponMobility
 {
     Ground,
     Air,
@@ -81,13 +113,13 @@ public enum WeaponTyping
     MLRS = 1,
     APC = 2,
     IFV = 3,
-    UAV = 4,
-    SPH = 5,
-    Towed = 6,
-    Fighter = 7,
-    Bomber = 8,
-    AH = 9,
-    AAW = 10
+    SPH = 4,
+    Towed = 5,
+    AAW = 6,
+    UAV = 7,
+    Fighter = 8,
+    Bomber = 9,
+    AH = 10
 }
 
 public enum WeaponSide

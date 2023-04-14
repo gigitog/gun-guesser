@@ -1,0 +1,74 @@
+[
+  {
+    "name": "T-64B",
+    "year": "1966",
+    "country": "USSR",
+    "description": "Main battle tank produced by the Soviet Union."
+  },
+  {
+    "name": "T-64BV",
+    "year": "1985",
+    "country": "USSR",
+    "description": "Improved version of the T-64B with additional armor and upgrades to the fire control system."
+  },
+  {
+    "name": "T-64BV 2017",
+    "year": "2017",
+    "country": "Ukraine",
+    "description": "Modernized version of the T-64BV with improved armor and new fire control system."
+  },
+  {
+    "name": "T-64BV 2022",
+    "year": "2022",
+    "country": "Ukraine",
+    "description": "Latest upgrade of the T-64BV with improved engines and digital systems."
+  },
+  {
+    "name": "T-64BM \"Bulat\"",
+    "year": "2000",
+    "country": "Ukraine",
+    "description": "Modernized version of the T-64B with upgraded armor, new fire control system and improved engines."
+  },
+  {
+    "name": "T-64BM2",
+    "year": "2014",
+    "country": "Ukraine",
+    "description": "Further upgrade of the T-64BM with additional armor and new electronic systems."
+  },
+  {
+    "name": "T-72AMT",
+    "year": "1987",
+    "country": "USSR",
+    "description": "Improved version of the T-72 with additional armor and new fire control system."
+  },
+  {
+    "name": "T-80BV",
+    "year": "1987",
+    "country": "USSR",
+    "description": "Main battle tank with advanced fire control system and composite armor."
+  },
+  {
+    "name": "T-84",
+    "year": "1994",
+    "country": "Ukraine",
+    "description": "Main battle tank with composite armor and advanced fire control system."
+  },
+  {
+    "name": "T-84U",
+    "year": "1997",
+    "country": "Ukraine",
+    "description": "Improved version of the T-84 with new fire control system and engine."
+  },
+  {
+    "name": "T-84U “Oplot-M”",
+    "year": "2001",
+    "country": "Ukraine",
+    "description": "Further upgrade of the T-84U with additional armor and new fire control system."
+  },
+  {
+    "name": "BM Oplot",
+    "year": "2009",
+    "country": "Ukraine",
+    "description": "New generation main battle tank with advanced armor and electronic systems."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "BTR-60",
+    "year": 1960,
+    "country": "USSR",
+    "description": "Armored personnel carrier developed in the Soviet Union."
+  },
+  {
+    "name": "BTR-70",
+    "year": 1972,
+    "country": "USSR",
+    "description": "Improved version of BTR-60 with better armor and armament."
+  },
+  {
+    "name": "BTR-80",
+    "year": 1984,
+    "country": "USSR",
+    "description": "Further development of BTR-70 with improved mobility and protection."
+  },
+  {
+    "name": "Varta",
+    "year": 1999,
+    "country": "Ukraine",
+    "description": "Armored personnel carrier produced in Ukraine with advanced protection and mobility features."
+  },
+  {
+    "name": "Novator",
+    "year": 2005,
+    "country": "Ukraine",
+    "description": "New generation armored personnel carrier with enhanced protection, firepower and mobility."
+  },
+  {
+    "name": "Kraz \"Spartan\"",
+    "year": 2008,
+    "country": "Ukraine",
+    "description": "Armored personnel carrier built on Kraz chassis with advanced armor and protection systems."
+  },
+  {
+    "name": "Kraz \"Shreck\"",
+    "year": 2014,
+    "country": "Ukraine",
+    "description": "New generation armored personnel carrier with high level of protection and firepower."
+  },
+  {
+    "name": "Kraz \"Phiona\"",
+    "year": 2018,
+    "country": "Ukraine",
+    "description": "Latest generation armored personnel carrier with advanced armor, protection and mobility features."
+  },
+  {
+    "name": "Kozak-2",
+    "year": 2015,
+    "country": "Ukraine",
+    "description": "Armored personnel carrier with modular design, capable of quick reconfiguration for different mission requirements."
+  },
+  {
+    "name": "Kozak-5",
+    "year": 2017,
+    "country": "Ukraine",
+    "description": "New generation armored personnel carrier with enhanced protection, firepower and mobility features."
+  }
+]

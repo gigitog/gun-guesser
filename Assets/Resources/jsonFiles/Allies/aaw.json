@@ -1,0 +1,56 @@
+[
+  {
+    "name": "S-300",
+    "year": "1979",
+    "country": "USSR",
+    "description": "Long-range surface-to-air missile system capable of engaging multiple targets"
+  },
+  {
+    "name": "S-400",
+    "year": "2007",
+    "country": "Russia",
+    "description": "Long-range anti-aircraft missile system with improved capabilities over S-300"
+  },
+  {
+    "name": "Patriot",
+    "year": "1981",
+    "country": "United States",
+    "description": "Mobile air defense system designed to intercept tactical ballistic missiles, cruise missiles, and advanced aircraft"
+  },
+  {
+    "name": "Osa",
+    "year": "1971",
+    "country": "USSR",
+    "description": "Short-range air defense missile system used to protect ground forces and strategic facilities"
+  },
+  {
+    "name": "Tunguska",
+    "year": "1982",
+    "country": "USSR",
+    "description": "Self-propelled anti-aircraft weapon system with guns and missiles used to protect ground forces from air attacks"
+  },
+  {
+    "name": "Shilka",
+    "year": "1965",
+    "country": "USSR",
+    "description": "Self-propelled anti-aircraft gun system used to protect ground forces from air attacks"
+  },
+  {
+    "name": "SAMP-T",
+    "year": "2011",
+    "country": "France/Italy",
+    "description": "Medium-range air defense missile system designed to counter a wide range of airborne threats"
+  },
+  {
+    "name": "IRIS-T",
+    "year": "2005",
+    "country": "Germany",
+    "description": "Short-range air-to-air missile used for self-defense and attacking enemy aircraft"
+  },
+  {
+    "name": "S-2 Pantsir",
+    "year": "2007",
+    "country": "Russia",
+    "description": "Short to medium range surface-to-air missile and anti-aircraft artillery system"
+  }
+]

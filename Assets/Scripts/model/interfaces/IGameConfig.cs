@@ -4,8 +4,8 @@ using UnityEngine;
 
 public interface IGameConfig
 {
-    public WeaponDataScriptableObject WeaponAlliesData { get;}
-    public WeaponDataScriptableObject WeaponEnemyData { get;}
+    public List<IWeapon> WeaponAlliesData { get;}
+    public List<IWeapon> WeaponEnemyData { get;}
     
     public GameObject RoundInterfacePrefab { get; }
     
@@ -22,7 +22,7 @@ public interface IGameConfig
 
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);
-    public string GetTextClassification(WeaponClassification classification);
+    public string GetTextClassification(WeaponMobility mobility);
     public Sprite GetEnemySprite(WeaponTyping typing);
     public Sprite GetAlliesSprite(WeaponTyping typing);
 

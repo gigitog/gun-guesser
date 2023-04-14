@@ -1,0 +1,38 @@
+[
+  {
+    "name": "BM-21 Grad",
+    "year": "1963",
+    "country": "USSR",
+    "description": "Soviet truck-mounted 122 mm multiple rocket launcher"
+  },
+  {
+    "name": "Bastion-1(2)",
+    "year": "1996",
+    "country": "Ukraine",
+    "description": "Ukrainian truck-mounted 122 mm multiple rocket launcher"
+  },
+  {
+    "name": "BM-27 Uragan",
+    "year": "1975",
+    "country": "USSR",
+    "description": "Soviet self-propelled multiple rocket launcher with a range of 35 km"
+  },
+  {
+    "name": "Bureviy",
+    "year": "2019",
+    "country": "Ukraine",
+    "description": "Ukrainian 300 mm guided rocket system with a range of 130 km"
+  },
+  {
+    "name": "BM-30 Smerch",
+    "year": "1987",
+    "country": "USSR",
+    "description": "Soviet heavy multiple rocket launcher system with a range of up to 90 km"
+  },
+  {
+    "name": "Vilkha",
+    "year": "2018",
+    "country": "Ukraine",
+    "description": "Ukrainian guided rocket system with a range of up to 300 km"
+  }
+]

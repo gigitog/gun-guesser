@@ -9,7 +9,7 @@ public class WeaponConfigScriptableObject : ScriptableObject
     public List<WeaponConfigModel> weapons;
     
     [Header("Weapon Classification")] 
-    [SerializeField] private List<ClassificationToString> classifications;
+    [SerializeField] private List<ClassificationToString> mobilityTypes;
     
     [Header("Errors")] 
     [SerializeField] private string errorText;
@@ -39,13 +39,13 @@ public class WeaponConfigScriptableObject : ScriptableObject
         return errorText;
     }
 
-    public string GetClassification(WeaponClassification searchedClassification)
+    public string GetMobilityType(WeaponMobility searchedMobility)
     {
-        foreach (var classification in classifications)
+        foreach (var mobilityType in mobilityTypes)
         {
-            if (classification.classification == searchedClassification)
+            if (mobilityType.mobility == searchedMobility)
             {
-                return classification.classificationText;
+                return mobilityType.classificationText;
             }
         }
 
@@ -61,7 +61,7 @@ public class WeaponConfigModel
     public Sprite defaultSprite;
     [Space(10)]
     public WeaponTyping typing;
-    public WeaponClassification classification;
+    public WeaponMobility mobility;
     
     [Header("Counter Weapon")]
     [Tooltip("MBT = 0 \n" +
@@ -111,6 +111,6 @@ public class WeaponConfigModel
 public class ClassificationToString
 {
     public string classificationText;
-    public WeaponClassification classification;
+    public WeaponMobility mobility;
 }
 

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "2S22 Bohdana",
+    "year": "2018",
+    "country": "Ukraine",
+    "description": "Self propelled howitzer capable of firing 155 mm shells up to 40 km"
+  },
+  {
+    "name": "2S19 Msta-S",
+    "year": "1989",
+    "country": "Russia",
+    "description": "Self propelled howitzer capable of firing 152 mm shells up to 24 km"
+  },
+  {
+    "name": "2S3 Akatsiya",
+    "year": "1969",
+    "country": "Soviet Union",
+    "description": "Self propelled howitzer capable of firing 152 mm shells up to 18.5 km"
+  },
+  {
+    "name": "2S1 Gvozdika",
+    "year": "1972",
+    "country": "Soviet Union",
+    "description": "Self propelled howitzer capable of firing 122 mm shells up to 15.3 km"
+  }
+]

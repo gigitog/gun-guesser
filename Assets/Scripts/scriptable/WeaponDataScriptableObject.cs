@@ -43,11 +43,6 @@ public class WeaponDataScriptableObject : ScriptableObject
         list.AddRange(ah);
         list.AddRange(aaw);
 
-        foreach (var weapon in list)
-        {
-            weapon.Side = WeaponSide.Enemy;
-        }
-
         return list;
     }
 }
