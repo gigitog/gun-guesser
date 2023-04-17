@@ -77,26 +77,10 @@ MonoBehaviour:
     bomber: 8
     ah: 9
     aaw: 0
-  - abbreviation: UAV
-    name: Unmanned arial vehicle
-    defaultSprite: {fileID: 21300000, guid: 0ea90d77bcb597b44acf9c3e53c2424d, type: 3}
-    typing: 4
-    mobility: 0
-    mbt: 0
-    mlrs: 0
-    apc: 1
-    ifv: 1
-    uav: 0
-    sph: 1
-    towed: 1
-    fighter: 10
-    bomber: 1
-    ah: 8
-    aaw: 10
   - abbreviation: SPH
     name: Self propelled howitzer
     defaultSprite: {fileID: 21300000, guid: fa45836509e35d64591696392daa3df3, type: 3}
-    typing: 5
+    typing: 4
     mobility: 0
     mbt: 1
     mlrs: 4
@@ -112,7 +96,7 @@ MonoBehaviour:
   - abbreviation: Towed
     name: Towed artillery
     defaultSprite: {fileID: 21300000, guid: 964093e7304498a408a6f44198dc76e9, type: 3}
-    typing: 6
+    typing: 5
     mobility: 0
     mbt: 1
     mlrs: 4
@@ -125,10 +109,42 @@ MonoBehaviour:
     bomber: 9
     ah: 8
     aaw: 0
+  - abbreviation: AAW
+    name: Anti Air Warfare
+    defaultSprite: {fileID: 21300000, guid: 6c8d6ad033c01704399c759feb3b0924, type: 3}
+    typing: 6
+    mobility: 0
+    mbt: 0
+    mlrs: 4
+    apc: 0
+    ifv: 0
+    uav: 5
+    sph: 4
+    towed: 4
+    fighter: 5
+    bomber: 2
+    ah: 2
+    aaw: 0
+  - abbreviation: UAV
+    name: Unmanned arial vehicle
+    defaultSprite: {fileID: 21300000, guid: 0ea90d77bcb597b44acf9c3e53c2424d, type: 3}
+    typing: 7
+    mobility: 0
+    mbt: 0
+    mlrs: 0
+    apc: 1
+    ifv: 1
+    uav: 0
+    sph: 1
+    towed: 1
+    fighter: 10
+    bomber: 1
+    ah: 8
+    aaw: 10
   - abbreviation: Fighter
     name: Fighter Jet
     defaultSprite: {fileID: 21300000, guid: 5b6c3aa0da3fc4748bebc21fc1cc85c9, type: 3}
-    typing: 7
+    typing: 8
     mobility: 0
     mbt: 0
     mlrs: 0
@@ -144,7 +160,7 @@ MonoBehaviour:
   - abbreviation: Bomber
     name: Bomber Aircraft
     defaultSprite: {fileID: 21300000, guid: 448c9e9922b0176418738e9062a0eb1a, type: 3}
-    typing: 8
+    typing: 9
     mobility: 0
     mbt: 0
     mlrs: 0
@@ -160,7 +176,7 @@ MonoBehaviour:
   - abbreviation: AH
     name: Attack helicopter
     defaultSprite: {fileID: 21300000, guid: 5b90675e577197b4484da8feab3d2004, type: 3}
-    typing: 9
+    typing: 10
     mobility: 0
     mbt: 3
     mlrs: 1
@@ -173,29 +189,13 @@ MonoBehaviour:
     bomber: 0
     ah: 5
     aaw: 10
-  - abbreviation: AAW
-    name: Anti Air Warfare
-    defaultSprite: {fileID: 21300000, guid: 6c8d6ad033c01704399c759feb3b0924, type: 3}
-    typing: 10
-    mobility: 0
-    mbt: 0
-    mlrs: 4
-    apc: 0
-    ifv: 0
-    uav: 5
-    sph: 4
-    towed: 4
-    fighter: 5
-    bomber: 2
-    ah: 2
-    aaw: 0
   mobilityTypes:
-  - classificationText: Ground
+  - mobilityText: 
     mobility: 0
-  - classificationText: Air
+  - mobilityText: 
     mobility: 1
-  - classificationText: Missile
+  - mobilityText: 
     mobility: 2
-  - classificationText: Hand
+  - mobilityText: 
     mobility: 3
   errorText: Missing_Name_Error

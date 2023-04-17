@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class RoundMediator : Mediator
     
     // Signals
     [Inject]
+    public RoundLoadedSignal loadedSignal { get; set; }
+    [Inject]
     public RoundAnsweredSignal answeredSignal { get; set; }
     [Inject]
     public RoundPhaseLoadedSignal phaseLoadedSignal { get; set; }
@@ -22,21 +25,27 @@ public class RoundMediator : Mediator
     public RoundLostSignal lostSignal { get; set; }
     [Inject]
     public RoundCorrectAnsweredSignal correctAnsweredSignal { get; set; }
-    
+
     public override void OnRegister()
     {
         SetListeners(true);
     }
     
-    private void FirstAnswerClicked() => answeredSignal.Dispatch(1);
-    private void SecondAnswerClicked() => answeredSignal.Dispatch(2);
-
-    private void SetPhase(IWeapon enemy, IWeapon firstWeapon, IWeapon secondWeapon)
+    private void AnswerClicked(int position)
     {
-        Debug.LogWarning("[RoundMediator] Setting phase data");
+        Debug.Log($"[RoundMediator] Answer clicked, dispatch answeredSignal with {position}");
+        answeredSignal.Dispatch(position);
+    }
+
+    private void SetPhase(IWeapon enemy, Dictionary<int, IWeapon> choicesWeapons)
+    {
+        Debug.LogWarning($"[RoundMediator] Setting phase data: \n" +
+                         $"Enemy {enemy.Name}\n" +
+                         $"1 - {choicesWeapons[1].Name}\n" +
+                         $"2 - {choicesWeapons[2].Name}");
         SetEnemy(enemy);
-        SetFirst(firstWeapon);
-        SetSecond(secondWeapon);
+        SetFirst(choicesWeapons[1]);
+        SetSecond(choicesWeapons[2]);
     }
 
     #region Show UI Screens
@@ -94,6 +103,10 @@ public class RoundMediator : Mediator
         
         view.SecondChoiceSprite = gameConfig.GetAlliesSprite(weapon.Type);
     }
+    private void SetRound()
+    {
+        view.SetRoundInterface();
+    }
 
     #endregion
 
@@ -102,27 +115,28 @@ public class RoundMediator : Mediator
     {
         if (isSet)
         {
+            loadedSignal.AddListener(SetRound);
             phaseLoadedSignal.AddListener(SetPhase);
             wonSignal.AddListener(ShowWinningScreen);
             lostSignal.AddListener(ShowLosingScreen);
             correctAnsweredSignal.AddListener(ShowAnimationCorrect);
             
             view.exitClickedSignal.AddListener(ShowExitConfirmPopup);
-            view.firstChoiceClickedSignal.AddListener(FirstAnswerClicked);
-            view.secondChoiceClickedSignal.AddListener(SecondAnswerClicked);
+            view.choiceClickedSignal.AddListener(AnswerClicked);
         }
         else
         {
+            loadedSignal.RemoveListener(SetRound);
             phaseLoadedSignal.RemoveListener(SetPhase);
             wonSignal.RemoveListener(ShowWinningScreen);
             lostSignal.RemoveListener(ShowLosingScreen);
             correctAnsweredSignal.RemoveListener(ShowAnimationCorrect);
             
             view.exitClickedSignal.RemoveListener(ShowExitConfirmPopup);
-            view.firstChoiceClickedSignal.RemoveListener(FirstAnswerClicked);
-            view.secondChoiceClickedSignal.RemoveListener(SecondAnswerClicked);
+            view.choiceClickedSignal.RemoveListener(AnswerClicked);
         }
     }
-    
+
+
     public override void OnRemove() => SetListeners(false);
 }

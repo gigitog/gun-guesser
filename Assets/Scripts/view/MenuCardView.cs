@@ -8,6 +8,10 @@ using UnityEngine.UI;
 
 public class MenuCardView : View
 {
+    /// <summary>
+    /// Includes objects of Menu Card <br/>
+    /// Stores Mono behavior objects from Unity scene
+    /// </summary>
     [SerializeField] private TMP_Text nameField;
     [SerializeField] private TMP_Text typeField;
     [SerializeField] private TMP_Text classificationField;

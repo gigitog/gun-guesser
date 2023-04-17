@@ -2,6 +2,9 @@ using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using UnityEngine;
 
+/// <summary>
+/// Command is executed on the "start" of the app 
+/// </summary>
 public class StartCommand : Command
 {
 	

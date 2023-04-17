@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+/// <summary>
+/// Weapon Configuration serves for Game Design purpose to get general information
+/// about the types <see cref="WeaponTyping"/> of weapons, their Counter Weapons Values.
+/// <para></para>
+/// Here are stored configurations of weapons "<see cref="WeaponTypeConfigModel"/>".
+/// Also here are stored information about <see cref="WeaponMobility"/> to it string value. "<see cref="MobilityTypeToString"/>".
+/// <remarks>Game Design</remarks>
+/// </summary>
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/WeaponConfig", order = 1)]
-public class WeaponConfigScriptableObject : ScriptableObject
+public class WeaponConfigScriptableObject : ScriptableObject, IWeaponConfig
 {
-    public List<WeaponConfigModel> weapons;
+    [Header("Weapon Models")] 
+    public List<WeaponTypeConfigModel> weapons;
     
-    [Header("Weapon Classification")] 
-    [SerializeField] private List<ClassificationToString> mobilityTypes;
+    [Header("Weapon Mobility types")] 
+    [SerializeField] private List<MobilityTypeToString> mobilityTypes;
     
     [Header("Errors")] 
     [SerializeField] private string errorText;
@@ -45,7 +54,7 @@ public class WeaponConfigScriptableObject : ScriptableObject
         {
             if (mobilityType.mobility == searchedMobility)
             {
-                return mobilityType.classificationText;
+                return mobilityType.mobilityText;
             }
         }
 
@@ -53,8 +62,22 @@ public class WeaponConfigScriptableObject : ScriptableObject
     }
 }
 
+/// <summary>
+/// Weapon Type Config Model is represented in Unity Editor in <see cref="WeaponConfigScriptableObject"/>.
+/// <para></para>
+/// It fully depends on <see cref="WeaponTyping"/>. And all of its attributes are determined by this Typing.
+/// <example> Model:<code>
+///     abbreviation = MBT;<br/>
+///     name = Main Battle Tank;<br/>
+///     default sprite = ###;<br/>
+///     typing = WeaponTyping.MBT; <br/>
+///     mobility = WeaponMobility.Ground<br/>
+///     Counter Weapons =  7, 1, 5, 8 ...;<br/>
+/// </code></example>
+/// <remarks>Game Design</remarks>
+/// </summary>
 [Serializable]
-public class WeaponConfigModel
+public class WeaponTypeConfigModel
 {
     public string abbreviation;
     public string name;
@@ -106,11 +129,14 @@ public class WeaponConfigModel
         };
     }
 }
-
+/// <summary>
+/// Class to translate <see cref="WeaponMobility"/> to text format
+/// <remarks>Game Design</remarks>
+/// </summary>
 [Serializable]
-public class ClassificationToString
+public class MobilityTypeToString
 {
-    public string classificationText;
+    public string mobilityText;
     public WeaponMobility mobility;
 }
 

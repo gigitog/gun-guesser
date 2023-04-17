@@ -27,6 +27,11 @@ public class InventoryModel : IInventory
         inventoryList.Add(inventoryElement);
     }
 
+    public IInventoryElement Get()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public string GetInventoryString()
     {
         string result = "";
@@ -34,7 +39,8 @@ public class InventoryModel : IInventory
         foreach (var element in inventoryList)
         {
             counter++;
-            result += $"{counter} : {element.weapon.Name}\n";
+            var side = element.weapon.Side == WeaponSide.Ally ? "A" : "E";
+            result += $"{counter} : {side} {element.weapon.Name}\n";
         }
 
         return result;

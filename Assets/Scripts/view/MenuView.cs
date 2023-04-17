@@ -5,6 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Includes: Start, User and Inventory buttons <br/>
+/// Stores Mono behavior objects from Unity scene
+/// </summary>
 public class MenuView : View
 {
     [SerializeField] private Button startButton;

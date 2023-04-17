@@ -16,13 +16,16 @@ public class UserModel : IUser
     
     [Inject]
     public IGameConfig gameConfig { get; set; }
+    
+    [Inject]
+    public IGameRules gameRules { get; set; }
 
     [PostConstruct]
     public void PostConstruct()
     {
         Debug.Log("[UserModel] Post Construct");
         Name = "Test Player Name";
-        if (gameConfig != null) inventory = gameConfig.GetInitialInventory();
+        if (gameConfig != null) inventory = gameRules.GetInitialInventory();
         Debug.Log($"[UserModel] user inv capacity = {inventory.inventoryList.Capacity}");
     }
 }

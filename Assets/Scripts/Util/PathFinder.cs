@@ -1,6 +1,10 @@
 
 using System;
 
+/// <summary>
+///
+/// <remarks>Game Design</remarks>
+/// </summary>
 public static class PathFinder
 {
     private static readonly string startpath = "jsonFiles/";

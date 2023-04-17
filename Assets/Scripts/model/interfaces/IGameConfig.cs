@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Game Configuration interface aim is to provide application an access to <br/>
+/// - all data of weapons (<see cref="IWeapon"/>) <br/>
+/// - Game Design information about <see cref="IRound"/> and its Phases <br/>
+/// - Get Default Sprites of weapons <br/>
+/// - Get text equivalents of <see cref="WeaponTyping"/>, <see cref="WeaponMobility"/>
+/// </summary>
 public interface IGameConfig
 {
     public List<IWeapon> WeaponAlliesData { get;}
@@ -9,15 +16,23 @@ public interface IGameConfig
     
     public GameObject RoundInterfacePrefab { get; }
     
-    public IInventory GetInitialInventory();
-
-    public List<IWeapon> GetEnemiesForRound(IUser user);
-    
     public int GetHeartsRefillTime();
-    public int GetNumberOfPhases(long userLevelNumber);
+
+    public int GetDefaultPhasesQuantityForRound();
+
+    public int GetDefaultChoicesQuantity();
+    public int GetDefaultTimeForRound(long userLevelNumber);
+
+
+    /// <summary>
+    /// For "Easy" minimal weapon power is 7-10.
+    /// <para>Min power is set for the whole round.</para>
+    /// </summary>
+    /// <returns>int value of power</returns>
+    public int GetMinimalWeaponPowerForRound();
+
     public int GetNumberNewWeapons(long userLevelNumber);
-    public int GetTimeForCard(long userLevelNumber);
-    
+
     public short GetXpForLevel(long userLevelNumber);
 
     public string GetTextType(WeaponTyping typing);
@@ -25,6 +40,4 @@ public interface IGameConfig
     public string GetTextClassification(WeaponMobility mobility);
     public Sprite GetEnemySprite(WeaponTyping typing);
     public Sprite GetAlliesSprite(WeaponTyping typing);
-
-    public bool MatchWeaponTypes(IWeapon enemy, IWeapon weapon);
 }

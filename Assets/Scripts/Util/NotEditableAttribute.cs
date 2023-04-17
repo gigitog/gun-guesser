@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class NotEditableAttribute : PropertyAttribute { }
 
-
+/// <summary>
+///
+/// <remarks>Game Design</remarks>
+/// </summary>
 [CustomPropertyDrawer(typeof(NotEditableAttribute))]
 public sealed class NotEditableDrawer : PropertyDrawer
 {

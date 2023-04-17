@@ -21,6 +21,8 @@ MonoBehaviour:
   baseNumberOfRoundsForLevel: 5
   experienceHardMultiplier: 2
   baseNumberNewWeaponsPerLevel: 1
-  baseCardsPerRound: 5
-  baseTimeForCard: 10
+  defaultPhasesPerRound: 5
+  baseTimeForCard: 12
+  defaultPhaseQuantity: 5
+  defaultChoicesQuantity: 2
   roundInterfacePrefab: {fileID: 0}

@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
 using TMPro;
@@ -6,6 +7,10 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Includes: Enemy, Choices, Exit, progress, timer. <br/>
+/// Stores Mono behavior objects from Unity scene
+/// </summary>
 public class RoundView : View
 {
     #region Serialize Fields
@@ -34,8 +39,8 @@ public class RoundView : View
     [SerializeField] private Slider progressBar; // track progress via bar
     [SerializeField] private TMP_Text phaseProgressCounter; // [curr/max]
     
-    public Signal firstChoiceClickedSignal = new Signal();
-    public Signal secondChoiceClickedSignal = new Signal();
+    public Signal<int> choiceClickedSignal = new Signal<int>();
+    // public Signal secondChoiceClickedSignal = new Signal();
     public Signal exitClickedSignal = new Signal();
     
     #endregion
@@ -43,6 +48,7 @@ public class RoundView : View
     #region Properties
 
     // Enemy -------------- Properties
+
     public string EnemyName
     {
         get => enemyNameField.text;
@@ -104,21 +110,27 @@ public class RoundView : View
 
     private void OnDisable() => SetListeners(false);
 
+    public void SetRoundInterface()
+    {
+        Debug.Log("[RoundView] meow");
+        gameObject.SetActive(true);
+    }
+
     private void FirstChoiceClicked()
     {
-        Debug.LogWarning("RoundView: [1] choice Clicked");
-        firstChoiceClickedSignal.Dispatch();
+        Debug.LogWarning("[RoundView]: [1] choice Clicked");
+        choiceClickedSignal.Dispatch(1);
     }
     
     private void SecondChoiceClicked()
     {
-        Debug.LogWarning("RoundView: [2] choice Clicked");
-        secondChoiceClickedSignal.Dispatch();
+        Debug.LogWarning("[RoundView]: [2] choice Clicked");
+        choiceClickedSignal.Dispatch(2);
     }
 
     private void ExitClicked()
     {
-        Debug.LogWarning("RoundView: EXIT clicked");
+        Debug.LogWarning("[RoundView]: EXIT clicked");
         exitClickedSignal.Dispatch();
     }
 

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using strange.extensions.command.impl;
 using UnityEngine;
 
+/// <summary>
+/// Command gets a random <see cref="IWeapon"/> and sets it to a card in Main Menu;
+/// <seealso cref="MenuCardView" /> <seealso cref="MenuCardMediator"/>
+/// </summary>
 public class MenuChangeCardCommand : Command
 {
     [Inject]

@@ -5,9 +5,12 @@ using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Generator of <see cref="WeaponsOfTypeDataObject"/> from Json files in <see cref="PathFinder"/>.
+/// Jsons are based on <see cref="WeaponJsonObject"/>
+/// </summary>
 public static class GenerateWeaponJsonData
 {
-
     public static void CreateWeapons(List<WeaponsOfTypeDataObject> weaponsToFill, WeaponSide weaponSide)
     {
         foreach (var dataWeapons in weaponsToFill)
@@ -57,6 +60,9 @@ public static class GenerateWeaponJsonData
     }
 }
 
+/// <summary>
+/// Model of Json object of Weapon. 
+/// </summary>
 public class WeaponJsonObject
 {
     public string name { get; set; }

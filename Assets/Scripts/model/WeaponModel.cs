@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
+/// <summary>
+/// Weapon Model derives from <see cref="IWeapon"/> <br/>
+/// </summary>
 [Serializable]
 public class WeaponModel : IWeapon
 {
@@ -99,6 +101,11 @@ public class WeaponModel : IWeapon
     }
 }
 
+
+/// <summary>
+/// Weapon Mobility Typing <br/>
+/// Ground, Air, Missile, Hand
+/// </summary>
 public enum WeaponMobility
 {
     Ground,
@@ -107,6 +114,10 @@ public enum WeaponMobility
     Hand
 }
 
+/// <summary>
+/// Weapon Typing <br/>
+/// MBT, MLRS, APC, IFV, SPH, Towed, AAW, UAV, Fighter, Bomber, AH
+/// </summary>
 public enum WeaponTyping
 {
     MBT = 0,
@@ -122,6 +133,9 @@ public enum WeaponTyping
     AH = 10
 }
 
+/// <summary>
+/// Weapon Side: "Ally" -- "Enemy"
+/// </summary>
 public enum WeaponSide
 {
     Ally = 0,

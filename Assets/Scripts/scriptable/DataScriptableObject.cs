@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// <remarks>Game Design</remarks>
+/// </summary>
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/WeaponData", order = 2)]
 public class DataScriptableObject : ScriptableObject
 {
@@ -26,6 +30,11 @@ public class DataScriptableObject : ScriptableObject
     }
 }
 
+/// <summary>
+/// Convenient way to store and modify data in Unity editor in <see cref="DataScriptableObject"/>
+/// Problem: Dependence on <see cref="WeaponModel"/>
+/// <remarks>Game Design</remarks>
+/// </summary>
 [Serializable]
 public class WeaponsOfTypeDataObject
 {

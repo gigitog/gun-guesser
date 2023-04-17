@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Custom Editor makes it easier to observe, modify and add data of Weapons. <br/>
+/// Works with <see cref="GenerateWeaponJsonData"/>
+/// </summary>
 [CustomEditor(typeof(DataScriptableObject)), CanEditMultipleObjects]
 public class WeaponDataEditor : Editor
 {
@@ -13,15 +17,21 @@ public class WeaponDataEditor : Editor
         
         base.OnInspectorGUI();
         
+        GUILayout.BeginHorizontal();
+        
         if (GUILayout.Button($"Fill With {Enum.GetName(typeof(WeaponSide), data.side)} data"))
         {
             data.dataWeapons = FillData(data.side);
         }
         
+        GUILayout.Space(20);
+        
         if (GUILayout.Button("Set Default data"))
         {
             SetDefault(ref data.dataWeapons);
         }
+        
+        GUILayout.EndHorizontal();
         
         ValidateSide(data);
         ValidateType(data);
@@ -89,5 +99,3 @@ public class WeaponDataEditor : Editor
         }
     }
 }
-
-

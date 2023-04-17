@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using strange.extensions.signal.impl;using UnityEngine.UIElements;
 
 
@@ -5,7 +6,7 @@ using strange.extensions.signal.impl;using UnityEngine.UIElements;
 public class RoundLoadedSignal : Signal {} 
 
 // Round Phase
-public class RoundPhaseLoadedSignal : Signal<IWeapon, IWeapon, IWeapon> {}
+public class RoundPhaseLoadedSignal : Signal<IWeapon, Dictionary<int, IWeapon>> {}
 public class RoundAnsweredSignal : Signal<int> {}
 public class RoundCorrectAnsweredSignal : Signal<IWeapon> {}
 

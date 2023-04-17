@@ -1,6 +1,13 @@
 
 using UnityEngine;
 
+/// <summary>
+/// It describes the weapon object in game, which could be represented as: <br/>
+///     - Enemy card in Round <br/>
+///     - Choice in Round <br/>
+///     - Card in Main Menu <br/>
+///     - In inventory as a part of <see cref="IInventoryElement"/>
+/// </summary>
 public interface IWeapon
 {
     public int Stage { get; }
