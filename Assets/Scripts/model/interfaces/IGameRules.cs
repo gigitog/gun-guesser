@@ -20,7 +20,8 @@ public interface IGameRules
     /// <remarks>Implementation will probably be changed (N = 5)</remarks>
     /// <returns>List of <see cref="IWeapon"/></returns>
     public List<IWeapon> GetEnemiesForRound();
-    public List<IWeapon> GetChoices();
+    
+    public Dictionary<WeaponTyping, int> GetCounterWeaponsPower(WeaponTyping typing);
     /// <summary>
     /// Returns Default Phases Quantity from <see cref="IGameConfig"/><br/>
     /// </summary>
@@ -65,7 +66,12 @@ class GameRulesModel : IGameRules
         AddInitWeapons(init, gameConfig.WeaponEnemyData);
         return init;
     }
-    
+
+    public Dictionary<WeaponTyping, int> GetCounterWeaponsPower(WeaponTyping typing)
+    {
+        return gameConfig.GetCounterTypingPower(typing);
+    }
+
     public int GetPhasesQuantityForRound()
     {
         return gameConfig.GetDefaultPhasesQuantityForRound();
@@ -108,16 +114,5 @@ class GameRulesModel : IGameRules
         {
             init.AddWeaponToInventory(listFromToAdd.Find(w => w.Type == typ));
         }
-    }
-    
-    public List<IWeapon> GetChoices()
-    {
-        var variants = new List<IWeapon>();
-        
-        // gameConfig.
-        
-        // user.inventory.alliesList;
-
-        return variants;
     }
 }

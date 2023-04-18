@@ -8,8 +8,10 @@ public class RoundModel : IRound
     private Queue<IWeapon> weapons;
     private float time;
     private int choicesQuantity;
-    
+
     public bool IsPlaying { get; private set; }
+    public IWeapon CorrectChoice { get; set; }
+
     public Dictionary<int, IWeapon> ChoicesWeapons { get; private set; }
 
     public void SetChoice(int choiceSerialNumber, IWeapon weapon)
@@ -60,4 +62,5 @@ public class RoundModel : IRound
     {
         return weapons?.Count ?? 0;
     }
+
 }

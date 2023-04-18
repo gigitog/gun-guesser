@@ -21,6 +21,7 @@ MonoBehaviour:
   baseNumberOfRoundsForLevel: 5
   experienceHardMultiplier: 2
   baseNumberNewWeaponsPerLevel: 1
+  minimalWeaponPower: 7
   defaultPhasesPerRound: 5
   baseTimeForCard: 12
   defaultPhaseQuantity: 5

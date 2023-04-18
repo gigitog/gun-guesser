@@ -190,12 +190,12 @@ MonoBehaviour:
     ah: 5
     aaw: 10
   mobilityTypes:
-  - mobilityText: 
+  - mobilityText: Ground
     mobility: 0
-  - mobilityText: 
+  - mobilityText: Air
     mobility: 1
-  - mobilityText: 
+  - mobilityText: Missile
     mobility: 2
-  - mobilityText: 
+  - mobilityText: Hand Weapon
     mobility: 3
   errorText: Missing_Name_Error

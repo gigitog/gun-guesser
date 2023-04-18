@@ -10,18 +10,17 @@ using System.Collections.Generic;
 public interface IRound
 {
     public bool IsPlaying { get; }
-    
     public void SetDefaultRound(List<IWeapon> enemies, int timeSeconds, int choicesQuantity);
     public void CleanRound();
     public IWeapon GetNextEnemy();
     public int GetEnemiesQuantity();
-    
+    public IWeapon CorrectChoice { get; set; }
     public Dictionary<int, IWeapon> ChoicesWeapons { get; }
+
     /// <summary>
     /// Set for a phase one choice; choice serial number can be 1-2 (MVP);
     /// </summary>
     /// <param name="choiceSerialNumber"></param>
     /// <param name="weapon"></param>
     public void SetChoice(int choiceSerialNumber, IWeapon weapon);
-
 }

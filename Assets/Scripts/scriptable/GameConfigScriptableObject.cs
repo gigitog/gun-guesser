@@ -33,6 +33,7 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [SerializeField] private int baseNumberNewWeaponsPerLevel;
 
     [Header("Round Logic")]
+    [Tooltip("for [7] means that for counter weapon for enemy could be chosen a weapon with 7 (70%) chance to win")] [Range(7, 9)] [SerializeField] private int minimalWeaponPower;
     [Range(4, 12)] [SerializeField] private int defaultPhasesPerRound;
     [Range(3, 12)] [SerializeField] private int baseTimeForCard;
     [Range(4, 20)] [SerializeField] private int defaultPhaseQuantity;
@@ -50,7 +51,7 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     public int GetMinimalWeaponPowerForRound()
     {
-        throw new NotImplementedException();
+        return minimalWeaponPower;
     }
 
     public int GetNumberNewWeapons(long userLevelNumber)
@@ -106,5 +107,10 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     {
         var weapon = weaponConfig.weapons.Find(w => w.typing == typing);
         return weapon.defaultSprite;
+    }
+
+    public Dictionary<WeaponTyping, int> GetCounterTypingPower(WeaponTyping weapon)
+    {
+        return weaponConfig.GetCounterWeaponsDictionary(weapon);
     }
 }

@@ -60,6 +60,25 @@ public class WeaponConfigScriptableObject : ScriptableObject, IWeaponConfig
 
         return errorText;
     }
+
+    public Dictionary<WeaponTyping, int> GetCounterWeaponsDictionary(WeaponTyping typing)
+    {
+        return weapons.Find(w => w.typing == typing).GetDictionaryOfPowers();
+    }
+
+    public int GetEnemyCounterPowerValue(WeaponTyping enemy, WeaponTyping weapon)
+    {
+        foreach (var model in weapons)
+        {
+            if (model.typing == enemy)
+            {
+                return model.GetValue(weapon);
+            }
+        }
+    
+        Debug.LogError($"[WeaponCfgSO] No found typing for {Enum.GetName(typeof(WeaponTyping), enemy)}");
+        return 0;
+    }
 }
 
 /// <summary>
@@ -85,7 +104,7 @@ public class WeaponTypeConfigModel
     [Space(10)]
     public WeaponTyping typing;
     public WeaponMobility mobility;
-    
+
     [Header("Counter Weapon")]
     [Tooltip("MBT = 0 \n" +
              "LRS = 1 \n" +
@@ -127,6 +146,14 @@ public class WeaponTypeConfigModel
             WeaponTyping.AAW => aaw,
             _ => throw new ArgumentOutOfRangeException(nameof(typing), typing, null)
         };
+    }
+
+    public Dictionary<WeaponTyping, int> GetDictionaryOfPowers()
+    {
+        var result = new Dictionary<WeaponTyping, int>();
+        foreach (WeaponTyping key in Enum.GetValues(typeof(WeaponTyping)))
+            result.Add(key, GetValue(key));
+        return result;
     }
 }
 /// <summary>
