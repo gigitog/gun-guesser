@@ -59,8 +59,8 @@ public class GunGuesserMainContext : MVCSContext
         commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
 
         // --- --- Round:
-        commandBinder.Bind<MenuStartRoundSignal>().To<RoundLoadCommand_Debug>();
-        commandBinder.Bind<RoundLoadedSignal>().To<RoundGetPhaseCommand_Debug>();
+        commandBinder.Bind<MenuStartRoundSignal>().To<RoundLoadCommand>();
+        commandBinder.Bind<RoundGetPhaseSignal>().To<RoundGetPhaseCommand_Debug>();
         commandBinder.Bind<RoundAnsweredSignal>().To<RoundAnswerCommand>();
 
         commandBinder.Bind<CallWebServiceSignal>().To<CallWebServiceCommand>();
@@ -73,10 +73,11 @@ public class GunGuesserMainContext : MVCSContext
         injectionBinder.Bind<MenuCardChangedSignal>().ToSingleton();
         
         // injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
-        injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();   
         injectionBinder.Bind<RoundWonSignal>().ToSingleton();
         injectionBinder.Bind<RoundLostSignal>().ToSingleton();
-        injectionBinder.Bind<RoundCorrectAnsweredSignal>().ToSingleton();
+        injectionBinder.Bind<RoundCorrectSignal>().ToSingleton();
     }
 
     private IGameConfig loadGameConfig()

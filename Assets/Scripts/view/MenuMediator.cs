@@ -1,20 +1,17 @@
 
 using System;
 using strange.extensions.mediation.impl;
-using strange.extensions.signal.api;
 using UnityEngine;
+using Console = UnityEngine.Console;
 
 public class MenuMediator : Mediator
 {
     [Inject]
     public MenuView view{ get; set;}
 
+    #region Dispatched Signals
     [Inject]
     public MenuStartRoundSignal startRoundSignal { get; set; }
-    
-    #region Dispatched Signals
-    
-
     #endregion
 
     #region Listen To Signals
@@ -30,18 +27,18 @@ public class MenuMediator : Mediator
 
     private void OnStartButtonClicked()
     {
-        Debug.Log("Menu mediator: Start Clicked");
+        Console.Log("MenuMediator", "Start Clicked");
         startRoundSignal.Dispatch();
     }
 
     private void OnInventoryButtonClicked()
     {
-        Debug.Log("Menu mediator: Inventory Clicked");
+        Console.Log("MenuMediator","Inventory Clicked");
     }
 
     private void OnProfileButtonClicked()
     {
-        Debug.Log("Menu mediator: Profile Clicked");
+        Console.Log("MenuMediator","Profile Clicked");
     }
 
     public override void OnRemove()

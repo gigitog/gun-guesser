@@ -15,8 +15,38 @@ public class RoundAnswerCommand : Command
     
     [Inject]
     public IGameConfig gameConfig { get; set; }
+
+    #region signals dispatched (correct/win/lose)
+    [Inject]
+    public RoundCorrectSignal correctSignal {get; set; }
+
+    [Inject]
+    public RoundWonSignal wonSignal { get; set; }
+    
+    [Inject]
+    public RoundLostSignal lostSignal { get; set; }
+    #endregion
+    
     public override void Execute()
     {
-        Debug.LogWarning($"[RoundAnswerCommand] Execution: ANum={AnswerNumber} AWea={round.ChoicesWeapons[AnswerNumber].Name} ");
+        // Debug.LogWarning($"[RoundAnswerCommand] Execution: ANum={AnswerNumber} AWea={round.ChoicesWeapons[AnswerNumber].Name} ");
+        if (round.ChoicesWeapons[AnswerNumber] == round.CorrectChoice)
+        {
+            if (round.GetEnemiesQuantity() == 0)
+            {
+                Console.Log("RACmd","That was Last Phase!");
+                wonSignal.Dispatch();
+                return;
+            }
+            Console.LogWarning("RACmd",$"Correct! Left phases = [{round.GetEnemiesQuantity()}]");
+            correctSignal.Dispatch();
+            return;
+        }
+        else
+        {
+            Console.LogWarning("RACmd","Incorrect!");
+            lostSignal.Dispatch(round.CorrectChoice);
+            return;
+        }
     }
 }

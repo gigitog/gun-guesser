@@ -76,7 +76,7 @@ public class WeaponConfigScriptableObject : ScriptableObject, IWeaponConfig
             }
         }
     
-        Debug.LogError($"[WeaponCfgSO] No found typing for {Enum.GetName(typeof(WeaponTyping), enemy)}");
+        UnityEngine.Console.LogError("WeaponCfgSO",$"No found typing for {Enum.GetName(typeof(WeaponTyping), enemy)}");
         return 0;
     }
 }

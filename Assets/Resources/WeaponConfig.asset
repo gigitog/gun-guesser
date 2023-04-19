@@ -118,8 +118,8 @@ MonoBehaviour:
     mlrs: 4
     apc: 0
     ifv: 0
-    uav: 5
-    sph: 4
+    uav: 8
+    sph: 7
     towed: 4
     fighter: 5
     bomber: 2

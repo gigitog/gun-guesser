@@ -19,7 +19,7 @@ public class MenuChangeCardCommand : Command
         // Debug.Log("MenuChangeCardCommand Execution...");
         IWeapon randomWeapon = GetRandomWeapon(user.inventory);
         if (randomWeapon == null)
-            Debug.LogError("[MCCCmd] sending null weapon!");
+            Console.LogError("MCCCmd","sending null weapon!");
         
         menuMenuCardClickedSignal.Dispatch(randomWeapon);
     }

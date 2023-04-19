@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Loads <see cref="IRound"/> bzw. gets information about its filling from game,
-/// sets Enemies for it and dispatches <see cref="RoundLoadedSignal"/>
+/// sets Enemies for it and dispatches <see cref="RoundLoadedSignal"/> and <see cref="RoundGetPhaseSignal"/>
 /// 
 /// </summary>
 public class RoundLoadCommand : Command
@@ -20,6 +20,8 @@ public class RoundLoadCommand : Command
 
     [Inject] 
     public RoundLoadedSignal roundLoadedSignal { get; set; }
+    [Inject]
+    public RoundGetPhaseSignal getPhaseSignal { get; set; }
 
     [Inject]
     public IRound round { get; set; }
@@ -29,6 +31,7 @@ public class RoundLoadCommand : Command
         round.SetDefaultRound(gameRules.GetEnemiesForRound(), gameRules.GetTimeForRound(), gameRules.GetChoicesQuantityForRound());
 
         roundLoadedSignal.Dispatch();
+        getPhaseSignal.Dispatch();
     }
 }
 
@@ -36,12 +39,13 @@ class RoundLoadCommand_Debug : RoundLoadCommand
 {
     public override void Execute()
     {
-        Debug.LogWarning("[RoundLoadCommand] Execution");
+        Console.LogWarning("RLCmd","Execution");
         base.Execute();
-        Debug.Log($"[RLCmd] User: {user.Name}");
-        Debug.Log($"[RLCmd] Inventory: {user.inventory.GetInventoryString()}");
-        Debug.Log($"[RLCmd] Round:\n" +
-                  $" - isPlaying: {round.IsPlaying}\n" +
-                  $" - enemiesQ: {round.GetEnemiesQuantity()}");
+        Console.Log("RLCmd",$"User: {user.Name}");
+        Console.Log("RLCmd",$"Inventory: {user.inventory.GetInventoryString()}");
+        Console.Log("RLCmd", 
+            $"Round:\n" +
+                   $" - isPlaying: {round.IsPlaying}\n" +
+                   $" - enemiesQ: {round.GetEnemiesQuantity()}");
     }
 }

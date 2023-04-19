@@ -9,6 +9,7 @@ public class RoundModel : IRound
     private float time;
     private int choicesQuantity;
 
+    public RoundStatsData RoundStats { get; private set; }
     public bool IsPlaying { get; private set; }
     public IWeapon CorrectChoice { get; set; }
 
@@ -25,15 +26,13 @@ public class RoundModel : IRound
             ChoicesWeapons.Add(choiceSerialNumber, weapon);
         }
     }
-
-    public short RoundNumber { get; set; }
-
-
+    
     public void SetDefaultRound(List<IWeapon> enemies, int timeSeconds, int choicesQuantity)
     {
         IsPlaying = true;
         this.choicesQuantity = choicesQuantity;
         time = timeSeconds;
+        RoundStats = new RoundStatsData() {currentPhaseIndex = 0, phasesQuantity = enemies.Count};
         ChoicesWeapons = new Dictionary<int, IWeapon>();
         SetEnemies(enemies);
     }
@@ -48,13 +47,15 @@ public class RoundModel : IRound
     {
         string enemiesString = list.Aggregate("", (current, weapon) => current + " - " + weapon.Name + "\n");
         
-        Debug.Log("[RoundModel]: Set Enemies (Phases) for Round: \n" + enemiesString);
+        // TODO LogProblem
+        Console.Log("RoundModel",$"Set Enemies (Phases) for Round: {enemiesString}");
 
         weapons = new Queue<IWeapon>(list);
     }
 
     public IWeapon GetNextEnemy()
     {
+        RoundStats.currentPhaseIndex++;
         return weapons.Dequeue();
     }
 
@@ -63,4 +64,10 @@ public class RoundModel : IRound
         return weapons?.Count ?? 0;
     }
 
+}
+
+public class RoundStatsData
+{
+    public int currentPhaseIndex;
+    public int phasesQuantity;
 }

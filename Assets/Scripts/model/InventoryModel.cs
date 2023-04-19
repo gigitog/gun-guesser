@@ -15,7 +15,7 @@ public class InventoryModel : IInventory
         {
             if (element.weapon == newWeapon)
             {
-                Debug.Log("This weapon already exists in this Inventory");
+                Console.LogWarning("InventoryModel","This weapon already exists in this Inventory");
                 return;
             }
         }

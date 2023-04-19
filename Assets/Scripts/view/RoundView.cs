@@ -46,8 +46,8 @@ public class RoundView : View
     #endregion
     
     #region Properties
-
-    // Enemy -------------- Properties
+    
+    #region Enemy Properties
 
     public string EnemyName
     {
@@ -65,9 +65,11 @@ public class RoundView : View
         get => enemySprite.sprite;
         set => enemySprite.sprite = value;
     }
+
+    #endregion
     
-    // Choices -------------- Properties
-    
+    #region Choices Properties
+
     public string FirstChoiceName
     {
         get => firstChoiceNameField.text;
@@ -103,34 +105,52 @@ public class RoundView : View
         get => secondChoiceSprite.sprite;
         set => secondChoiceSprite.sprite = value;
     }
-
+    #endregion
+    
     #endregion
     
     private void OnEnable() => SetListeners(true);
 
     private void OnDisable() => SetListeners(false);
 
+    /// <summary>
+    /// Sets phase statistic as <see cref="phaseProgressCounter"/>
+    /// </summary>
+    /// <param name="indexOfEnemy"> 1..N</param>
+    /// <param name="phasesQuantity"> N</param>
+    public void SetPhaseStats(RoundStatsData stats)
+    {
+        phaseProgressCounter.text = $"{stats.currentPhaseIndex}/{stats.phasesQuantity}";
+    }
+
     public void SetRoundInterface()
     {
-        Debug.Log("[RoundView] meow");
+        Console.Log("RoundView","meow");
+        phaseProgressCounter.text = "0/N";
         gameObject.SetActive(true);
+    }
+
+    public void SetActive(bool isActive)
+    {
+        // Debug.Log($"[RoundView] buttons set to {isActive}");
+        firstChoiceButton.interactable = secondChoiceButton.interactable = isActive;
     }
 
     private void FirstChoiceClicked()
     {
-        Debug.LogWarning("[RoundView]: [1] choice Clicked");
+        // Debug.Log("[RoundView]: [1] choice Clicked");
         choiceClickedSignal.Dispatch(1);
     }
     
     private void SecondChoiceClicked()
     {
-        Debug.LogWarning("[RoundView]: [2] choice Clicked");
+        // Debug.Log("[RoundView]: [2] choice Clicked");
         choiceClickedSignal.Dispatch(2);
     }
 
     private void ExitClicked()
     {
-        Debug.LogWarning("[RoundView]: EXIT clicked");
+        Console.LogWarning("RoundView","EXIT clicked");
         exitClickedSignal.Dispatch();
     }
 

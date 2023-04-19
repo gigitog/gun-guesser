@@ -1,8 +1,5 @@
-
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -51,7 +48,7 @@ public static class GenerateWeaponJsonData
         if (json != null) 
             return JsonConvert.DeserializeObject<List<WeaponJsonObject>>(json.text);
         
-        Debug.LogWarning($"{PathFinder.GetFullPath(side, typing)} do not exist!");
+        Console.LogWarning("GenerateWeaponJsonData",$"{PathFinder.GetFullPath(side, typing)} do not exist!");
         
         var s = new List<WeaponJsonObject>();
         s.Add(new WeaponJsonObject());

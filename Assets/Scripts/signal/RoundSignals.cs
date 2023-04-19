@@ -6,12 +6,14 @@ using strange.extensions.signal.impl;using UnityEngine.UIElements;
 public class RoundLoadedSignal : Signal {} 
 
 // Round Phase
-public class RoundPhaseLoadedSignal : Signal<IWeapon, Dictionary<int, IWeapon>> {}
+public class RoundGetPhaseSignal : Signal {}
+public class RoundPhaseLoadedSignal : Signal<IWeapon, Dictionary<int, IWeapon>, RoundStatsData> {}
 public class RoundAnsweredSignal : Signal<int> {}
-public class RoundCorrectAnsweredSignal : Signal<IWeapon> {}
+
+public class RoundCorrectSignal : Signal {}
 
 // Round End
-public class RoundLostSignal : Signal {}
+public class RoundLostSignal : Signal<IWeapon> {}
 public class RoundWonSignal : Signal {}
 
 public class RoundToMenuSignal : Signal {}
@@ -21,3 +23,10 @@ public class RoundToAgainSignal : Signal {}
 // Hearts Behaviour
 public class HeartLostSignal : Signal {}
 public class HeartRefilledSignal : Signal {}
+
+public class IncorrectAnswerData
+{
+    public IWeapon enemy;
+    public IWeapon correctAnswer;
+    public IWeapon incorrectAnswer;
+}

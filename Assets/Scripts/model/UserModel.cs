@@ -23,9 +23,10 @@ public class UserModel : IUser
     [PostConstruct]
     public void PostConstruct()
     {
-        Debug.Log("[UserModel] Post Construct");
+        // Debug.Log("[UserModel] Post Construct");
+        Console.Log("UserModel", "PostConstruct");
         Name = "Test Player Name";
         if (gameConfig != null) inventory = gameRules.GetInitialInventory();
-        Debug.Log($"[UserModel] user inv capacity = {inventory.inventoryList.Capacity}");
+        Console.Log("UserModel", $"user inv capacity = {inventory.inventoryList.Capacity}");
     }
 }

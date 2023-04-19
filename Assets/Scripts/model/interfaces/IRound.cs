@@ -10,6 +10,7 @@ using System.Collections.Generic;
 public interface IRound
 {
     public bool IsPlaying { get; }
+    public RoundStatsData RoundStats { get;}
     public void SetDefaultRound(List<IWeapon> enemies, int timeSeconds, int choicesQuantity);
     public void CleanRound();
     public IWeapon GetNextEnemy();
