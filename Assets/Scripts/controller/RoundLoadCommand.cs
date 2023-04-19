@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using strange.extensions.command.impl;
 using UnityEngine;
 
@@ -20,9 +19,10 @@ public class RoundLoadCommand : Command
 
     [Inject] 
     public RoundLoadedSignal roundLoadedSignal { get; set; }
+    
     [Inject]
     public RoundGetPhaseSignal getPhaseSignal { get; set; }
-
+    
     [Inject]
     public IRound round { get; set; }
     

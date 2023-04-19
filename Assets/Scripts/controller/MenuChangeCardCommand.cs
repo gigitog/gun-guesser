@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using strange.extensions.command.impl;
 using UnityEngine;

@@ -32,6 +32,7 @@ public class RoundMediator : Mediator
         public RoundWonSignal wonSignal { get; set; }
         [Inject]
         public RoundLostSignal lostSignal { get; set; }
+        
         [Inject]
         public RoundCorrectSignal correctSignal { get; set; }
     #endregion
@@ -57,7 +58,7 @@ public class RoundMediator : Mediator
         SetEnemy(enemy);
         SetFirst(choicesWeapons[1]);
         SetSecond(choicesWeapons[2]);
-        view.SetActive(true);
+        EnableView();
     }
 
     #region Show UI Screens
@@ -75,19 +76,8 @@ public class RoundMediator : Mediator
         // throw new System.NotImplementedException();
     }
 
-    private void ShowLosingScreen(IWeapon weapon)
-    {
-        Console.LogWarning("RoundMediator", "Show Lose");
-        Console.LogWarning("RoundMediator", $"It was better to use {weapon.Name}");
-    }
-
-    private void ShowWinningScreen()
-    {
-        Console.LogWarning("RoundMediator", " Show Win");
-        throw new System.NotImplementedException();
-    }
     #endregion
-    
+
     #region Set Round Data
 
     private void SetEnemy(IWeapon weapon)
@@ -122,7 +112,21 @@ public class RoundMediator : Mediator
     }
 
     #endregion
+    
+    private void EnableView() => view.SetActive(true);
 
+    private void DisableView()
+    {
+        Console.LogWarning("RoundMediator", "Disable RoundView");
+        view.gameObject.SetActive(false);
+    }
+
+    private void DisableView(IWeapon weapon)
+    {
+        Console.LogWarning("RoundMediator", "Disable RoundView");
+        Console.LogWarning("RoundMediator", $"It was better to use {weapon.Name}");
+        DisableView();
+    }
     // --- Listeners ---
     private void SetListeners(bool isSet)
     {
@@ -130,8 +134,8 @@ public class RoundMediator : Mediator
         {
             loadedSignal.AddListener(SetRound);
             phaseLoadedSignal.AddListener(SetPhase);
-            wonSignal.AddListener(ShowWinningScreen);
-            lostSignal.AddListener(ShowLosingScreen);
+            wonSignal.AddListener(DisableView);
+            lostSignal.AddListener(DisableView);
             correctSignal.AddListener(ShowAnimationOfCorrect);
             
             view.exitClickedSignal.AddListener(ShowExitConfirmPopup);
@@ -141,8 +145,8 @@ public class RoundMediator : Mediator
         {
             loadedSignal.RemoveListener(SetRound);
             phaseLoadedSignal.RemoveListener(SetPhase);
-            wonSignal.RemoveListener(ShowWinningScreen);
-            lostSignal.RemoveListener(ShowLosingScreen);
+            wonSignal.RemoveListener(DisableView);
+            lostSignal.RemoveListener(DisableView);
             correctSignal.RemoveListener(ShowAnimationOfCorrect);
             
             view.exitClickedSignal.RemoveListener(ShowExitConfirmPopup);

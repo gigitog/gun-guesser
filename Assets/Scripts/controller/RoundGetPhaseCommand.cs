@@ -1,10 +1,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using strange.extensions.command.impl;
-using UnityEngine;
 using Console = UnityEngine.Console;
 
 /// <summary>
@@ -30,7 +28,7 @@ public class RoundGetPhaseCommand : Command
 
     protected string debugResult;
     
-    private static System.Random rng = new System.Random();
+    private static Random rng = new Random();
     
     public override void Execute()
     {

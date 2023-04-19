@@ -14,8 +14,11 @@ public class StartCommand : Command
     [Inject]
     public IGameConfig gameConfig { get; set; }
     
+    [Inject]
+    public MenuLoadSignal menuLoadSignal { get; set; }
     public override void Execute()
     {
+        menuLoadSignal.Dispatch();
         // CreateUser();
         //TODO 
         // Load assets

@@ -1,8 +1,10 @@
 using strange.extensions.signal.impl;
 
-// Dispatch
 
-// Listen to 
+public class MenuLoadSignal : Signal {}
+
+
+public class MenuLoadedSignal : Signal {}
 
 public class MenuCardClickedSignal : Signal {}
 

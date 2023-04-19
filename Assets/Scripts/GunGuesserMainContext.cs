@@ -53,19 +53,25 @@ public class GunGuesserMainContext : MVCSContext
         mediationBinder.Bind<MenuView>().To<MenuMediator>();
         mediationBinder.Bind<MenuCardView>().To<MenuCardMediator>();
         mediationBinder.Bind<RoundView>().To<RoundMediator>();
+        mediationBinder.Bind<WinView>().To<WinMediator>();
         
         // --- Commands ---
         // --- --- Menu:
         commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
 
         // --- --- Round:
+        commandBinder.Bind<MenuLoadSignal>().To<MenuLoadCommand>();
+        commandBinder.Bind<RoundToMenuSignal>().To<MenuLoadCommand>();
+        
+        commandBinder.Bind<RoundToNextSignal>().To<RoundLoadCommand>();
         commandBinder.Bind<MenuStartRoundSignal>().To<RoundLoadCommand>();
+
         commandBinder.Bind<RoundGetPhaseSignal>().To<RoundGetPhaseCommand_Debug>();
         commandBinder.Bind<RoundAnsweredSignal>().To<RoundAnswerCommand>();
-
+        
         commandBinder.Bind<CallWebServiceSignal>().To<CallWebServiceCommand>();
 		
-        //StartSignal is now fired instead of the START event.
+        
         //Note how we've bound it "Once". This means that the mapping goes away as soon as the command fires.
         commandBinder.Bind<GGStartSignal>().To<StartCommand>().Once ();
         
@@ -73,6 +79,7 @@ public class GunGuesserMainContext : MVCSContext
         injectionBinder.Bind<MenuCardChangedSignal>().ToSingleton();
         
         // injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<MenuLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();   
         injectionBinder.Bind<RoundWonSignal>().ToSingleton();
