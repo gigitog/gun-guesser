@@ -20,6 +20,9 @@ public class RoundMediator : Mediator
         
         [Inject]
         public RoundAnsweredSignal answeredSignal { get; set; }
+        
+        [Inject]
+        public RoundShowExitSignal showExitSignal { get; set; }
     #endregion
 
     #region Listen To Signals
@@ -28,11 +31,13 @@ public class RoundMediator : Mediator
         
         [Inject]
         public RoundPhaseLoadedSignal phaseLoadedSignal { get; set; }
-        [Inject]
-        public RoundWonSignal wonSignal { get; set; }
-        [Inject]
-        public RoundLostSignal lostSignal { get; set; }
         
+        [Inject]
+        public RoundEndSignal endSignal { get; set; }
+        
+        [Inject]
+        public RoundExitCanceledSignal exitCanceledSignal { get; set; }
+
         [Inject]
         public RoundCorrectSignal correctSignal { get; set; }
     #endregion
@@ -44,7 +49,7 @@ public class RoundMediator : Mediator
     
     private void AnswerClicked(int position)
     {
-        view.SetActive(false);
+        SetViewInteractable(false);
         answeredSignal.Dispatch(position);
     }
 
@@ -63,10 +68,10 @@ public class RoundMediator : Mediator
 
     #region Show UI Screens
     
-    private void ShowExitConfirmPopup()
+    private void ShowExitConfirmPopup(GameObject prefab)
     {
-        Console.LogWarning("RoundMediator", "Show Exit");
-        throw new System.NotImplementedException();
+        SetViewInteractable(false);
+        showExitSignal.Dispatch(prefab);
     }
 
     private void ShowAnimationOfCorrect()
@@ -113,30 +118,40 @@ public class RoundMediator : Mediator
 
     #endregion
     
-    private void EnableView() => view.SetActive(true);
+    private void EnableView()
+    {
+        view.gameObject.SetActive(true);
+        SetViewInteractable(true);
+    }
 
     private void DisableView()
     {
         Console.LogWarning("RoundMediator", "Disable RoundView");
+        SetViewInteractable(false);
         view.gameObject.SetActive(false);
     }
 
-    private void DisableView(IWeapon weapon)
+    private void SetViewInteractable(bool isInteractable)
     {
-        Console.LogWarning("RoundMediator", "Disable RoundView");
-        Console.LogWarning("RoundMediator", $"It was better to use {weapon.Name}");
-        DisableView();
+        view.SetActive(isInteractable);
     }
+
+    private void OnCancelExitPopup()
+    {
+        SetViewInteractable(true);
+    }
+
     // --- Listeners ---
+
     private void SetListeners(bool isSet)
     {
         if (isSet)
         {
             loadedSignal.AddListener(SetRound);
             phaseLoadedSignal.AddListener(SetPhase);
-            wonSignal.AddListener(DisableView);
-            lostSignal.AddListener(DisableView);
+            endSignal.AddListener(DisableView);
             correctSignal.AddListener(ShowAnimationOfCorrect);
+            exitCanceledSignal.AddListener(OnCancelExitPopup);
             
             view.exitClickedSignal.AddListener(ShowExitConfirmPopup);
             view.choiceClickedSignal.AddListener(AnswerClicked);
@@ -145,9 +160,9 @@ public class RoundMediator : Mediator
         {
             loadedSignal.RemoveListener(SetRound);
             phaseLoadedSignal.RemoveListener(SetPhase);
-            wonSignal.RemoveListener(DisableView);
-            lostSignal.RemoveListener(DisableView);
+            endSignal.RemoveListener(DisableView);
             correctSignal.RemoveListener(ShowAnimationOfCorrect);
+            exitCanceledSignal.RemoveListener(OnCancelExitPopup);
             
             view.exitClickedSignal.RemoveListener(ShowExitConfirmPopup);
             view.choiceClickedSignal.RemoveListener(AnswerClicked);

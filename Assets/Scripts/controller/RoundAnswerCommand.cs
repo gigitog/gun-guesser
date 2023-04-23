@@ -25,6 +25,9 @@ public class RoundAnswerCommand : Command
     
     [Inject]
     public RoundLostSignal lostSignal { get; set; }
+    
+    [Inject]
+    public RoundEndSignal endSignal { get; set; }
     #endregion
     
     public override void Execute()
@@ -35,7 +38,9 @@ public class RoundAnswerCommand : Command
             if (round.GetEnemiesQuantity() == 0)
             {
                 Console.Log("RACmd","That was Last Phase!");
+                endSignal.Dispatch();
                 wonSignal.Dispatch();
+                
                 return;
             }
             Console.LogWarning("RACmd",$"Correct! Left phases = [{round.GetEnemiesQuantity()}]");
@@ -45,6 +50,7 @@ public class RoundAnswerCommand : Command
         else
         {
             Console.LogWarning("RACmd","Incorrect!");
+            endSignal.Dispatch();
             lostSignal.Dispatch(round.CorrectChoice);
             return;
         }

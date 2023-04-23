@@ -32,13 +32,13 @@ public class RoundView : View
     
     // UI
     [Header("User Interface")]
+    [SerializeField] private GameObject exitPopup;
     [SerializeField] private Button exitButton; // leave round
     [SerializeField] private Slider progressBar; // track progress via bar
     [SerializeField] private TMP_Text phaseProgressCounter; // [curr/max]
     
     public Signal<int> choiceClickedSignal = new Signal<int>();
-    // public Signal secondChoiceClickedSignal = new Signal();
-    public Signal exitClickedSignal = new Signal();
+    public Signal<GameObject> exitClickedSignal = new Signal<GameObject>();
     
     #endregion
     
@@ -130,7 +130,7 @@ public class RoundView : View
     public void SetActive(bool isActive)
     {
         // Debug.Log($"[RoundView] buttons set to {isActive}");
-        firstChoiceButton.interactable = secondChoiceButton.interactable = isActive;
+        firstChoiceButton.interactable = secondChoiceButton.interactable = exitButton.interactable = isActive;
     }
 
     private void FirstChoiceClicked()
@@ -148,7 +148,7 @@ public class RoundView : View
     private void ExitClicked()
     {
         Console.LogWarning("RoundView","EXIT clicked");
-        exitClickedSignal.Dispatch();
+        exitClickedSignal.Dispatch(exitPopup);
     }
 
     private void SetListeners(bool isSet)

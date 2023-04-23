@@ -65,14 +65,14 @@ public class LoseMediator : Mediator
 
     private void NextRoundClicked()
     {
-        Console.Log("WinMediator", "Next Round clicked");
+        Console.Log("LoseMediator", "Next Round clicked");
         roundToAgainSignal.Dispatch();
         DisableView();
     }
 
     private void MainMenuClicked()
     {
-        Console.Log("WinMediator", "Main Menu clicked");
+        Console.Log("LoseMediator", "Main Menu clicked");
         menuLoadSignal.Dispatch();
         DisableView();
     }

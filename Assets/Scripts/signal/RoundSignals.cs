@@ -1,5 +1,12 @@
 using System.Collections.Generic;
 using strange.extensions.signal.impl;
+using UnityEngine;
+
+
+// Exit Popup
+public class RoundShowExitSignal : Signal<GameObject> {}
+public class RoundExitConfirmedSignal : Signal {}
+public class RoundExitCanceledSignal : Signal{}
 
 // Start
 public class RoundLoadedSignal : Signal {} 
@@ -12,6 +19,7 @@ public class RoundAnsweredSignal : Signal<int> {}
 public class RoundCorrectSignal : Signal {}
 
 // Round End
+public class  RoundEndSignal : Signal {}
 public class RoundLostSignal : Signal<IWeapon> {}
 public class RoundWonSignal : Signal {}
 

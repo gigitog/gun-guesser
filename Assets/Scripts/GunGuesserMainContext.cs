@@ -53,6 +53,7 @@ public class GunGuesserMainContext : MVCSContext
         mediationBinder.Bind<MenuView>().To<MenuMediator>();
         mediationBinder.Bind<MenuCardView>().To<MenuCardMediator>();
         mediationBinder.Bind<RoundView>().To<RoundMediator>();
+        mediationBinder.Bind<ExitPopupView>().To<ExitPopupMediator>();
         mediationBinder.Bind<WinView>().To<WinMediator>();
         mediationBinder.Bind<LoseView>().To<LoseMediator>();
         
@@ -67,6 +68,9 @@ public class GunGuesserMainContext : MVCSContext
         commandBinder.Bind<RoundToNextSignal>().To<RoundLoadCommand>();
         commandBinder.Bind<RoundToAgainSignal>().To<RoundLoadCommand>();
         commandBinder.Bind<MenuStartRoundSignal>().To<RoundLoadCommand>();
+
+        commandBinder.Bind<RoundShowExitSignal>().To<RoundShowExitCommand>();
+        commandBinder.Bind<RoundExitConfirmedSignal>().To<RoundExitConfirmedCommand>();
 
         commandBinder.Bind<RoundGetPhaseSignal>().To<RoundGetPhaseCommand_Debug>();
         commandBinder.Bind<RoundAnsweredSignal>().To<RoundAnswerCommand>();
@@ -83,10 +87,12 @@ public class GunGuesserMainContext : MVCSContext
         // injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
         injectionBinder.Bind<MenuLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
-        injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();   
+        injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<RoundEndSignal>().ToSingleton();
         injectionBinder.Bind<RoundWonSignal>().ToSingleton();
         injectionBinder.Bind<RoundLostSignal>().ToSingleton();
         injectionBinder.Bind<RoundCorrectSignal>().ToSingleton();
+        injectionBinder.Bind<RoundExitCanceledSignal>().ToSingleton();
     }
 
     private IGameConfig loadGameConfig()
