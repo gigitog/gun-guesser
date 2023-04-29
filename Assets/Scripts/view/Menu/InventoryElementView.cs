@@ -18,27 +18,36 @@ public class InventoryElementView : View
 
     public Signal elementClickedSignal = new Signal();
 
-    public string Name
+    public void SetView(IWeapon weaponModel, IGameConfig gameConfig)
+    {
+        Name = weaponModel.Name;
+        Mobility = gameConfig.GetTextMobility(weaponModel.WeaponMobility);
+        Type = gameConfig.GetTextType(weaponModel.Type);
+        Side = gameConfig.GetTextSide(weaponModel.Side);
+        Stage = gameConfig.GetTextStage(weaponModel.Stage); // TODO config.GetInventoryElementStage(data.weapon.Stage);
+    }
+
+    private string Name
     {
         get => nameField.text;
         set => nameField.text = string.IsNullOrEmpty(value) ? "Error Name" : value;
     }
-    public string Type
+    private string Type
     {
         get => typeField.text;
         set => typeField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
     }
-    public string Mobility
+    private string Mobility
     {
         get => mobilityField.text;
         set => mobilityField.text = string.IsNullOrEmpty(value) ? "Error Mobility" : value;
     }
-    public string Side
+    private string Side
     {
         get => sideField.text;
         set => sideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
-    public string Stage
+    private string Stage
     {
         get => stageField.text;
         set => stageField.text = string.IsNullOrEmpty(value) ? "Error Stage" : value;

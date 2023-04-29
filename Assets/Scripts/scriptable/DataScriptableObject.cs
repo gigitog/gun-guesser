@@ -28,6 +28,7 @@ public class DataScriptableObject : ScriptableObject
         }
         return weaponModels;
     }
+    
 }
 
 /// <summary>

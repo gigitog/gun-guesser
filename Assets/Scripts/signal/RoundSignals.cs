@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using strange.extensions.signal.impl;
 using UnityEngine;
 
-
 // Exit Popup
 
 /// <summary>
@@ -67,7 +66,7 @@ public class HeartRefilledSignal : Signal {}
 
 public class IncorrectAnswerData
 {
-    public IWeapon enemy;
     public IWeapon correctAnswer;
+    public IWeapon enemy;
     public IWeapon incorrectAnswer;
 }

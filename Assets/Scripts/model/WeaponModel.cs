@@ -7,9 +7,8 @@ using UnityEngine;
 [Serializable]
 public class WeaponModel : IWeapon
 {
-    [SerializeField] private int identificationNumber;
-    
     [SerializeField] private string name;
+    [NotEditable] [SerializeField] private string identificationNumber = Guid.NewGuid().ToString();
     [SerializeField] private string description;
     [SerializeField] private string year;
     [SerializeField] private string country;
@@ -25,9 +24,10 @@ public class WeaponModel : IWeapon
     // stage ≈ lvl
     [SerializeField] private int stage;
     [SerializeField] private Sprite image;
-
-
-    public int id => identificationNumber;
+    
+    public string id => identificationNumber;
+    
+    public void SetNewGUID() => identificationNumber = Guid.NewGuid().ToString();
     
     public int Stage => stage;
     public WeaponSide Side

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Util;
@@ -17,9 +18,14 @@ public class WeaponDataEditor : Editor
         EditorGUILayout.LabelField($"--- {Enum.GetName(typeof(WeaponSide), data.side)} ---");
         
         base.OnInspectorGUI();
+
+        if (GUILayout.Button("Generate new IDs"))
+        {
+            RegenerateGUID(data);
+        }
         
         GUILayout.BeginHorizontal();
-        
+
         if (GUILayout.Button($"Fill With {Enum.GetName(typeof(WeaponSide), data.side)} data"))
         {
             data.dataWeapons = FillData(data.side);
@@ -36,6 +42,14 @@ public class WeaponDataEditor : Editor
         
         ValidateSide(data);
         ValidateType(data);
+    }
+    
+    private void RegenerateGUID (DataScriptableObject data)
+    {
+        foreach (var weapon in data.dataWeapons.SelectMany(weapons => weapons.weapons))
+        {
+            weapon.SetNewGUID();
+        }
     }
 
     private static List<WeaponsOfTypeDataObject> FillData(WeaponSide weaponSide)

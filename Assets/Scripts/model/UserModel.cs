@@ -29,6 +29,6 @@ public class UserModel : IUser
         Console.Log("UserModel", "PostConstruct");
         Name = "Test Player Name";
         if (gameConfig != null) inventory = gameRules.GetInitialInventory();
-        Console.Log("UserModel", $"user inv capacity = {inventory.inventoryList.Capacity}");
+        Console.Log("UserModel", $"user inv capacity = {inventory.inventoryList.Count}");
     }
 }

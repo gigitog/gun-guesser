@@ -14,7 +14,7 @@ public interface IGameConfig
     public List<IWeapon> WeaponAlliesData { get;}
     public List<IWeapon> WeaponEnemyData { get;}
     
-    public GameObject RoundInterfacePrefab { get; }
+    public GameObject InventoryElementPrefab { get; }
     
     public int GetHeartsRefillTime();
 
@@ -38,6 +38,9 @@ public interface IGameConfig
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);
     public string GetTextMobility(WeaponMobility mobility);
+    // TODO config.GetInventoryElementStage(data.weapon.Stage);
+    public string GetTextStage(int stage);
+    public string GetTextSide(WeaponSide side);
     public Sprite GetEnemySprite(WeaponTyping typing);
     public Sprite GetAlliesSprite(WeaponTyping typing);
     public Dictionary<WeaponTyping, int> GetCounterTypingPower(WeaponTyping weapon);

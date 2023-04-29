@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using strange.extensions.signal.impl;
+using UnityEngine;
 
 public class MenuLoadSignal : Signal {}
 
@@ -39,7 +41,7 @@ public class MenuInventoryLoadSignal : Signal {}
 /// <summary>
 /// Dispatched by <see cref="InventoryLoadCommand"/> after some processing
 /// </summary>
-public class InventoryLoadedSignal : Signal {}
+public class InventoryLoadedSignal : Signal<List<GameObject>> {}
 
 /// <summary>
 /// Intention to open full information about certain <see cref="IInventoryElement"/>, namely <see cref="IWeapon"/>

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using strange.extensions.mediation.impl;
 using UnityEngine;
 
@@ -23,13 +24,15 @@ public class InventoryMediator : Mediator
     
     #endregion
 
-    private void EnableView()
+    private void EnableView(List<GameObject> obj)
     {
-        view.gameObject.SetActive(true);
+        view.SetInventory(obj);
+        view.SetActive(true);
     }
 
     private void DisableView()
     {
+        view.SetActive(false);
         throw new NotImplementedException();
     }
 

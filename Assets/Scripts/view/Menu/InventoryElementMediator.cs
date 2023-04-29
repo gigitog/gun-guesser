@@ -10,7 +10,7 @@ public class InventoryElementMediator : Mediator
     [Inject] public InventoryElementView view { get; set; }
 
     [Inject]
-    public IGameConfig config { get; set; }
+    public IGameConfig gameConfig { get; set; }
 
     public IInventoryElement element { get; set; }
 
@@ -24,20 +24,11 @@ public class InventoryElementMediator : Mediator
 
     #endregion
 
-    public void SetElement(IInventoryElement data)
+    public void SetElementData(IInventoryElement data)
     {
         element = data;
 
-        FillData();
-    }
-
-    private void FillData()
-    {
-        view.Name = element.weapon.Name;
-        view.Type = config.GetTextType(element.weapon.Type);
-        view.Mobility = config.GetTextMobility(element.weapon.WeaponMobility);
-        view.Side = "TODO";
-        view.Stage = element.weapon.Stage.ToString(); // TODO config.GetInventoryElementStage(data.weapon.Stage);
+        view.SetView(element.weapon, gameConfig);
     }
 
     private void EnableView()

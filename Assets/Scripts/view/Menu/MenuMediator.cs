@@ -101,4 +101,6 @@ public class MenuMediator : Mediator
     {
         view.gameObject.SetActive(false);
     }
+
+    private void DisableView(object data) => DisableView();
 }

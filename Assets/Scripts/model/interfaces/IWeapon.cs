@@ -10,7 +10,7 @@ using UnityEngine;
 /// </summary>
 public interface IWeapon
 {
-    public int id { get; }
+    public string id { get; }
     /// <summary>
     /// Maybe "Stage" change to "Rarity"
     /// </summary>

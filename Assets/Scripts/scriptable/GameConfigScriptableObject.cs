@@ -38,14 +38,14 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     [Range(3, 12)] [SerializeField] private int baseTimeForCard;
     [Range(4, 20)] [SerializeField] private int defaultPhaseQuantity;
     [Range(2, 6)] [SerializeField] private int defaultChoicesQuantity;
-    
+
     [Space(10)]
-    [Header("User Interface Prefavs")]
-    [SerializeField] private GameObject roundInterfacePrefab;
+    [Header("User Interface Prefabs")]
+    [SerializeField] private GameObject inventoryElementPrefab;
 
     public List<IWeapon> WeaponAlliesData => weaponAlliesData.GetWeapons();
     public List<IWeapon> WeaponEnemyData => weaponEnemyData.GetWeapons();
-    public GameObject RoundInterfacePrefab => roundInterfacePrefab;
+    public GameObject InventoryElementPrefab => inventoryElementPrefab;
 
     public int GetDefaultChoicesQuantity() => defaultChoicesQuantity;
 
@@ -96,6 +96,12 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
 
     public string GetTextMobility(WeaponMobility mobility) => weaponConfig.GetMobilityType(mobility);
+    public string GetTextStage(int stage) => stage.ToString();
+
+    public string GetTextSide(WeaponSide side)
+    {
+        return $"{Enum.GetName(typeof(WeaponSide), side)}";
+    }
 
     public Sprite GetEnemySprite(WeaponTyping typing)
     {

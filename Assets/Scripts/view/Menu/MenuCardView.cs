@@ -1,4 +1,5 @@
 
+using JetBrains.Annotations;
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
 using TMPro;
@@ -20,26 +21,36 @@ public class MenuCardView : View
     [SerializeField] private TMP_Text sideField;
     [SerializeField] private Button cardClickButton;
     public Signal CardClickedSignal = new Signal();
-    
-    public string Name
+
+    private string Name
     {
         get => nameField.text;
         set => nameField.text = string.IsNullOrEmpty(value) ? "Error Name" : value;
     }
-    public string Type
+
+    private string Type
     {
         get => typeField.text;
         set => typeField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
     }
-    public string Classification
+    private string Classification
     {
         get => classificationField.text;
         set => classificationField.text = string.IsNullOrEmpty(value) ? "Error Classification" : value;
     }
-    public string Side
+
+    private string Side
     {
         get => sideField.text;
         set => sideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
+    }
+
+    public void SetCard(IWeapon weapon, IGameConfig gameConfig)
+    {
+        Name = weapon.Name;
+        Classification = gameConfig.GetTextMobility(weapon.WeaponMobility);
+        Type = gameConfig.GetTextTypeLong(weapon.Type);
+        Side = weapon.Side.ToString();
     }
     
     private void OnEnable()

@@ -28,14 +28,27 @@ public class InventoryView : View
 
     #endregion
 
-    public void SetInventory(List<IInventoryElement> inventoryElements)
+    public void SetActive(bool isActive)
     {
-        
+        gameObject.SetActive(isActive);
     }
-
+    
+    public void SetInventory(List<GameObject> elements)
+    {
+        FeedPortWithElements(elements);
+    }
+    
+    /// TODO with new updates to make a more convenient way of representation of data
+    /// add Tabs by mobility
+    /// add blocks by Types
+    /// add filters?? by side 
     private void FeedPortWithElements(List<GameObject> elements)
     {
-        
+        Console.Log("InventoryView", "Feeding");
+        foreach (var o in elements)
+        {
+            o.transform.SetParent(listContentParent, false);
+        }
     }
     
     private void OnEnable()

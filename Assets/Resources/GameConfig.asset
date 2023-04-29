@@ -26,4 +26,4 @@ MonoBehaviour:
   baseTimeForCard: 12
   defaultPhaseQuantity: 5
   defaultChoicesQuantity: 2
-  roundInterfacePrefab: {fileID: 0}
+  inventoryElementPrefab: {fileID: 3727501291455656119, guid: bca6bf8121ba30e4497ebf4f8416eb96, type: 3}
