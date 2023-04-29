@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Util;
 
 /// <summary>
 /// Custom Editor makes it easier to observe, modify and add data of Weapons. <br/>

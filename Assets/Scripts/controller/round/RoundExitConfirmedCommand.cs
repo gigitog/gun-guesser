@@ -2,6 +2,9 @@
 using strange.extensions.command.impl;
 using UnityEngine;
 
+/// <summary>
+/// Process leaving round
+/// </summary>
 public class RoundExitConfirmedCommand : Command
 {
     [Inject]

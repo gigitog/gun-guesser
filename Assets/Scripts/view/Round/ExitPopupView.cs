@@ -1,10 +1,9 @@
 
-using System;
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
 using UnityEngine;
 using UnityEngine.UI;
-using Console = UnityEngine.Console;
+
 
 public class ExitPopupView : View
 {

@@ -1,6 +1,8 @@
 using strange.extensions.mediation.impl;
 
-
+/// <summary>
+/// bounds relationship between <see cref="MenuCardView"/> and rest of the App
+/// </summary>
 public class MenuCardMediator : Mediator
 {
     [Inject] 

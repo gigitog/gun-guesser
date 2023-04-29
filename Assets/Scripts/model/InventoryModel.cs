@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Inventory Model derives from <see cref="IInventory"/> <br/>
+/// </summary>
 public class InventoryModel : IInventory
 {
     public List<IInventoryElement> inventoryList { get; set; }

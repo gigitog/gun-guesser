@@ -3,6 +3,9 @@ using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using UnityEngine;
 
+/// <summary>
+/// Process opening popup of Exit
+/// </summary>
 public class RoundShowExitCommand : Command
 {
     [Inject(ContextKeys.CONTEXT_VIEW)]

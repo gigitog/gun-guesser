@@ -1,12 +1,15 @@
 using strange.extensions.mediation.impl;
 using Console = UnityEngine.Console;
 
+/// <summary>
+/// bounds relationship between <see cref="MenuView"/> and rest of the App
+/// </summary>
 public class MenuMediator : Mediator
 {
     [Inject]
     public MenuView view{ get; set;}
 
-    #region Dispatched Signals
+    #region Dispatched Signals (StartRound, Open Profile and Inventory)
     [Inject]
     public MenuStartRoundSignal startRoundSignal { get; set; }
     

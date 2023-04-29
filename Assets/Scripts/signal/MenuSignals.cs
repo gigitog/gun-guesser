@@ -51,3 +51,6 @@ public class InventoryElementClickedSignal : Signal<IInventoryElement> {}
 /// Dispatched by <see cref="ProfileLoadCommand"/> after some processing
 /// </summary>
 public class ProfileLoadedSignal : Signal {}
+
+public class ProfileToMenuSignal : Signal {}
+public class InventoryToMenuSignal : Signal {}

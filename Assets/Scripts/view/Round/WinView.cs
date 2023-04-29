@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Interface of Won Round
+/// </summary>
 public class WinView : View
 {
     #region Serialize Fields

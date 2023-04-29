@@ -1,17 +1,24 @@
-using System;
 using strange.extensions.mediation.impl;
 
+/// <summary>
+/// bounds relationship between <see cref="ProfileView"/> and rest of the App
+/// </summary>
 public class ProfileMediator : Mediator
 {
     [Inject] public ProfileView view { get; set; }
 
-    #region Dispatched Signals
+    #region Dispatched Signals (BackToMenu)
 
+    [Inject]
+    public ProfileToMenuSignal profileToMenuSignal { get; set; }
+    
     #endregion
 
-    #region Listen To Signals
+    #region Listen To Signals (Profile Loaded)
+    
     [Inject]
     public ProfileLoadedSignal profileLoadedSignal { get; set; }
+    
     #endregion
 
     private void EnableView()
@@ -21,18 +28,12 @@ public class ProfileMediator : Mediator
 
     private void DisableView()
     {
-        throw new NotImplementedException();
+        view.gameObject.SetActive(false);
     }
 
-    public override void OnRegister()
-    {
-        SetListeners(true);
-    }
+    public override void OnRegister() => SetListeners(true);
 
-    public override void OnRemove()
-    {
-        SetListeners(false);
-    }
+    public override void OnRemove() => SetListeners(false);
 
     private void SetListeners(bool isSet)
     {
@@ -47,7 +48,5 @@ public class ProfileMediator : Mediator
             profileLoadedSignal.RemoveListener(EnableView);
         }
     }
-
-    
 }
 

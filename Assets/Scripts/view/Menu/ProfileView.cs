@@ -1,5 +1,8 @@
 using strange.extensions.mediation.impl;
 
+/// <summary>
+/// Interface of Profile
+/// </summary>
 public class ProfileView : View
 {
 

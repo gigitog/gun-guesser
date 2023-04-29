@@ -1,6 +1,9 @@
 using strange.extensions.mediation.impl;
 using UnityEngine;
 
+/// <summary>
+/// Bounds relationship between <see cref="LoseView"/> and rest of the App
+/// </summary>
 public class LoseMediator : Mediator
 {
     [Inject]

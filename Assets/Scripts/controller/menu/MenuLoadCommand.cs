@@ -2,6 +2,9 @@
 using strange.extensions.command.impl;
 using UnityEngine;
 
+/// <summary>
+/// Process opening of the Menu
+/// </summary>
 public class MenuLoadCommand : Command
 {
     [Inject]

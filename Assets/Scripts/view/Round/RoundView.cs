@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
+/// Interface of Round <br/>
 /// Includes: Enemy, Choices, Exit, progress, timer. <br/>
 /// Stores Mono behavior objects from Unity scene
 /// </summary>

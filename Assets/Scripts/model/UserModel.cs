@@ -1,6 +1,8 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
+/// <summary>
+/// User Model derives from <see cref="IUser"/> <br/>
+/// </summary>
 public class UserModel : IUser
 {
     public string Id { get; private set; }

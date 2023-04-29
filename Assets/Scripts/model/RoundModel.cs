@@ -3,6 +3,9 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Round Model derives from <see cref="IRound"/> <br/>
+/// </summary>
 public class RoundModel : IRound
 {
     private Queue<IWeapon> weapons;

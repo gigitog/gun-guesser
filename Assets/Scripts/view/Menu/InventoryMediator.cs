@@ -2,19 +2,25 @@ using System;
 using strange.extensions.mediation.impl;
 using UnityEngine;
 
+/// <summary>
+/// bounds relationship between <see cref="InventoryView"/> and rest of the App
+/// </summary>
 public class InventoryMediator : Mediator
 {
-    // Add in Context:
-    // mediationBinder.Bind<####View>().To<####Mediator>();
     [Inject] public InventoryView view { get; set; }
 
-    #region Dispatched Signals
-
+    #region Dispatched Signals (BackToMenu)
+    
+    [Inject]
+    public InventoryToMenuSignal inventoryToMenuSignal { get; set; }
+    
     #endregion
 
     #region Listen To Signals
+    
     [Inject]
     public InventoryLoadedSignal inventoryLoadedSignal { get; set; }
+    
     #endregion
 
     private void EnableView()

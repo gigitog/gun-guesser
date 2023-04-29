@@ -1,11 +1,11 @@
 using System;
 using strange.extensions.mediation.impl;
 
+/// <summary>
+/// bounds relationship between <see cref="InventoryElementView"/> and rest of the App
+/// </summary>
 public class InventoryElementMediator : Mediator
 {
-    // Add in Context:
-    // mediationBinder.BindView<####View>().To<####Mediator>();
-    
     // Mediator knows, what weapon is here
     [Inject] public InventoryElementView view { get; set; }
 
@@ -14,7 +14,7 @@ public class InventoryElementMediator : Mediator
 
     public IInventoryElement element { get; set; }
 
-    #region Dispatched Signals
+    #region Dispatched Signals (invElemClicked)
     
     public InventoryElementClickedSignal inventoryElementClickedSignal { get; set; }
     

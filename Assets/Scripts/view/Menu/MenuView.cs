@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
+/// Interface of Main Menu<br/>
 /// Includes: Start, User and Inventory buttons <br/>
 /// Stores Mono behavior objects from Unity scene
 /// </summary>

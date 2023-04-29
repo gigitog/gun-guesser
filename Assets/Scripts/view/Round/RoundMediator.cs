@@ -4,7 +4,7 @@ using strange.extensions.mediation.impl;
 using UnityEngine;
 
 /// <summary>
-/// bounds relationship between <see cref="RoundView"/> and controllers
+/// bounds relationship between <see cref="RoundView"/> and rest of the App
 /// </summary>
 public class RoundMediator : Mediator
 {
@@ -42,11 +42,8 @@ public class RoundMediator : Mediator
         public RoundCorrectSignal correctSignal { get; set; }
     #endregion
 
-    public override void OnRegister()
-    {
-        SetListeners(true);
-    }
-    
+    public override void OnRegister() => SetListeners(true);
+
     private void AnswerClicked(int position)
     {
         SetViewInteractable(false);

@@ -2,7 +2,10 @@
 using strange.extensions.mediation.impl;
 using UnityEngine;
 
-// exit view is destroyed
+/// <summary>
+/// Bounds relationship between <see cref="ExitPopupView"/> and rest of the App
+/// <remarks>ExitPopupView is destroyed</remarks>
+/// </summary>
 public class ExitPopupMediator : Mediator
 {
     [Inject] 

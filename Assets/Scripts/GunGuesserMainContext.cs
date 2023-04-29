@@ -8,13 +8,9 @@ using Util;
 
 public class GunGuesserMainContext : MVCSContext
 {
-    public GunGuesserMainContext (MonoBehaviour view) : base(view)
-    {
-    }
+    public GunGuesserMainContext (MonoBehaviour view) : base(view) {}
 
-    public GunGuesserMainContext (MonoBehaviour view, ContextStartupFlags flags) : base(view, flags)
-    {
-    }
+    public GunGuesserMainContext (MonoBehaviour view, ContextStartupFlags flags) : base(view, flags) {}
 	
     // Unbind the default EventCommandBinder and rebind the SignalCommandBinder
     protected override void addCoreComponents()

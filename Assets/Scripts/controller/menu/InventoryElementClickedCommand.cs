@@ -1,6 +1,8 @@
 using strange.extensions.command.impl;
-using Util;
 
+/// <summary>
+/// Process opening of Inventory Element
+/// </summary>
 public class InventoryElementClickedCommand : Command
 {
     [Inject]

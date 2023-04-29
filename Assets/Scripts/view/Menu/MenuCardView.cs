@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Interface of a card in Main Menu (<see cref="MenuView"/>)
+/// </summary>
 public class MenuCardView : View
 {
     /// <summary>

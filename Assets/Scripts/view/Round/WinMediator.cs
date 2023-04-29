@@ -1,6 +1,9 @@
 using strange.extensions.mediation.impl;
 using UnityEngine;
 
+/// <summary>
+/// Bounds relationship between <see cref="WinView"/> and rest of the App
+/// </summary>
 public class WinMediator : Mediator
 {
     [Inject]

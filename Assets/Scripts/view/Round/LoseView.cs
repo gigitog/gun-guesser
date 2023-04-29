@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Interface of Lost Round
+/// </summary>
 public class LoseView : View
 {
     #region Serialize Fields

@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Is divided into categories by mobility and inside by types
-/// <br/>
+/// Interface of Inventory<br/>
+/// Is divided into categories by mobility and inside by types <br/>
 /// Includes: Inventory elements, Exit <br/>
 /// Stores Mono behavior objects from Unity scene
 /// </summary>
