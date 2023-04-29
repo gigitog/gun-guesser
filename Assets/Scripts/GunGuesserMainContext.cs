@@ -4,6 +4,7 @@ using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using strange.extensions.context.impl;
 using UnityEngine;
+using Util;
 
 public class GunGuesserMainContext : MVCSContext
 {
@@ -42,7 +43,7 @@ public class GunGuesserMainContext : MVCSContext
         injectionBinder.Bind<IRound>().To<RoundModel>().ToSingleton();
         injectionBinder.Bind<IWeapon>().To<WeaponModel>();
         injectionBinder.Bind<IInventory>().To<InventoryModel>();
-        injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>();
+        injectionBinder.Bind<IInventoryElement>().To<InventoryElementModel>().ToName(StrangeInjectionNames.MODEL);
         injectionBinder.Bind<IUser>().To<UserModel>().ToSingleton();
 
         // ---
@@ -50,16 +51,22 @@ public class GunGuesserMainContext : MVCSContext
         injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
 
         // --- View Mediators ---
-        mediationBinder.Bind<MenuView>().To<MenuMediator>();
-        mediationBinder.Bind<MenuCardView>().To<MenuCardMediator>();
-        mediationBinder.Bind<RoundView>().To<RoundMediator>();
-        mediationBinder.Bind<ExitPopupView>().To<ExitPopupMediator>();
-        mediationBinder.Bind<WinView>().To<WinMediator>();
-        mediationBinder.Bind<LoseView>().To<LoseMediator>();
+        mediationBinder.BindView<MenuView>().To<MenuMediator>();
+        mediationBinder.BindView<MenuCardView>().To<MenuCardMediator>();
+        mediationBinder.BindView<RoundView>().To<RoundMediator>();
+        mediationBinder.BindView<ExitPopupView>().To<ExitPopupMediator>();
+        mediationBinder.BindView<WinView>().To<WinMediator>();
+        mediationBinder.BindView<LoseView>().To<LoseMediator>();
+        mediationBinder.BindView<ProfileView>().To<ProfileMediator>();
+        mediationBinder.BindView<InventoryView>().To<InventoryMediator>();
+        mediationBinder.BindView<InventoryElementView>().To<InventoryElementMediator>();
         
         // --- Commands ---
         // --- --- Menu:
-        commandBinder.Bind<MenuCardClickedSignal>().To<MenuChangeCardCommand>();
+        commandBinder.Bind<MenuCardClickedSignal>().To<MenuCardChangeCommand>();
+        commandBinder.Bind<InventoryElementClickedSignal>().To<InventoryElementClickedCommand>();
+        commandBinder.Bind<MenuInventoryLoadSignal>().To<InventoryLoadCommand>();
+        commandBinder.Bind<MenuProfileLoadSignal>().To<ProfileLoadCommand>();
 
         // --- --- Round:
         commandBinder.Bind<MenuLoadSignal>().To<MenuLoadCommand>();
@@ -86,6 +93,9 @@ public class GunGuesserMainContext : MVCSContext
         
         // injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
         injectionBinder.Bind<MenuLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<ProfileLoadedSignal>().ToSingleton();
+        injectionBinder.Bind<InventoryLoadedSignal>().ToSingleton();
+        
         injectionBinder.Bind<RoundLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundPhaseLoadedSignal>().ToSingleton();
         injectionBinder.Bind<RoundEndSignal>().ToSingleton();

@@ -9,6 +9,13 @@ public class MenuMediator : Mediator
     #region Dispatched Signals
     [Inject]
     public MenuStartRoundSignal startRoundSignal { get; set; }
+    
+    [Inject]
+    public MenuProfileLoadSignal profileLoadSignal { get; set; }
+    
+    [Inject]
+    public MenuInventoryLoadSignal inventoryLoadSignal { get; set; }
+    
     #endregion
 
     #region Listen To Signals (Menu Loaded, Round Loaded)
@@ -18,6 +25,12 @@ public class MenuMediator : Mediator
     
     [Inject]
     public RoundLoadedSignal roundLoadedSignal { get; set; }
+    
+    [Inject]
+    public ProfileLoadedSignal profileLoadedSignal { get; set; }
+    
+    [Inject]
+    public InventoryLoadedSignal inventoryLoadedSignal { get; set; }
 
     #endregion
     
@@ -35,11 +48,13 @@ public class MenuMediator : Mediator
     private void OnInventoryButtonClicked()
     {
         Console.Log("MenuMediator","Inventory Clicked");
+        inventoryLoadSignal.Dispatch();
     }
 
     private void OnProfileButtonClicked()
     {
         Console.Log("MenuMediator","Profile Clicked");
+        profileLoadSignal.Dispatch();
     }
 
     public override void OnRemove()
@@ -53,6 +68,8 @@ public class MenuMediator : Mediator
         {
             menuLoadedSignal.AddListener(EnableView);
             roundLoadedSignal.AddListener(DisableView);
+            profileLoadedSignal.AddListener(DisableView);
+            inventoryLoadedSignal.AddListener(DisableView);
             
             view.MenuInventoryClickedSignal.AddListener(OnInventoryButtonClicked);
             view.MenuProfileClickedSignal.AddListener(OnProfileButtonClicked);
@@ -62,6 +79,8 @@ public class MenuMediator : Mediator
         {
             menuLoadedSignal.RemoveListener(EnableView);
             roundLoadedSignal.RemoveListener(DisableView);
+            profileLoadedSignal.RemoveListener(DisableView);
+            inventoryLoadedSignal.RemoveListener(DisableView);
             
             view.MenuInventoryClickedSignal.RemoveListener(OnInventoryButtonClicked);
             view.MenuProfileClickedSignal.RemoveListener(OnProfileButtonClicked);

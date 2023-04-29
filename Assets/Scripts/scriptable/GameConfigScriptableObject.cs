@@ -95,7 +95,7 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
 
     public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
 
-    public string GetTextClassification(WeaponMobility mobility) => weaponConfig.GetMobilityType(mobility);
+    public string GetTextMobility(WeaponMobility mobility) => weaponConfig.GetMobilityType(mobility);
 
     public Sprite GetEnemySprite(WeaponTyping typing)
     {

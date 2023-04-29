@@ -1,5 +1,6 @@
 using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,11 +13,16 @@ public class MenuView : View
     [SerializeField] private Button startButton;
     [SerializeField] private Button userProfileButton;
     [SerializeField] private Button inventoryButton;
+    [SerializeField] private TMP_Text hearts;
+
+    #region Dispatched Signals of User Actions
 
     public Signal MenuInventoryClickedSignal = new Signal();
     public Signal MenuProfileClickedSignal = new Signal();
     public Signal MenuStartClickedSignal = new Signal();
 
+    #endregion
+    
     private void OnEnable()
     {
         startButton.onClick.AddListener(StartClick);
@@ -30,18 +36,18 @@ public class MenuView : View
         userProfileButton.onClick.RemoveListener(ProfileClick);
         inventoryButton.onClick.RemoveListener(InventoryClick);
     }
-    
-    public void StartClick()
+
+    private void StartClick()
     {
         MenuStartClickedSignal.Dispatch();
     }
 
-    public void ProfileClick()
+    private void ProfileClick()
     {
         MenuProfileClickedSignal.Dispatch();
     }
 
-    public void InventoryClick()
+    private void InventoryClick()
     {
         MenuInventoryClickedSignal.Dispatch();
     }

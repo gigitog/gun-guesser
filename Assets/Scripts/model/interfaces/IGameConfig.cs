@@ -37,7 +37,7 @@ public interface IGameConfig
 
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);
-    public string GetTextClassification(WeaponMobility mobility);
+    public string GetTextMobility(WeaponMobility mobility);
     public Sprite GetEnemySprite(WeaponTyping typing);
     public Sprite GetAlliesSprite(WeaponTyping typing);
     public Dictionary<WeaponTyping, int> GetCounterTypingPower(WeaponTyping weapon);

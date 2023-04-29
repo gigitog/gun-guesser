@@ -40,7 +40,7 @@ public class MenuCardMediator : Mediator
     private void SetCard(IWeapon weapon)
     {
         view.Name = weapon.Name;
-        view.Classification = config.GetTextClassification(weapon.WeaponMobility);
+        view.Classification = config.GetTextMobility(weapon.WeaponMobility);
         view.Type = config.GetTextTypeLong(weapon.Type);
         view.Side = weapon.Side.ToString();
     }

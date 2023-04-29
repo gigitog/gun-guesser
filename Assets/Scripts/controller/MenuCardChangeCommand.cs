@@ -6,7 +6,7 @@ using UnityEngine;
 /// Command gets a random <see cref="IWeapon"/> and sets it to a card in Main Menu;
 /// <seealso cref="MenuCardView" /> <seealso cref="MenuCardMediator"/>
 /// </summary>
-public class MenuChangeCardCommand : Command
+public class MenuCardChangeCommand : Command
 {
     [Inject]
     public IUser user { get; set; }

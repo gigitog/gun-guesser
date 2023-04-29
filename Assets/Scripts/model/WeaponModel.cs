@@ -7,6 +7,8 @@ using UnityEngine;
 [Serializable]
 public class WeaponModel : IWeapon
 {
+    [SerializeField] private int identificationNumber;
+    
     [SerializeField] private string name;
     [SerializeField] private string description;
     [SerializeField] private string year;
@@ -23,6 +25,10 @@ public class WeaponModel : IWeapon
     // stage ≈ lvl
     [SerializeField] private int stage;
     [SerializeField] private Sprite image;
+
+
+    public int id => identificationNumber;
+    
     public int Stage => stage;
     public WeaponSide Side
     {
