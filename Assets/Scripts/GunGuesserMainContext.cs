@@ -43,13 +43,17 @@ public class GunGuesserMainContext : MVCSContext
     /// Menu Controllers
     private void BindMenuSignalsToCommands()
     {
+        commandBinder.Bind<MenuLoadSignal>().To<MenuLoadCommand>();
+        
         commandBinder.Bind<MenuCardClickedSignal>().To<MenuCardChangeCommand>();
-        commandBinder.Bind<InventoryElementClickedSignal>().To<InventoryElementClickedCommand>();
+
         commandBinder.Bind<MenuInventoryLoadSignal>().To<InventoryLoadCommand>();
+        commandBinder.Bind<InventoryElementClickedSignal>().To<InventoryElementClickedCommand>();
+
         commandBinder.Bind<MenuProfileLoadSignal>().To<ProfileLoadCommand>();
+        
         commandBinder.Bind<ProfileToMenuSignal>().To<MenuLoadCommand>();
         commandBinder.Bind<InventoryToMenuSignal>().To<MenuLoadCommand>();
-        commandBinder.Bind<MenuLoadSignal>().To<MenuLoadCommand>();
     }
     /// Round Controllers
     private void BindRoundSignalsToCommands()

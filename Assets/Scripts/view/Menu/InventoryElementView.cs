@@ -14,9 +14,21 @@ public class InventoryElementView : View
     [SerializeField] private TMP_Text mobilityField;
     [SerializeField] private TMP_Text stageField;
     [SerializeField] private TMP_Text sideField;
+    [SerializeField] private TMP_Text countryField;
     [SerializeField] private Button elementButton;
 
     public Signal elementClickedSignal = new Signal();
+
+    protected override void Awake()
+    {
+        base.Awake();
+        SetEmptyView();
+    }
+
+    private void SetEmptyView()
+    {
+        nameField.text = typeField.text = mobilityField.text = stageField.text = sideField.text = countryField.text = "";
+    }
 
     public void SetView(IWeapon weaponModel, IGameConfig gameConfig)
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using strange.extensions.mediation.impl;
 using UnityEngine;
+using Console = UnityEngine.Console;
 
 /// <summary>
 /// bounds relationship between <see cref="InventoryView"/> and rest of the App
@@ -9,6 +10,8 @@ using UnityEngine;
 public class InventoryMediator : Mediator
 {
     [Inject] public InventoryView view { get; set; }
+    private List<GameObject> inventoryElementsObjects;
+
 
     #region Dispatched Signals (BackToMenu)
     
@@ -26,6 +29,7 @@ public class InventoryMediator : Mediator
 
     private void EnableView(List<GameObject> obj)
     {
+        inventoryElementsObjects = obj;    
         view.SetInventory(obj);
         view.SetActive(true);
     }
@@ -83,5 +87,6 @@ public class InventoryMediator : Mediator
             view.InventoryInfoClicked.RemoveListener(OnInfoClicked);
         }
     }
+    
 }
 

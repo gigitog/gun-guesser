@@ -1,5 +1,6 @@
 using System;
 using strange.extensions.mediation.impl;
+using Console = UnityEngine.Console;
 
 /// <summary>
 /// bounds relationship between <see cref="InventoryElementView"/> and rest of the App
@@ -16,6 +17,7 @@ public class InventoryElementMediator : Mediator
 
     #region Dispatched Signals (invElemClicked)
     
+    [Inject]
     public InventoryElementClickedSignal inventoryElementClickedSignal { get; set; }
     
     #endregion
@@ -56,7 +58,6 @@ public class InventoryElementMediator : Mediator
         if (isSet)
         {
             // Add Listeners
-            
         }
         else
         {

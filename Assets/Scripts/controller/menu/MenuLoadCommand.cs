@@ -11,7 +11,7 @@ public class MenuLoadCommand : Command
     public MenuLoadedSignal menuLoadedSignal { get; set; }
     public override void Execute()
     {
-        Console.LogWarning("MLCmd", "Execution");
+        // Console.LogWarning("MLCmd", "Execution");
         menuLoadedSignal.Dispatch();
     }
 }

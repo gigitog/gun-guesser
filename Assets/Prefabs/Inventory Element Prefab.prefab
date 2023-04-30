@@ -770,6 +770,7 @@ MonoBehaviour:
   mobilityField: {fileID: 3727501289773619077}
   stageField: {fileID: 3727501290170624850}
   sideField: {fileID: 3727501290686331301}
+  countryField: {fileID: 3727501291592998499}
   elementButton: {fileID: 3727501291455656117}
 --- !u!114 &3727501291455656117
 MonoBehaviour:
