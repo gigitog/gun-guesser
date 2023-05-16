@@ -17,8 +17,10 @@ public class MenuCardView : View
     /// </summary>
     [SerializeField] private TMP_Text nameField;
     [SerializeField] private TMP_Text typeField;
-    [SerializeField] private TMP_Text classificationField;
-    [SerializeField] private TMP_Text sideField;
+    [SerializeField] private TMP_Text descriptionField;
+    [SerializeField] private Image mobilityType;
+    [SerializeField] private Image country;
+    [SerializeField] private Image weaponImage;
     [SerializeField] private Button cardClickButton;
     public Signal CardClickedSignal = new Signal();
 
@@ -33,24 +35,42 @@ public class MenuCardView : View
         get => typeField.text;
         set => typeField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
     }
-    private string Classification
+    private string Description
     {
-        get => classificationField.text;
-        set => classificationField.text = string.IsNullOrEmpty(value) ? "Error Classification" : value;
+        get => descriptionField.text;
+        set => descriptionField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
+    }
+    
+    private Sprite MobilityType
+    {
+        get => mobilityType.sprite;
+        set => mobilityType.sprite = value;
     }
 
-    private string Side
+    private Sprite Country
     {
-        get => sideField.text;
-        set => sideField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
+        get => country.sprite;
+        set => country.sprite = value;
+    }
+
+    private Sprite WeaponImage
+    {
+        get => weaponImage.sprite;
+        set => weaponImage.sprite = value;
     }
 
     public void SetCard(IWeapon weapon, IGameConfig gameConfig)
     {
         Name = weapon.Name;
-        Classification = gameConfig.GetTextMobility(weapon.WeaponMobility);
-        Type = gameConfig.GetTextTypeLong(weapon.Type);
-        Side = weapon.Side.ToString();
+        Description = weapon.Description;
+        
+        WeaponImage = weapon.Side == WeaponSide.Ally 
+            ? gameConfig.GetAlliesSprite(weapon.Type) 
+            : gameConfig.GetEnemySprite(weapon.Type);
+        
+        MobilityType = gameConfig.GetImageMobility(weapon.WeaponMobility);
+        Country = gameConfig.GetImageCountry(weapon.Country);
+        Type = gameConfig.GetTextType(weapon.Type);
     }
     
     private void OnEnable()

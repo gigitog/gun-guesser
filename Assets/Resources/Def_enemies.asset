@@ -1,0 +1,914 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4d18523dde4fdb90ec2ccbff783d4d, type: 3}
+  m_Name: Def_enemies
+  m_EditorClassIdentifier: 
+  side: 1
+  dataWeapons:
+  - typeName: MBT
+    typing: 0
+    weapons:
+    - name: T-72B3
+      description: Main battle tank that has improved armor protection and upgraded
+        digital equipment.
+      year: 2013
+      country: Russia
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-90
+      description: Main battle tank that has a low profile, improved fire control
+        system, and advanced armor protection.
+      year: 1992
+      country: Russia
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-80
+      description: Main battle tank that has a gas turbine engine and composite armor
+        protection.
+      year: 1976
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Object 195
+      description: Main battle tank that has an unmanned turret and a 125mm smoothbore
+        gun.
+      year: 2010
+      country: Russia
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-14 Armata
+      description: Main battle tank that has a remote controlled turret, advanced
+        fire control system, and improved armor protection.
+      year: 2015
+      country: Russia
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64
+      description: Main battle tank that has a 125mm smoothbore gun and composite
+        armor protection.
+      year: 1966
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-54/55
+      description: Main battle tank that has a 100mm rifled gun and sloped armor
+        protection.
+      year: 1947
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-62
+      description: Main battle tank that has a 115mm smoothbore gun and composite
+        armor protection.
+      year: 1961
+      country: USSR
+      weaponMobility: 0
+      type: 0
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: MLRS
+    typing: 1
+    weapons:
+    - name: BM-21 Grad
+      description: Soviet-made rocket artillery system that can launch 40 122mm rockets
+        at once.
+      year: 1963
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-27 Uragan
+      description: Soviet-made multiple launch rocket system that can fire up to
+        16 220mm rockets at a range of up to 35km.
+      year: 1975
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-30 Smerch
+      description: Soviet-made multiple launch rocket system that can fire up to
+        12 300mm rockets at a range of up to 90km.
+      year: 1987
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: TOS-1 Buratino
+      description: Russian-made flamethrower multiple rocket launcher that can launch
+        thermobaric rockets at a range of up to 6km.
+      year: 1988
+      country: USSR
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-21V Grad-V
+      description: Upgraded version of the BM-21 Grad that has improved accuracy
+        and firing range.
+      year: 2014
+      country: Russia
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tornado-G
+      description: Russian-made multiple launch rocket system that can fire up to
+        12 122mm or 220mm rockets at a range of up to 120km.
+      year: 2011
+      country: Russia
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Iskander-M
+      description: Russian-made mobile ballistic missile system that can launch a
+        variety of missiles, including those with nuclear warheads.
+      year: 2006
+      country: Russia
+      weaponMobility: 0
+      type: 1
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: APC
+    typing: 2
+    weapons:
+    - name: BTR-60
+      description: Soviet-made wheeled armored personnel carrier that can carry up
+        to 14 soldiers.
+      year: 1960
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-70
+      description: Soviet-made wheeled armored personnel carrier that can carry up
+        to 9 soldiers and has improved armor protection compared to the BTR-60.
+      year: 1972
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-80
+      description: Soviet-made wheeled armored personnel carrier that can carry up
+        to 10 soldiers and has better cross-country mobility than the BTR-70.
+      year: 1986
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-1
+      description: Soviet-made airborne infantry fighting vehicle that can transport
+        up to 5 soldiers and is equipped with a 73mm gun and a 7.62mm machine gun.
+      year: 1969
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-2
+      description: Soviet-made airborne infantry fighting vehicle that can transport
+        up to 5 soldiers and is equipped with a 30mm cannon and a 7.62mm machine
+        gun.
+      year: 1985
+      country: USSR
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-3
+      description: Russian-made airborne infantry fighting vehicle that can transport
+        up to 5 soldiers and is equipped with a 30mm cannon, a 100mm gun and a 7.62mm
+        machine gun.
+      year: 1990
+      country: Russia
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kurganets-25
+      description: Russian-made tracked armored personnel carrier that can carry
+        up to 14 soldiers and is equipped with a remote-controlled 12.7mm machine
+        gun.
+      year: 2015
+      country: Russia
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Boomerang
+      description: Russian-made wheeled armored personnel carrier that can carry
+        up to 11 soldiers and is equipped with a 30mm cannon and a 7.62mm machine
+        gun.
+      year: 2014
+      country: Russia
+      weaponMobility: 0
+      type: 2
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: IFV
+    typing: 3
+    weapons:
+    - name: BMP-1
+      description: Soviet-made infantry fighting vehicle that can transport up to
+        8 soldiers and is equipped with a 73mm gun and a 7.62mm machine gun.
+      year: 1966
+      country: USSR
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-2
+      description: Soviet-made infantry fighting vehicle that can transport up to
+        8 soldiers and is equipped with a 30mm cannon and a 7.62mm machine gun.
+      year: 1980
+      country: USSR
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-3
+      description: Russian-made infantry fighting vehicle that can transport up to
+        7 soldiers and is equipped with a 100mm gun, a 30mm cannon and a 7.62mm machine
+        gun.
+      year: 1987
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kurganets-25
+      description: Russian-made tracked infantry fighting vehicle that can transport
+        up to 9 soldiers and is equipped with a remote-controlled 30mm cannon and
+        a 7.62mm machine gun.
+      year: 2015
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: T-15
+      description: Russian-made tracked infantry fighting vehicle that can transport
+        up to 9 soldiers and is equipped with a 30mm cannon and a 7.62mm machine
+        gun.
+      year: 2018
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-4
+      description: Russian-made airborne infantry fighting vehicle that can transport
+        up to 5 soldiers and is equipped with a 100mm gun, a 30mm cannon and a 7.62mm
+        machine gun.
+      year: 2004
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BMPT Terminator
+      description: Russian-made armored fighting vehicle that is designed to support
+        infantry in urban and other complex terrains. It is equipped with a 30mm
+        cannon, two 30mm automatic grenade launchers and four ATGM launchers.
+      year: 2006
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-T
+      description: Russian-made heavily armored infantry fighting vehicle based on
+        the BTR-80 chassis. It can transport up to 9 soldiers and is equipped with
+        a 30mm cannon and a 7.62mm machine gun.
+      year: 1998
+      country: Russia
+      weaponMobility: 0
+      type: 3
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: SPH
+    typing: 4
+    weapons:
+    - name: 2S19 Msta-S
+      description: 155 mm self-propelled howitzer
+      year: 1989
+      country: USSR
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S3 Akatsiya
+      description: 152 mm self-propelled howitzer
+      year: 1967
+      country: USSR
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S1 Gvozdika
+      description: 122 mm self-propelled howitzer
+      year: 1972
+      country: USSR
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S35 Koalitsiya-SV
+      description: 152 mm self-propelled howitzer
+      year: 2015
+      country: Russia
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S7 Pion
+      description: 203 mm self-propelled gun
+      year: 1975
+      country: USSR
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S31 Vena
+      description: 120 mm self-propelled mortar
+      year: 1990
+      country: Russia
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S25 Sprut-SD
+      description: 125 mm self-propelled anti-tank gun
+      year: 2005
+      country: Russia
+      weaponMobility: 0
+      type: 4
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Towed
+    typing: 5
+    weapons:
+    - name: D-30
+      description: 122 mm towed howitzer
+      year: 1960
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2A65 Msta-B
+      description: 152 mm towed howitzer
+      year: 1987
+      country: Russia
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: D-20
+      description: 152 mm towed howitzer
+      year: 1955
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2A36 Giatsint-B
+      description: 152 mm towed howitzer
+      year: 1975
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: M-46
+      description: 130 mm towed howitzer
+      year: 1955
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2A18 (D-20)
+      description: 152 mm towed howitzer
+      year: 1955
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 2A19 (Msta-S)
+      description: 152 mm towed howitzer
+      year: 1989
+      country: Russia
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: D-1
+      description: 152 mm towed howitzer
+      year: 1956
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: D-74
+      description: 122 mm towed howitzer
+      year: 1955
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: M-30
+      description: 122 mm towed howitzer
+      year: 1941
+      country: USSR
+      weaponMobility: 0
+      type: 5
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AAW
+    typing: 6
+    weapons:
+    - name: S-400 Triumf
+      description: Long-range air defense system
+      year: 2007
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: S-300V4 Antey-2500
+      description: Long-range air defense system with anti-ballistic missile capability
+      year: 2014
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: S-300PMU2 Favorit
+      description: Long-range air defense system
+      year: 1997
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Buk-M2
+      description: Medium-range surface-to-air missile system
+      year: 1988
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Pantsir-S1
+      description: Short-to-medium range air defense system
+      year: 2007
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tor-M2
+      description: Short-range air defense system
+      year: 2010
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tunguska-M1
+      description: Self-propelled anti-aircraft gun and missile system
+      year: 1986
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: ZSU-23-4 Shilka
+      description: Self-propelled anti-aircraft gun system
+      year: 1962
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: SA-19 Grison
+      description: Short-range air defense missile system
+      year: 1982
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: SA-22 Greyhound
+      description: Self-propelled medium-range air defense missile system
+      year: 2007
+      country: Russia
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: SA-13 Gopher
+      description: Man-portable air defense system
+      year: 1974
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: 9K22 Tunguska
+      description: Self-propelled anti-aircraft gun and missile system
+      year: 1982
+      country: USSR
+      weaponMobility: 0
+      type: 6
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: UAV
+    typing: 7
+    weapons:
+    - name: Orlan-10
+      description: Unmanned aerial vehicle used for surveillance and reconnaissance
+        missions.
+      year: 2010
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Forpost
+      description: Unmanned aerial vehicle used for surveillance, reconnaissance,
+        and target acquisition missions.
+      year: 2014
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Zastava
+      description: Unmanned aerial vehicle used for surveillance and reconnaissance
+        missions.
+      year: 2016
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Eleron-3
+      description: Unmanned aerial vehicle used for reconnaissance, surveillance,
+        and target acquisition missions.
+      year: 2014
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Orion
+      description: Unmanned aerial vehicle used for reconnaissance, surveillance,
+        and target acquisition missions.
+      year: 2019
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: ZALA 421-16E2
+      description: Unmanned aerial vehicle used for reconnaissance and surveillance
+        missions.
+      year: 2016
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Korsar
+      description: Unmanned aerial vehicle used for reconnaissance, surveillance,
+        and target acquisition missions.
+      year: 2018
+      country: Russia
+      weaponMobility: 1
+      type: 7
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Fighter
+    typing: 8
+    weapons:
+    - name: Sukhoi Su-57
+      description: Stealth multirole fighter aircraft
+      year: 2010
+      country: Russia
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mikoyan MiG-29
+      description: Twin-engine air superiority fighter aircraft
+      year: 1982
+      country: USSR
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Sukhoi Su-35
+      description: Multirole air superiority fighter aircraft
+      year: 2008
+      country: Russia
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mikoyan MiG-31
+      description: Intercept and air superiority fighter aircraft
+      year: 1975
+      country: USSR
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Sukhoi Su-30
+      description: Twin-engine multirole fighter aircraft
+      year: 1996
+      country: Russia
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mikoyan MiG-35
+      description: Multirole fighter aircraft
+      year: 2007
+      country: Russia
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Sukhoi Su-27
+      description: Twin-engine air superiority fighter aircraft
+      year: 1985
+      country: USSR
+      weaponMobility: 1
+      type: 8
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Bomber
+    typing: 9
+    weapons:
+    - name: Tupolev Tu-160
+      description: Supersonic strategic bomber aircraft
+      year: 1987
+      country: USSR
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tupolev Tu-22M
+      description: Strategic and maritime strike bomber aircraft
+      year: 1969
+      country: USSR
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Sukhoi Su-34
+      description: Tactical bomber and strike fighter aircraft
+      year: 2006
+      country: Russia
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tupolev Tu-95
+      description: Long-range turboprop bomber aircraft
+      year: 1952
+      country: USSR
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Ilyushin Il-28
+      description: Tactical bomber and reconnaissance aircraft
+      year: 1948
+      country: USSR
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Tupolev Tu-22
+      description: Supersonic long-range bomber aircraft
+      year: 1959
+      country: USSR
+      weaponMobility: 1
+      type: 9
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AH
+    typing: 10
+    weapons:
+    - name: Mil Mi-24
+      description: Soviet/Russian attack helicopter and gunship.
+      year: 1972
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kamov Ka-50
+      description: Single-seat attack helicopter designed for the Soviet Army.
+      year: 1982
+      country: Russia
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kamov Ka-52
+      description: Twin-seat variant of the Ka-50 designed for all-weather operations.
+      year: 1997
+      country: Russia
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mil Mi-28
+      description: Russian all-weather, day-night, military tandem, two-seat anti-armor
+        attack helicopter.
+      year: 1982
+      country: Russia
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kamov Ka-27
+      description: Soviet naval helicopter used for anti-submarine warfare and search
+        and rescue missions.
+      year: 1973
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mil Mi-8
+      description: Soviet multipurpose helicopter widely used for transport, medevac,
+        and gunship operations.
+      year: 1961
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mil Mi-35
+      description: Soviet/Russian version of the Mi-24 attack helicopter with upgraded
+        avionics and weapons systems.
+      year: 1978
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kamov Ka-226
+      description: Light multi-purpose helicopter designed for civilian and military
+        applications.
+      year: 2002
+      country: Russia
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Mil Mi-26
+      description: Soviet heavy transport helicopter designed for carrying large
+        and heavy cargos, equipment and troops.
+      year: 1977
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}
+    - name: Kamov Ka-29
+      description: Soviet naval helicopter used for transportation and fire support
+        of naval infantry.
+      year: 1976
+      country: USSR
+      weaponMobility: 1
+      type: 10
+      side: 1
+      stage: 0
+      image: {fileID: 0}

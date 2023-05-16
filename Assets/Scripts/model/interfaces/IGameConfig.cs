@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using Util;
 
 /// <summary>
 /// Game Configuration interface aim is to provide application an access to <br/>
@@ -38,6 +39,8 @@ public interface IGameConfig
     public string GetTextType(WeaponTyping typing);
     public string GetTextTypeLong(WeaponTyping typing);
     public string GetTextMobility(WeaponMobility mobility);
+    public Sprite GetImageMobility(WeaponMobility mobility);
+    public Sprite GetImageCountry(CountryNames countryCode);
     // TODO config.GetInventoryElementStage(data.weapon.Stage);
     public string GetTextStage(int stage);
     public string GetTextSide(WeaponSide side);

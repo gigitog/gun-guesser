@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
+using Console = UnityEngine.Console;
 
 namespace Util
 {
@@ -29,13 +31,19 @@ namespace Util
                 {
                     Name = jsonWeapon.name,
                     Year = jsonWeapon.year.ToString(),
-                    Country = jsonWeapon.country,
                     Description = jsonWeapon.description,
                 
                     Side = blueprint.Side,
                     Type = blueprint.Type,
                     WeaponMobility = blueprint.WeaponMobility
                 };
+
+                CountryNames name = CountryNames.Afghanistan;
+                if ( Enum.TryParse(jsonWeapon.country, out name) )
+                {
+                    Console.Log("GWJsonD", name);
+                    w.Country = (CountryNames) Enum.Parse(typeof(CountryNames), jsonWeapon.country);
+                }
                 weapons.Add(w);
             }
 

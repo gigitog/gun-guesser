@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using strange.extensions.injector.api;
 using UnityEngine;
+using Util;
 
 /// <summary>
 /// Game Config Scriptable Object is a Unity-specified object to
@@ -96,6 +97,9 @@ public class GameConfigScriptableObject : ScriptableObject, IGameConfig
     public string GetTextTypeLong(WeaponTyping typing) => weaponConfig.GetFullType(typing);
 
     public string GetTextMobility(WeaponMobility mobility) => weaponConfig.GetMobilityType(mobility);
+    public Sprite GetImageMobility(WeaponMobility mobility) => weaponConfig.GetMobilityImage(mobility);
+    public Sprite GetImageCountry(CountryNames countryCode) => weaponConfig.GetImageCountry(countryCode);
+
     public string GetTextStage(int stage) => stage.ToString();
 
     public string GetTextSide(WeaponSide side)

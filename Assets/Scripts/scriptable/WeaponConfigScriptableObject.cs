@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
+using Util;
 
 /// <summary>
 /// Weapon Configuration serves for Game Design purpose to get general information
@@ -20,6 +22,12 @@ public class WeaponConfigScriptableObject : ScriptableObject, IWeaponConfig
     [Header("Weapon Mobility types")] 
     [SerializeField] private List<MobilityTypeToString> mobilityTypes;
     
+    [Header("Countries")] 
+    [SerializeField] private List<CountryNameModel> countriesConfig;
+
+    [SerializeField] private Sprite defaultCountrySprite;
+    
+
     [Header("Errors")] 
     [SerializeField] private string errorText;
 
@@ -59,6 +67,32 @@ public class WeaponConfigScriptableObject : ScriptableObject, IWeaponConfig
         }
 
         return errorText;
+    }
+
+    public Sprite GetMobilityImage(WeaponMobility searchedMobility)
+    {
+        foreach (var mobilityType in mobilityTypes)
+        {
+            if (mobilityType.mobility == searchedMobility)
+            {
+                return mobilityType.sprite;
+            }
+        }
+
+        return mobilityTypes[0].sprite;
+    }
+
+    public Sprite GetImageCountry(CountryNames countryCode)
+    {
+        foreach (var code in countriesConfig)
+        {
+            if (code.name == countryCode)
+            {
+                return code.sprite;
+            }
+        }
+
+        return defaultCountrySprite;
     }
 
     public Dictionary<WeaponTyping, int> GetCounterWeaponsDictionary(WeaponTyping typing)
@@ -165,5 +199,14 @@ public class MobilityTypeToString
 {
     public string mobilityText;
     public WeaponMobility mobility;
+    public Sprite sprite;
 }
 
+
+[Serializable]
+public class CountryNameModel
+{
+    public CountryNames name;
+    public CountryCodes code;
+    public Sprite sprite;
+}

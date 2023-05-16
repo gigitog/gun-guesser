@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Util;
 
 /// <summary>
 /// Weapon Model derives from <see cref="IWeapon"/> <br/>
@@ -11,7 +12,7 @@ public class WeaponModel : IWeapon
     [NotEditable] [SerializeField] private string identificationNumber = Guid.NewGuid().ToString();
     [SerializeField] private string description;
     [SerializeField] private string year;
-    [SerializeField] private string country;
+    [SerializeField] private CountryNames country;
     
     [Tooltip("Earth, Air, Rocket, Hand Weapon")]
     [NotEditable] [SerializeField] private WeaponMobility weaponMobility;
@@ -52,7 +53,7 @@ public class WeaponModel : IWeapon
         }
     }
 
-    public string Country
+    public CountryNames Country
     {
         get => country;
         set => country = value;
@@ -117,7 +118,8 @@ public enum WeaponMobility
     Ground,
     Air,
     Missile,
-    Hand
+    Hand,
+    Naval
 }
 
 /// <summary>

@@ -85,8 +85,8 @@ public class RoundMediator : Mediator
     private void SetEnemy(IWeapon weapon)
     {
         view.EnemyName = weapon.Name;
-        view.EnemyType = gameConfig.GetTextType(weapon.Type);
-        
+        view.EnemyMobility = gameConfig.GetImageMobility(weapon.WeaponMobility);
+        view.EnemyCountry = gameConfig.GetImageCountry(weapon.Country);
         view.EnemySprite = gameConfig.GetEnemySprite(weapon.Type);
         // ** TODO Change Set Enemy to:         **
         // ** view.EnemySprite = weapon.Image;  **
@@ -96,16 +96,16 @@ public class RoundMediator : Mediator
     private void SetFirst(IWeapon weapon)
     {
         view.FirstChoiceName = weapon.Name;
-        view.FirstChoiceType = gameConfig.GetTextType(weapon.Type);
-        
+        view.FirstChoiceMobility = gameConfig.GetImageMobility(weapon.WeaponMobility);
+        view.FirstChoiceCountry = gameConfig.GetImageCountry(weapon.Country);
         view.FirstChoiceSprite = gameConfig.GetAlliesSprite(weapon.Type);
     }
 
     private void SetSecond(IWeapon weapon)
     {
         view.SecondChoiceName = weapon.Name;
-        view.SecondChoiceType = gameConfig.GetTextType(weapon.Type);
-        
+        view.SecondChoiceMobility = gameConfig.GetImageMobility(weapon.WeaponMobility);
+        view.SecondChoiceCountry = gameConfig.GetImageCountry(weapon.Country);
         view.SecondChoiceSprite = gameConfig.GetAlliesSprite(weapon.Type);
     }
     private void SetRound()

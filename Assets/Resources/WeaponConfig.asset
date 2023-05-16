@@ -15,7 +15,7 @@ MonoBehaviour:
   weapons:
   - abbreviation: MBT
     name: Main Battle Tank
-    defaultSprite: {fileID: 21300000, guid: 1b574045b5738d746ad10748ae7da421, type: 3}
+    defaultSprite: {fileID: 21300000, guid: c4540d83ae096634a819a63915f9f748, type: 3}
     typing: 0
     mobility: 0
     mbt: 5
@@ -47,7 +47,7 @@ MonoBehaviour:
     aaw: 0
   - abbreviation: APC
     name: Armoured personal carrier
-    defaultSprite: {fileID: 21300000, guid: aaa35595fb3e9e4428ceaaee4e093af7, type: 3}
+    defaultSprite: {fileID: 21300000, guid: 1e53af89143e5c643b009c59827372af, type: 3}
     typing: 2
     mobility: 0
     mbt: 7
@@ -127,7 +127,7 @@ MonoBehaviour:
     aaw: 0
   - abbreviation: UAV
     name: Unmanned arial vehicle
-    defaultSprite: {fileID: 21300000, guid: 0ea90d77bcb597b44acf9c3e53c2424d, type: 3}
+    defaultSprite: {fileID: 21300000, guid: ddd4cb1bd279b194c89110f85b0711c6, type: 3}
     typing: 7
     mobility: 0
     mbt: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
     aaw: 10
   - abbreviation: Fighter
     name: Fighter Jet
-    defaultSprite: {fileID: 21300000, guid: 5b6c3aa0da3fc4748bebc21fc1cc85c9, type: 3}
+    defaultSprite: {fileID: 21300000, guid: a65d305472f531949beab874bbafa0fb, type: 3}
     typing: 8
     mobility: 0
     mbt: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     aaw: 8
   - abbreviation: Bomber
     name: Bomber Aircraft
-    defaultSprite: {fileID: 21300000, guid: 448c9e9922b0176418738e9062a0eb1a, type: 3}
+    defaultSprite: {fileID: 21300000, guid: d623b0e4a484d4642bec11ad593802d0, type: 3}
     typing: 9
     mobility: 0
     mbt: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     aaw: 10
   - abbreviation: AH
     name: Attack helicopter
-    defaultSprite: {fileID: 21300000, guid: 5b90675e577197b4484da8feab3d2004, type: 3}
+    defaultSprite: {fileID: 21300000, guid: 035c07703b4018941bd25a99b86d8e4f, type: 3}
     typing: 10
     mobility: 0
     mbt: 3
@@ -192,10 +192,31 @@ MonoBehaviour:
   mobilityTypes:
   - mobilityText: Ground
     mobility: 0
+    sprite: {fileID: 21300000, guid: 29fbaafeb5ca2224e960ee1d62913719, type: 3}
   - mobilityText: Air
     mobility: 1
+    sprite: {fileID: 21300000, guid: 4f53301b3361e1e4694860686a9dce73, type: 3}
   - mobilityText: Missile
     mobility: 2
+    sprite: {fileID: 21300000, guid: c703dc0e1708a674a99fdd5653a6ad6d, type: 3}
   - mobilityText: Hand Weapon
     mobility: 3
+    sprite: {fileID: 21300000, guid: 7429affa3e94f1544b9d426876d1923c, type: 3}
+  - mobilityText: Naval
+    mobility: 4
+    sprite: {fileID: 21300000, guid: 20766c069d243a94dbba4b7b8d678e5e, type: 3}
+  countriesConfig:
+  - name: 804
+    code: 233
+    sprite: {fileID: 21300000, guid: 433bd901496cd1745bdf0392c6c16dd9, type: 3}
+  - name: 810
+    code: 10001
+    sprite: {fileID: 21300000, guid: 16d7d96bfee2bed4996403a89b0c58cb, type: 3}
+  - name: 840
+    code: 236
+    sprite: {fileID: 21300000, guid: 55213501814640e4aa0691e047679b10, type: 3}
+  - name: 643
+    code: 183
+    sprite: {fileID: 21300000, guid: f820cbe7092ccca498c37e5c27bc644c, type: 3}
+  defaultCountrySprite: {fileID: 21300000, guid: 6e2a0dd5aa546ae4897528ce5a22c589, type: 3}
   errorText: Missing_Name_Error

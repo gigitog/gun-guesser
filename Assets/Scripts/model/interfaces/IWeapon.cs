@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using Util;
 
 /// <summary>
 /// It describes the weapon object in game, which could be represented as: <br/>
@@ -18,7 +19,7 @@ public interface IWeapon
     public WeaponSide Side { get; set; }
     public WeaponTyping Type { get; }
     public WeaponMobility WeaponMobility { get; }
-    public string Country { get; }
+    public CountryNames Country { get; }
     public string Year { get; }
     public string Description { get; }
     public string Name { get; }

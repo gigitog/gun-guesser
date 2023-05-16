@@ -2,6 +2,7 @@ using strange.extensions.mediation.impl;
 using strange.extensions.signal.impl;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>
@@ -16,19 +17,22 @@ public class RoundView : View
     // Enemy Card
     [Header("Enemy Card")]
     [SerializeField] private TMP_Text enemyNameField;
-    [SerializeField] private TMP_Text enemyTypeField;
+    [SerializeField] private Image enemyMobilityType;
+    [SerializeField] private Image enemyCountry;
     [SerializeField] private Image enemySprite;
 
     // Choices
     [Header("Choice 1")]
     [SerializeField] private TMP_Text firstChoiceNameField;
-    [SerializeField] private TMP_Text firstChoiceTypeField;
+    [SerializeField] private Image firstChoiceMobility;
     [SerializeField] private Image firstChoiceSprite;
+    [SerializeField] private Image firstChoiceCountry;
     [SerializeField] private Button firstChoiceButton;
     [Header("Choice 2")]
     [SerializeField] private TMP_Text secondChoiceNameField;
-    [SerializeField] private TMP_Text secondChoiceTypeField;
+    [SerializeField] private Image secondChoiceMobility;
     [SerializeField] private Image secondChoiceSprite;
+    [SerializeField] private Image secondChoiceCountry;
     [SerializeField] private Button secondChoiceButton;
     
     // UI
@@ -52,16 +56,22 @@ public class RoundView : View
         get => enemyNameField.text;
         set => enemyNameField.text = string.IsNullOrEmpty(value) ? "Error Name" : value;
     }
-    public string EnemyType
+    public Sprite EnemyMobility
     {
-        get => enemyTypeField.text;
-        set => enemyTypeField.text = string.IsNullOrEmpty(value) ? "Error Type" : value;
+        get => enemyMobilityType.sprite;
+        set => enemyMobilityType.sprite = value;
     }
 
     public Sprite EnemySprite
     {
         get => enemySprite.sprite;
         set => enemySprite.sprite = value;
+    }
+    
+    public Sprite EnemyCountry
+    {
+        get => enemyCountry.sprite;
+        set => enemyCountry.sprite = value;
     }
 
     #endregion
@@ -74,16 +84,22 @@ public class RoundView : View
         set => firstChoiceNameField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
 
-    public string FirstChoiceType
+    public Sprite FirstChoiceMobility
     {
-        get => firstChoiceTypeField.text;
-        set => firstChoiceTypeField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
+        get => firstChoiceMobility.sprite;
+        set => firstChoiceMobility.sprite = value;
     }
 
     public Sprite FirstChoiceSprite
     {
         get => firstChoiceSprite.sprite;
         set => firstChoiceSprite.sprite = value;
+    }
+    
+    public Sprite FirstChoiceCountry
+    {
+        get => firstChoiceCountry.sprite;
+        set => firstChoiceCountry.sprite = value;
     }
 
     public string SecondChoiceName
@@ -92,16 +108,22 @@ public class RoundView : View
         set => secondChoiceNameField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
     }
 
-    public string SecondChoiceType
+    public Sprite SecondChoiceMobility
     {
-        get => secondChoiceTypeField.text;
-        set => secondChoiceTypeField.text = string.IsNullOrEmpty(value) ? "Error Side" : value;
+        get => secondChoiceMobility.sprite;
+        set => secondChoiceMobility.sprite = value;
     }
 
     public Sprite SecondChoiceSprite
     {
         get => secondChoiceSprite.sprite;
         set => secondChoiceSprite.sprite = value;
+    }
+    
+    public Sprite SecondChoiceCountry
+    {
+        get => secondChoiceCountry.sprite;
+        set => secondChoiceCountry.sprite = value;
     }
     #endregion
     

@@ -1,0 +1,648 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4d18523dde4fdb90ec2ccbff783d4d, type: 3}
+  m_Name: Def_allies
+  m_EditorClassIdentifier: 
+  side: 0
+  dataWeapons:
+  - typeName: MBT
+    typing: 0
+    weapons:
+    - name: T-64B
+      identificationNumber: 32927935-2b05-44f8-aae7-431845f29849
+      description: Main battle tank produced by the Soviet Union.
+      year: 1966
+      country: 810
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV
+      identificationNumber: 6be64f63-6772-49d6-81e7-845e223ded4b
+      description: Improved version of the T-64B with additional armor and upgrades
+        to the fire control system.
+      year: 1985
+      country: 810
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV 2017
+      identificationNumber: e6757822-0092-4bc9-b9a5-f23b48c39525
+      description: Modernized version of the T-64BV with improved armor and new fire
+        control system.
+      year: 2017
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BV 2022
+      identificationNumber: 2b0e8fab-3b63-4efa-888a-6b3b8b28a22b
+      description: Latest upgrade of the T-64BV with improved engines and digital
+        systems.
+      year: 2022
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BM "Bulat"
+      identificationNumber: 782c3629-fa8f-4645-8a48-ba96df6397fc
+      description: Modernized version of the T-64B with upgraded armor, new fire
+        control system and improved engines.
+      year: 2000
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-64BM2
+      identificationNumber: b464e36d-5a90-41c3-a506-f6f99832c06f
+      description: Further upgrade of the T-64BM with additional armor and new electronic
+        systems.
+      year: 2014
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-72AMT
+      identificationNumber: 55abc4c4-b9e0-4157-9039-057e72c46579
+      description: Improved version of the T-72 with additional armor and new fire
+        control system.
+      year: 1987
+      country: 810
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-80BV
+      identificationNumber: 33aae509-79ee-495c-ad1c-fc24ab48df58
+      description: Main battle tank with advanced fire control system and composite
+        armor.
+      year: 1987
+      country: 810
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-84
+      identificationNumber: 8fa72b4f-d10e-4ece-bc81-658f2762623d
+      description: Main battle tank with composite armor and advanced fire control
+        system.
+      year: 1994
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: T-84U
+      identificationNumber: 7373f350-f492-4ba4-bd68-a98ddcb5938b
+      description: Improved version of the T-84 with new fire control system and
+        engine.
+      year: 1997
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: "T-84U \u201COplot-M\u201D"
+      identificationNumber: 596653c9-d32c-4f2d-b63d-f8d17b01cb82
+      description: Further upgrade of the T-84U with additional armor and new fire
+        control system.
+      year: 2001
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM Oplot
+      identificationNumber: 2d89d3ca-a1df-42f3-8b54-dd01038dc442
+      description: New generation main battle tank with advanced armor and electronic
+        systems.
+      year: 2009
+      country: 804
+      weaponMobility: 0
+      type: 0
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: MLRS
+    typing: 1
+    weapons:
+    - name: BM-21 Grad
+      identificationNumber: ae57a061-66a0-47dd-9499-5ead1ffe66dc
+      description: Soviet truck-mounted 122 mm multiple rocket launcher
+      year: 1963
+      country: 810
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Bastion-1(2)
+      identificationNumber: d9ce51f5-7023-4b9f-89f0-458003806faa
+      description: Ukrainian truck-mounted 122 mm multiple rocket launcher
+      year: 1996
+      country: 804
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-27 Uragan
+      identificationNumber: c76c9914-26ac-4270-8371-45f232ef1759
+      description: Soviet self-propelled multiple rocket launcher with a range of
+        35 km
+      year: 1975
+      country: 810
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Bureviy
+      identificationNumber: c7be4ec9-fa86-47bd-bdee-90523a135df1
+      description: Ukrainian 300 mm guided rocket system with a range of 130 km
+      year: 2019
+      country: 804
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BM-30 Smerch
+      identificationNumber: 90c3a47d-9adb-48ef-bbbb-ba0fdd1a7d1d
+      description: Soviet heavy multiple rocket launcher system with a range of up
+        to 90 km
+      year: 1987
+      country: 810
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Vilkha
+      identificationNumber: 5b786a47-58da-4b95-86c5-01f4da1540bf
+      description: Ukrainian guided rocket system with a range of up to 300 km
+      year: 2018
+      country: 804
+      weaponMobility: 0
+      type: 1
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: APC
+    typing: 2
+    weapons:
+    - name: BTR-60
+      identificationNumber: c7702a8c-432c-41f4-903d-af889498584f
+      description: Armored personnel carrier developed in the Soviet Union.
+      year: 1960
+      country: 810
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-70
+      identificationNumber: e4337510-2893-4799-9489-4f1acc7916ec
+      description: Improved version of BTR-60 with better armor and armament.
+      year: 1972
+      country: 810
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-80
+      identificationNumber: 2372c30c-0ab9-42f4-bbef-11a567d843bc
+      description: Further development of BTR-70 with improved mobility and protection.
+      year: 1984
+      country: 810
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Varta
+      identificationNumber: 3f7c4c32-db39-47e4-87ee-e2dfaefd9dc7
+      description: Armored personnel carrier produced in Ukraine with advanced protection
+        and mobility features.
+      year: 1999
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Novator
+      identificationNumber: 54201eda-44a6-4295-81f1-24fd41ed5e53
+      description: New generation armored personnel carrier with enhanced protection,
+        firepower and mobility.
+      year: 2005
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Spartan"
+      identificationNumber: 2ca6c6d6-b265-4aac-9511-334ba181bc5b
+      description: Armored personnel carrier built on Kraz chassis with advanced
+        armor and protection systems.
+      year: 2008
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Shreck"
+      identificationNumber: be66eeab-d15e-4359-87f6-1fdb522729fb
+      description: New generation armored personnel carrier with high level of protection
+        and firepower.
+      year: 2014
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kraz "Phiona"
+      identificationNumber: 4b7e943b-d9ca-443b-b3be-f7a879362cfc
+      description: Latest generation armored personnel carrier with advanced armor,
+        protection and mobility features.
+      year: 2018
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kozak-2
+      identificationNumber: 4f4505e0-9d2a-4e95-bb93-fbeca2eefeea
+      description: Armored personnel carrier with modular design, capable of quick
+        reconfiguration for different mission requirements.
+      year: 2015
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Kozak-5
+      identificationNumber: 6c51ced9-f07e-427b-99e4-042e898d7359
+      description: New generation armored personnel carrier with enhanced protection,
+        firepower and mobility features.
+      year: 2017
+      country: 804
+      weaponMobility: 0
+      type: 2
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: IFV
+    typing: 3
+    weapons:
+    - name: BMP-1
+      identificationNumber: f102e245-0ca7-46b5-a9cd-a78299ec938c
+      description: Soviet-designed tracked infantry fighting vehicle with 73mm main
+        gun.
+      year: 1966
+      country: 810
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-2
+      identificationNumber: 47f767ef-5d71-4d8c-9803-3f1a2fc027e7
+      description: Soviet-designed tracked infantry fighting vehicle with 30mm automatic
+        cannon and 9M113 Konkurs ATGM.
+      year: 1980
+      country: 810
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMP-3
+      identificationNumber: 1f323f66-fffa-4850-b383-da9f6c3a3762
+      description: Russian-designed tracked infantry fighting vehicle with 100mm
+        main gun, 30mm automatic cannon, and 9M120 Ataka ATGM.
+      year: 1987
+      country: 643
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BMD-4
+      identificationNumber: 6dd5737b-a57b-4fda-a52f-5ec416a33bde
+      description: Russian-designed airborne infantry fighting vehicle with 100mm
+        main gun, 30mm automatic cannon, and 9M120 Ataka ATGM.
+      year: 2004
+      country: 643
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-3
+      identificationNumber: 13bea269-f7e2-4e04-a5c3-ef14dff55bd5
+      description: Ukrainian-designed wheeled infantry fighting vehicle with 30mm
+        automatic cannon and 9K113 Konkurs ATGM.
+      year: 2000
+      country: 804
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: BTR-4
+      identificationNumber: 90aae186-4107-42e7-ba2c-bfc509bdd648
+      description: Ukrainian-designed wheeled infantry fighting vehicle with 30mm
+        automatic cannon and 9K135 Kornet ATGM.
+      year: 2008
+      country: 804
+      weaponMobility: 0
+      type: 3
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: SPH
+    typing: 4
+    weapons:
+    - name: 2S22 Bohdana
+      identificationNumber: b0f9dbb4-16d5-4dd0-b205-09b11308e7b3
+      description: Self propelled howitzer capable of firing 155 mm shells up to
+        40 km
+      year: 2018
+      country: 804
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S19 Msta-S
+      identificationNumber: ee327f4d-c8b1-4053-b79b-4b70a2ef0c66
+      description: Self propelled howitzer capable of firing 152 mm shells up to
+        24 km
+      year: 1989
+      country: 643
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S3 Akatsiya
+      identificationNumber: 3086c4e7-d54f-4a7b-bff6-3097487afecb
+      description: Self propelled howitzer capable of firing 152 mm shells up to
+        18.5 km
+      year: 1969
+      country: 810
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: 2S1 Gvozdika
+      identificationNumber: 953f1033-e3b6-4404-a2fd-318a99b2e12e
+      description: Self propelled howitzer capable of firing 122 mm shells up to
+        15.3 km
+      year: 1972
+      country: 810
+      weaponMobility: 0
+      type: 4
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Towed
+    typing: 5
+    weapons:
+    - name: Towed1
+      identificationNumber: f49c6db9-855a-444a-9ce5-34e3274c415d
+      description: 
+      year: 0
+      country: 804
+      weaponMobility: 0
+      type: 5
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Towed2
+      identificationNumber: f49c6db9-855a-444a-9ce5-34e3274c415d
+      description: 
+      year: 0
+      country: 804
+      weaponMobility: 0
+      type: 5
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AAW
+    typing: 6
+    weapons:
+    - name: S-300
+      identificationNumber: 0061a2ad-a067-4f2f-9950-346dcd55a029
+      description: Long-range surface-to-air missile system capable of engaging multiple
+        targets
+      year: 1979
+      country: 810
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: S-400
+      identificationNumber: 307114d5-9497-4233-a052-bf5d64db1a4c
+      description: Long-range anti-aircraft missile system with improved capabilities
+        over S-300
+      year: 2007
+      country: 643
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Patriot
+      identificationNumber: 81995b78-5bfc-4d1a-ba66-34cc6c5622d7
+      description: Mobile air defense system designed to intercept tactical ballistic
+        missiles, cruise missiles, and advanced aircraft
+      year: 1981
+      country: 840
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Osa
+      identificationNumber: 5a543eac-57a7-4095-aaea-d29d610b6dce
+      description: Short-range air defense missile system used to protect ground
+        forces and strategic facilities
+      year: 1971
+      country: 810
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Tunguska
+      identificationNumber: a0da0ff7-671d-43bd-9e04-cb08d97072ed
+      description: Self-propelled anti-aircraft weapon system with guns and missiles
+        used to protect ground forces from air attacks
+      year: 1982
+      country: 810
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Shilka
+      identificationNumber: 8460d77f-3e5c-47ac-8362-a55ce91ca3b2
+      description: Self-propelled anti-aircraft gun system used to protect ground
+        forces from air attacks
+      year: 1965
+      country: 810
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: SAMP-T
+      identificationNumber: 3849d0d6-19c3-4da9-896c-717800a44660
+      description: Medium-range air defense missile system designed to counter a
+        wide range of airborne threats
+      year: 2011
+      country: 250
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: IRIS-T
+      identificationNumber: 607ae52f-9b8c-42e9-8048-b52d38b52a42
+      description: Short-range air-to-air missile used for self-defense and attacking
+        enemy aircraft
+      year: 2005
+      country: 276
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: S-2 Pantsir
+      identificationNumber: a2cdfc75-e4c1-4a06-92fd-4f1ecd14492d
+      description: Short to medium range surface-to-air missile and anti-aircraft
+        artillery system
+      year: 2007
+      country: 643
+      weaponMobility: 0
+      type: 6
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: UAV
+    typing: 7
+    weapons:
+    - name: Uav1
+      identificationNumber: 0d8170c9-d3a7-45d5-b1ba-adb405fea9fb
+      description: 
+      year: 0
+      country: 840
+      weaponMobility: 1
+      type: 7
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: Uav2
+      identificationNumber: 0d8170c9-d3a7-45d5-b1ba-adb405fea9fb
+      description: 
+      year: 0
+      country: 840
+      weaponMobility: 1
+      type: 7
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Fighter
+    typing: 8
+    weapons:
+    - name: F-16 1
+      identificationNumber: 13c438fc-8f83-430f-8e2c-bae8df04fc0b
+      description: 
+      year: 0
+      country: 840
+      weaponMobility: 1
+      type: 8
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: F-35
+      identificationNumber: 13c438fc-8f83-430f-8e2c-bae8df04fc0b
+      description: 
+      year: 0
+      country: 840
+      weaponMobility: 1
+      type: 8
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: Bomber
+    typing: 9
+    weapons:
+    - name: Bomber 1
+      identificationNumber: 41f0c144-b841-4058-9efa-73a632a683fb
+      description: 
+      year: 0
+      country: 804
+      weaponMobility: 1
+      type: 9
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+  - typeName: AH
+    typing: 10
+    weapons:
+    - name: AH 1
+      identificationNumber: 2b22184f-273a-454c-8863-8436aad60184
+      description: 
+      year: 0
+      country: 810
+      weaponMobility: 1
+      type: 10
+      side: 0
+      stage: 0
+      image: {fileID: 0}
+    - name: AH 2
+      identificationNumber: 2b22184f-273a-454c-8863-8436aad60184
+      description: 
+      year: 0
+      country: 810
+      weaponMobility: 1
+      type: 10
+      side: 0
+      stage: 0
+      image: {fileID: 0}
